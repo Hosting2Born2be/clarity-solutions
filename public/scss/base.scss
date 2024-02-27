@@ -30,10 +30,23 @@ a{
 	}
 }
 
+.highlight{
+	color: #F85C3A;
+	text-align: center;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	text-transform: uppercase;
+	border-radius: 70px;
+	background: #FEE7E1;
+	padding: 8px 24px;
+}
+
 @media screen and (min-width:992px){
-	html, body{
+	/*html, body{
 		overflow-x:hidden;
-	}
+	}*/
 	.dt-hidden{
 		display:none!important;
 	}
@@ -179,30 +192,21 @@ a{
 	font-weight: 600;
 	line-height: normal;
 	border-radius: 0px;
-	background: #FD8B10;
+	background: #F85C3A;
 	display:flex;
 	align-items:center;
 	gap:24px;
-	padding:0 15px;
-	width:160px;
+	padding:0 40px;
 	height:50px;
 	justify-content:center;
 	text-decoration:none;
+	border-radius: 54px;
 	&:hover{
 		color: #fff;
 		background: #1C2329;
 	}
 }
 
-.section-title{
-	color: var(--3, #262626);
-	margin: 0 0 40px 0;
-	font-size: 36px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: normal;
-	text-align:center;
-}
 
 .woocommerce-cart{
 	.entry-header{
