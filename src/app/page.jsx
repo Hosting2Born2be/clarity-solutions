@@ -473,7 +473,7 @@ export default function Home() {
                   management tips, industry updates, and success stories.
                 </p>
                 <div className="buttons-wrap">
-                  <Link className="black-button" href="#">Go to blog</Link>
+                  <Link className="black-button" href="/insights">Go to blog</Link>
                 </div>
               </div>
             </RevealWrapper>
@@ -490,7 +490,7 @@ export default function Home() {
                   hearing from you.
                 </p>
                 <div className="buttons-wrap">
-                  <Link className="black-button" href="#">Get assistance</Link>
+                  <Link className="black-button" href="/contacts">Get assistance</Link>
                 </div>
               </div>
             </RevealWrapper>
