@@ -70,7 +70,7 @@ export default function Home() {
               <div className="home-third__col-01">
                 <h2>Already a member?</h2>
                 <p>
-                  If you're already part of our community, simply{" "}
+                  If you&apos;re already part of our community, simply{" "}
                   <Link href="#">sign in</Link> to access your account.
                   Alternatively, download our app for convenient on-the-go
                   management.
@@ -91,7 +91,7 @@ export default function Home() {
 
             <RevealWrapper origin="bottom">
               <div className="home-third__col-02">
-                <h2>Join us today - it's free!</h2>
+                <h2>Join us today - it&apos;s free!</h2>
                 <p>
                   Ready to experience the benefits of Clarity Solutions?{" "}
                   <Link href="#">Sign up</Link> for free today and unlock a
@@ -132,7 +132,7 @@ export default function Home() {
                 <h3>Quick Sign-Up for Payments</h3>
                 <p>
                   Get started in under a minute and begin receiving payments
-                  instantly upon registration. It's fast, simple, and
+                  instantly upon registration. It&apos;s fast, simple, and
                   hassle-free.
                 </p>
                 <svg
