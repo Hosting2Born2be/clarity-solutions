@@ -9,7 +9,7 @@ export const metadata = {
   title: "Business Accounts",
 };
 
-export default function Home() {
+export default function Business() {
   return (
     <>
       <BusinessHero/>

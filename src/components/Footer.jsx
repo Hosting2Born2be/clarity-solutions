@@ -13,7 +13,7 @@ const Footer = () => {
             <span></span>
             <nav className="main-menu">
               <Link href="/business-accounts">Business Accounts</Link>
-              <Link href="#">Tariffs</Link>
+              <Link href="/tariffs">Tariffs</Link>
               <Link href="#">FAQ</Link>
               <Link href="#">Insights</Link>
               <Link href="#">Contacts</Link>

@@ -13,7 +13,7 @@ const Header = () => {
 
             <nav>
               <Link href="/business-accounts">Business Accounts</Link>
-              <Link href="#">Tariffs</Link>
+              <Link href="/tariffs">Tariffs</Link>
               <Link href="#">FAQ</Link>
               <Link href="#">Contacts</Link>
             </nav>

@@ -1,0 +1,105 @@
+.tariffs-hero{
+    
+    background-color: #F85C3A;
+    background-image: url(/images/tariffs/hero-back.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    position: relative;
+    overflow: hidden;
+    
+    &__body{
+        display: flex;
+        align-items: center;
+        >div{
+            display: flex;
+        }
+        @media (max-width:992px){
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+            padding-top: 80px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    h1{
+        color: var(--5, #FFF);
+        font-size: 56px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+        margin: 0 0 24px 0;
+        @media (max-width:992px){
+            
+            text-align: center;
+        }
+    }
+}
+
+.tariffs-second{
+    padding: 80px 0;
+    &__body{
+        border-radius: 40px;
+        background: var(--5, #FFF);
+        padding: 80px 85px;
+        @media (max-width:992px){
+            padding: 40px 24px;
+            overflow-x: auto;
+        }
+    }
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        @media (max-width:992px){
+            width: 1200px;
+        }
+        thead{
+            th{
+                padding: 16px;
+                color: var(--2, #282828);
+                text-align: center;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 120%;
+                width: 25%;
+            }
+        }
+        tbody{
+            tr{
+                &:last-child{
+                    td{
+                        padding: 32px 0 0 0;
+                        border: none;
+                    }
+                }
+                td{
+                    padding: 8px 8px 8px 0;
+                    text-align: left;
+                    color: var(--3, #484848);
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+                    span{
+                        color: #F85C3A;
+                    }
+                    &.subtitle{
+                        background: var(--1, #F85C3A);
+                        padding: 16px;
+                        color: var(--5, #FFF);
+                        font-size: 24px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 120%;
+                        text-align: center;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}
