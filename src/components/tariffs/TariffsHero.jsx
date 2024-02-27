@@ -1,5 +1,6 @@
 "use client";
 import { RevealWrapper, RevealList } from "next-reveal";
+import TariffsParallaxComponent from "./TariffsParallaxComponent";
 
 
 const TariffsHero = () => {
@@ -11,9 +12,7 @@ const TariffsHero = () => {
             <RevealWrapper delay={100} origin="bottom">
               <h1 className="wow fadeInUp">Clarity Solutions tariffs</h1>
             </RevealWrapper>
-            <RevealWrapper delay={100} origin="bottom" className="mob-hidden">
-                <img src="/images/tariffs/hero.png"/>
-        </RevealWrapper>
+            <TariffsParallaxComponent/>
           </div>
         </div>
         <RevealWrapper delay={100} origin="bottom" className="dt-hidden">

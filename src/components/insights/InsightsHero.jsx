@@ -1,5 +1,6 @@
 "use client";
 import { RevealWrapper, RevealList } from "next-reveal";
+import InsightsParallaxComponent from "./InsightsParallaxComponent";
 
 
 const InsightsHero = () => {
@@ -11,9 +12,10 @@ const InsightsHero = () => {
             <RevealWrapper delay={100} origin="bottom">
               <h1 className="wow fadeInUp">Insights</h1>
             </RevealWrapper>
-            <RevealWrapper delay={100} origin="bottom">
-                <img className="mob-hidden" src="/images/insights/hero.png"/>
-                <img className="dt-hidden" src="/images/insights/hero-mobile.png"/>
+            <InsightsParallaxComponent/>
+            <RevealWrapper delay={100} origin="bottom" className="dt-hidden">
+                
+                <img  src="/images/insights/hero-mobile.png"/>
             </RevealWrapper>
           </div>
         </div>

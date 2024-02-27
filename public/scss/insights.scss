@@ -41,6 +41,55 @@
             text-align: center;
         }
     }
+
+    .parallax{
+        position: relative;
+        bottom: 0;
+        right: calc((100vw - 1407px) / 2);
+        width: 590px;
+        height: 220px;
+        background-image: url(/images/insights/hero-parallax.png);
+        background-position: bottom center;
+        background-size: 240px;
+        background-repeat: no-repeat;
+        @media (max-width:992px){
+            display: none;
+        }
+        .circle1{
+            top: 60%;
+            left: 0%;
+            position: absolute;
+            img{
+                width: 25px;
+            }
+        }
+        .circle2{
+            top: 20%;
+            left: 25%;
+            position: absolute;
+            
+            img{
+                width: 30px;
+            }
+        }
+        .circle3{
+            top: 10%;
+            right: 0%;
+            position: absolute;
+            img{
+                width: 40px;
+            }
+        }
+        .circle4{
+            bottom:-7%;
+            right: 0%;
+            position: absolute;
+            img{
+                width: 75px;
+            }
+        }
+    }
+
 }
 
 .insights-wrap{
