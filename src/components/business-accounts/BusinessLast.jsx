@@ -5,26 +5,27 @@ import * as Yup from "yup";
 import { Montserrat } from "next/font/google";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
+const requiredText = "This field is required";
 
 const ValidationSchema = Yup.object().shape({
-  companyName: Yup.string().required("Company Name is required"),
-  contactName: Yup.string().required("Contact Name is required"),
-  companyWebsite: Yup.string().required("Company Website is required"),
-  contactPhoneNumber: Yup.string().required("Contact Phone Number is required"),
+  companyName: Yup.string().required(requiredText),
+  contactName: Yup.string().required(requiredText),
+  companyWebsite: Yup.string().required(requiredText),
+  contactPhoneNumber: Yup.string().required(requiredText),
   emailAddress: Yup.string()
     .email("Invalid email")
-    .required("Email Address is required"),
+    .required(requiredText),
   countryOfIncorporation: Yup.string().required(
-    "Country of Incorporation is required"
+    requiredText
   ),
   countryOfBankAccount: Yup.string().required(
-    "Country of Bank Account is required"
+    requiredText
   ),
-  affiliatedWebsites: Yup.string().required("Affiliated Websites is required"),
+  affiliatedWebsites: Yup.string().required(requiredText),
   monthlyPaymentVolume: Yup.string().required(
-    "Monthly Payment Volume is required"
+    requiredText
   ),
-  sourceOfFunds: Yup.string().required("Source of Funds is required"),
+  sourceOfFunds: Yup.string().required(requiredText),
 });
 
 const BusinessLast = () => {
