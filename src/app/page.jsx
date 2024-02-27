@@ -82,11 +82,11 @@ export default function Home() {
                 </p>
                 <h4>App available on:</h4>
                 <div className="buttons-wrap">
-                  <Link href="#">
+                  <Link className="black-button" href="#">
                     <img src="/images/home/appstore.svg" />
                     App Store
                   </Link>
-                  <Link href="#">
+                  <Link className="black-button" href="#">
                     <img src="/images/home/google.svg" />
                     Google Play
                   </Link>
@@ -103,7 +103,7 @@ export default function Home() {
                   world of financial convenience and security.
                 </p>
                 <div className="buttons-wrap">
-                  <Link href="#">
+                  <Link className="black-button" href="#">
                     <img src="/images/home/sign-up.svg" />
                     Sign up
                   </Link>
@@ -473,7 +473,7 @@ export default function Home() {
                   management tips, industry updates, and success stories.
                 </p>
                 <div className="buttons-wrap">
-                  <Link href="#">Go to blog</Link>
+                  <Link className="black-button" href="#">Go to blog</Link>
                 </div>
               </div>
             </RevealWrapper>
@@ -490,7 +490,7 @@ export default function Home() {
                   hearing from you.
                 </p>
                 <div className="buttons-wrap">
-                  <Link href="#">Get assistance</Link>
+                  <Link className="black-button" href="#">Get assistance</Link>
                 </div>
               </div>
             </RevealWrapper>

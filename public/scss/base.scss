@@ -167,24 +167,22 @@ a{
 }
 
 .black-button{
-	color: #fff;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 600;
-	line-height: normal;
-	border-radius: 0px;
-	background: #1C2329;
-	display:flex;
-	align-items:center;
-	gap:24px;
-	padding:0 15px;
-	width:160px;
-	height:50px;
-	justify-content:center;
-	text-decoration:none;
+	color: var(--5, #FFF);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 106.8%;
+	height: 48px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    gap:10px;
+    border-radius: 54px;
+    background: var(--2, #282828);
+	border: 1px solid #282828;
 	&:hover{
-		color: #fff;
-		background: #FD8B10;
+		color: #282828;
+		background: transparent;
 	}
 }
 
@@ -204,9 +202,10 @@ a{
 	justify-content:center;
 	text-decoration:none;
 	border-radius: 54px;
+	border: 1px solid #F85C3A;
 	&:hover{
-		color: #fff;
-		background: #1C2329;
+		color: #F85C3A;
+		background: transparent;
 	}
 }
 
