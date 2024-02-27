@@ -221,6 +221,9 @@
             .message{
                 text-align: center;
                 width: 100%;
+                &.success{
+                    color: #000;
+                }
             }
         }
         @media (max-width:992px){

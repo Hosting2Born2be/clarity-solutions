@@ -6,12 +6,18 @@ export async function POST(request) {
     const requestBody = await request.text();
     const bodyJSON = JSON.parse(requestBody);
     const {
-      firstName,
-      lastName,
+      companyName,
+      contactName,
+      companyWebsite,
+      contactPhoneNumber,
+      countryOfIncorporation,
+      countryOfBankAccount,
       emailAddress,
-      residentialCountry,
-      sanCard,
-      yourInquiry,
+      affiliatedWebsites,
+      monthlyPaymentVolume,
+      sourceOfFunds,
+      anticipatedPaymentCountries,
+      additionalComments
     } = bodyJSON;
 
     // Configure nodemailer with Gmail SMTP
@@ -30,8 +36,8 @@ export async function POST(request) {
     const mailOptions = {
       from: '"Clarity Solutions" <serg.web@acceptance.ltd>', // Sender address
       to: "serg.web@acceptance.ltd", // Change to your recipient's email
-      subject: "Contact Form Submission",
-      text: `Name: ${firstName} ${lastName}\nEmail: ${emailAddress}\nResidentialCountry: ${residentialCountry}\nSAN or Card Number: ${sanCard}\nYour Inquiry: ${yourInquiry}`,
+      subject: "Business Form Submission",
+      text: `Company name: ${companyName}\nContact name: ${contactName}\nEmail: ${emailAddress}\nCompany Website: ${companyWebsite}\nContact Phone Number: ${contactPhoneNumber}\nCountry of Incorporation: ${countryOfIncorporation}\nCountry of Bank Account: ${countryOfBankAccount}\nAffiliated Website: ${affiliatedWebsites}\nMonthly Payment Volume: ${monthlyPaymentVolume}\nSource of Funds: ${sourceOfFunds}\nAnticipated Payment Countries: ${anticipatedPaymentCountries}\nAdditional Comments: ${additionalComments}`,
     };
 
     // Send email

@@ -49,7 +49,7 @@ const ContactsLast = () => {
                 yourInquiry: "",
               }}
               validationSchema={ValidationSchema}
-              onSubmit={async (values) => {
+              onSubmit={async (values, { resetForm }) => {
                 try {
                   // Make a POST request to your serverless function
                   const response = await fetch("/api/contact", {
@@ -61,17 +61,17 @@ const ContactsLast = () => {
                   });
                   console.log(JSON.stringify(values));
                   if (response.ok) {
-                    //formik.resetForm();
-                    setResultMessage("Your message was sent successfully!");
+                    resetForm();
+                    setResultMessage("success");
                   } else {
                     setResultMessage(
-                      "Failed to send message. Please try again."
+                      "failed"
                     );
                   }
                 } catch (error) {
                   console.error(error);
                   setResultMessage(
-                    "An unexpected error occurred. Please try again."
+                    "failed"
                   );
                 }
               }}
@@ -159,11 +159,15 @@ const ContactsLast = () => {
                     Send Message
                   </button>
 
-                  {resultMessage && 
-                  <div className="input-wrap full">
-                      <div className="message succes">{resultMessage}</div>
-                  </div>
-                  }
+                  {resultMessage === "success" ? (
+                    <div className="input-wrap full">
+                      <div className="message success">Your message was sent successfully!</div>
+                    </div>
+                  ) : (
+                    <div className="input-wrap full">
+                      <div className="message">Failed to send message. Please try again.</div>
+                    </div>
+                  )}
 
                 </Form>
               )}

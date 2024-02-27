@@ -3,6 +3,7 @@ import { RevealWrapper, RevealList } from "next-reveal";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import { Montserrat } from "next/font/google";
+import { useState } from "react";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 const requiredText = "This field is required";
@@ -12,23 +13,16 @@ const ValidationSchema = Yup.object().shape({
   contactName: Yup.string().required(requiredText),
   companyWebsite: Yup.string().required(requiredText),
   contactPhoneNumber: Yup.string().required(requiredText),
-  emailAddress: Yup.string()
-    .email("Invalid email")
-    .required(requiredText),
-  countryOfIncorporation: Yup.string().required(
-    requiredText
-  ),
-  countryOfBankAccount: Yup.string().required(
-    requiredText
-  ),
+  emailAddress: Yup.string().email("Invalid email").required(requiredText),
+  countryOfIncorporation: Yup.string().required(requiredText),
+  countryOfBankAccount: Yup.string().required(requiredText),
   affiliatedWebsites: Yup.string().required(requiredText),
-  monthlyPaymentVolume: Yup.string().required(
-    requiredText
-  ),
+  monthlyPaymentVolume: Yup.string().required(requiredText),
   sourceOfFunds: Yup.string().required(requiredText),
 });
 
 const BusinessLast = () => {
+  const [resultMessage, setResultMessage] = useState("");
   return (
     <>
       <section className="business-last">
@@ -58,9 +52,31 @@ const BusinessLast = () => {
                 additionalComments: "",
               }}
               validationSchema={ValidationSchema}
-              onSubmit={(values) => {
-                // Here you would handle form submission, e.g., sending data to a server
-                alert(JSON.stringify(values, null, 2));
+              onSubmit={async (values, { resetForm }) => {
+                try {
+                  // Make a POST request to your serverless function
+                  const response = await fetch("/api/business", {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(values),
+                  });
+                  console.log(JSON.stringify(values));
+                  if (response.ok) {
+                    resetForm();
+                    setResultMessage("success");
+                  } else {
+                    setResultMessage(
+                      "failed"
+                    );
+                  }
+                } catch (error) {
+                  console.error(error);
+                  setResultMessage(
+                    "failed"
+                  );
+                }
               }}
             >
               {({ errors, touched }) => (
@@ -109,7 +125,9 @@ const BusinessLast = () => {
                       placeholder="Contact Phone Number"
                       type="tel"
                       className={
-                        errors.contactPhoneNumber && touched.contactPhoneNumber ? "error" : ""
+                        errors.contactPhoneNumber && touched.contactPhoneNumber
+                          ? "error"
+                          : ""
                       }
                     />
                     {errors.contactPhoneNumber && touched.contactPhoneNumber ? (
@@ -122,7 +140,9 @@ const BusinessLast = () => {
                       placeholder="Email Address"
                       type="email"
                       className={
-                        errors.emailAddress && touched.emailAddress ? "error" : ""
+                        errors.emailAddress && touched.emailAddress
+                          ? "error"
+                          : ""
                       }
                     />
                     {errors.emailAddress && touched.emailAddress ? (
@@ -134,7 +154,10 @@ const BusinessLast = () => {
                       name="countryOfIncorporation"
                       placeholder="Country of Incorporation"
                       className={
-                        errors.countryOfIncorporation && touched.countryOfIncorporation ? "error" : ""
+                        errors.countryOfIncorporation &&
+                        touched.countryOfIncorporation
+                          ? "error"
+                          : ""
                       }
                     />
                     {errors.countryOfIncorporation &&
@@ -147,7 +170,10 @@ const BusinessLast = () => {
                       name="countryOfBankAccount"
                       placeholder="Country of Bank Account"
                       className={
-                        errors.countryOfBankAccount && touched.countryOfBankAccount ? "error" : ""
+                        errors.countryOfBankAccount &&
+                        touched.countryOfBankAccount
+                          ? "error"
+                          : ""
                       }
                     />
                     {errors.countryOfBankAccount &&
@@ -160,7 +186,9 @@ const BusinessLast = () => {
                       name="affiliatedWebsites"
                       placeholder="Affiliated Websites"
                       className={
-                        errors.affiliatedWebsites && touched.affiliatedWebsites ? "error" : ""
+                        errors.affiliatedWebsites && touched.affiliatedWebsites
+                          ? "error"
+                          : ""
                       }
                     />
                     {errors.affiliatedWebsites && touched.affiliatedWebsites ? (
@@ -323,7 +351,8 @@ const BusinessLast = () => {
                           name="sourceOfFunds"
                           value="Corporate Bank Funds"
                         />
-                        <span><svg
+                        <span>
+                          <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="12"
                             height="13"
@@ -346,7 +375,9 @@ const BusinessLast = () => {
                               rx="3"
                               fill="#F85C3A"
                             />
-                          </svg><span>Corporate Bank Funds</span></span>
+                          </svg>
+                          <span>Corporate Bank Funds</span>
+                        </span>
                       </label>
                       <label>
                         <Field
@@ -354,7 +385,8 @@ const BusinessLast = () => {
                           name="sourceOfFunds"
                           value="Incoming Transfers from Affiliated Websites"
                         />
-                        <span><svg
+                        <span>
+                          <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="12"
                             height="13"
@@ -377,7 +409,11 @@ const BusinessLast = () => {
                               rx="3"
                               fill="#F85C3A"
                             />
-                          </svg><span>Incoming Transfers from Affiliated Websites</span></span>
+                          </svg>
+                          <span>
+                            Incoming Transfers from Affiliated Websites
+                          </span>
+                        </span>
                       </label>
                     </div>
                     {errors.sourceOfFunds && touched.sourceOfFunds ? (
@@ -401,7 +437,19 @@ const BusinessLast = () => {
                     />
                   </div>
 
-                  <button type="submit" className="orange-button">Submit Form</button>
+                  <button type="submit" className="orange-button">
+                    Submit Form
+                  </button>
+
+                  {resultMessage === "success" ? (
+                    <div className="input-wrap full">
+                      <div className="message success">Your message was sent successfully!</div>
+                    </div>
+                  ) : (
+                    <div className="input-wrap full">
+                      <div className="message">Failed to send message. Please try again.</div>
+                    </div>
+                  )}
                 </Form>
               )}
             </Formik>
