@@ -5,7 +5,6 @@ import Link from "next/link";
 
 export default async function InsightsSecond() {
   const insights = await getInsights();
-  console.log(insights);
   return (
     <>
       <section className="insights-wrap">
