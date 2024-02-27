@@ -130,7 +130,7 @@ export default function Home() {
             <RevealList
               origin="bottom"
               interval={500}
-              delay={500}
+              delay={0}
               className="flex"
             >
               <div className="left">
