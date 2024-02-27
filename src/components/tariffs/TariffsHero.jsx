@@ -11,13 +11,14 @@ const TariffsHero = () => {
             <RevealWrapper delay={100} origin="bottom">
               <h1 className="wow fadeInUp">Clarity Solutions tariffs</h1>
             </RevealWrapper>
-            <RevealWrapper delay={100} origin="bottom">
-                <img className="mob-hidden" src="/images/tariffs/hero.png"/>
-                <img className="dt-hidden" src="/images/tariffs/hero-mobile.png"/>
-            </RevealWrapper>
+            <RevealWrapper delay={100} origin="bottom" className="mob-hidden">
+                <img src="/images/tariffs/hero.png"/>
+        </RevealWrapper>
           </div>
         </div>
-
+        <RevealWrapper delay={100} origin="bottom" className="dt-hidden">
+                <img src="/images/tariffs/hero-mobile.png"/>
+        </RevealWrapper>
 
       </section>
     </>
