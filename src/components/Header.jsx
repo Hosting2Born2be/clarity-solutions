@@ -15,7 +15,7 @@ const Header = () => {
   useEffect(() => {
     setMenuOpened(false);
   }, [pathname]);
-
+  
   return (
     <>
       <div className={`head-wrap ${menuOpened && "fixed"}`}>
