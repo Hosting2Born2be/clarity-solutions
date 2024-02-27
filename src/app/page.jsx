@@ -24,7 +24,7 @@ export default function Home() {
           </div>
         </div>
         <ParallaxComponent />
-        <RevealWrapper origin="bottom">
+        <RevealWrapper className="hero-mobile" origin="bottom">
           <img src="/images/home/hero-mobile.png" />
         </RevealWrapper>
       </section>
