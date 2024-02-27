@@ -1,0 +1,251 @@
+@import 'mixin';
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* html,body{
+	overflow-x: hidden;
+} */
+
+body { 
+	margin: 0;
+	background: #FAFAFA;
+}
+
+a{
+	text-decoration: none;
+}
+
+.section-title{
+	color: var(--2, #282828);
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 120%;
+	margin: 0;
+	@media (max-width:992px){
+		font-size: 40px;
+	}
+}
+
+@media screen and (min-width:992px){
+	html, body{
+		overflow-x:hidden;
+	}
+	.dt-hidden{
+		display:none!important;
+	}
+}
+@media screen and (max-width:992px){
+	.iti.iti--container {
+		z-index: 1999999999!important;
+	}
+	.mob-hidden{
+		display:none!important;
+	}
+}
+
+._container {
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	padding: 0 16px;
+	width: 100%;
+}
+
+
+.site {
+	position: relative;
+	overflow: hidden;
+}
+
+
+/* Tabs */
+
+._tabs-block {
+	display: none;
+	&._active {
+		display: block;
+	}
+}
+
+
+.policy-hero {
+	margin:50px 0 100px 0;
+	h1 {
+		color: #131313;
+		font-size: 36px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		margin-bottom:30px;
+		@media (max-width:992px){
+			font-size: 24px;
+		}
+	}
+	.policy-content {
+		a{
+			color: #005369;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+			text-decoration-line: underline;
+		}
+		p {
+			color: #212121;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: normal;
+		}
+		h2{
+			color: #212121;
+			font-size: 24px;
+			font-style: normal;
+			font-weight: 700;
+			line-height: normal;
+			margin:40px 0 20px 0;
+			strong{
+				font-weight: 700;
+			}
+			&:first-child {
+				margin-top:0;
+			}
+		}
+		ul, ol {
+			margin:0 0 20px 0;
+			padding:0 0 0 16px;
+			li {
+				color: #212121;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+			}
+		}
+	}
+}
+
+.main-button{
+	color: var(--2-b, #FFF);
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	border-radius: 4px;
+	background: var(--4, #FF8266);
+	display:flex;
+	align-items:center;
+	gap:24px;
+	padding:8px 24px;
+	border:1px solid #FF8266;
+	width:fit-content;
+	&:hover{
+		color: var(--2-b, #FFF);
+		background: #FF6340;
+	}
+}
+
+.black-button{
+	color: #fff;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	border-radius: 0px;
+	background: #1C2329;
+	display:flex;
+	align-items:center;
+	gap:24px;
+	padding:0 15px;
+	width:160px;
+	height:50px;
+	justify-content:center;
+	text-decoration:none;
+	&:hover{
+		color: #fff;
+		background: #FD8B10;
+	}
+}
+
+.orange-button{
+	color: #fff;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	border-radius: 0px;
+	background: #FD8B10;
+	display:flex;
+	align-items:center;
+	gap:24px;
+	padding:0 15px;
+	width:160px;
+	height:50px;
+	justify-content:center;
+	text-decoration:none;
+	&:hover{
+		color: #fff;
+		background: #1C2329;
+	}
+}
+
+.section-title{
+	color: var(--3, #262626);
+	margin: 0 0 40px 0;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	text-align:center;
+}
+
+.woocommerce-cart{
+	.entry-header{
+		display:none;
+	}
+}
+
+.wp-block-woocommerce-empty-cart-block{
+	border-radius: 16px;
+    border: 1px solid var(--4, #FF8266);
+    background: rgba(255, 130, 102, 0.1);
+	padding:70px 16px;
+	max-width: 1110px;
+    margin: 80px auto;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+	h2{
+		color: var(--3, #262626);
+		font-size: 36px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+	}
+	a{
+		color: var(--2-b, #FFF);
+		font-size: 14px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+		border-radius: 4px;
+		background: var(--4, #FF8266);
+		display:flex;
+		align-items:center;
+		gap:24px;
+		padding:8px 24px;
+		border:1px solid #FF8266;
+		width:fit-content;
+		&:hover{
+			color: var(--2-b, #FFF);
+			background: #FF6340;
+		}
+	}
+}

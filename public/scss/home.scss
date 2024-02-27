@@ -1,0 +1,98 @@
+.home-hero{
+    min-height: 690px;
+    display: flex;
+    align-items: center;
+    background-color: #F85C3A;
+    background-image: url(/images/home/home-back.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    ._container{
+        width: 100%;
+    }
+    &__body{
+        width: 540px;
+        @media (max-width:992px){
+            width: 100%;
+        }
+        h1{
+            color: var(--5, #FFF);
+            font-size: 56px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%;
+            margin: 0 0 24px 0;
+            @media (max-width:992px){
+
+            }
+        }
+        p{
+            color: var(--4, #F6F6F6);
+            margin: 0;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 140%;
+        }
+    }
+}
+
+.home-second{
+    background: #F6F6F6;
+    padding: 120px 0;
+    &__body{
+        display: flex;
+        flex-direction: column;
+        gap:40px;
+        align-items: flex-start;
+    }
+    .why-row {
+        display: flex;
+        gap: 32px;
+        align-items: stretch;
+        >div{
+            width: calc(33.33% - 20px);
+        }
+        .why-element{
+            height: 100%;
+            padding: 40px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap:40px;
+            border-radius: 20px;
+            background: #FFF;
+            box-shadow: 0px 4px 31px 0px rgba(0, 0, 0, 0.05);
+            &:hover{
+                background: #2D2D2D;
+                p{
+                    color: #fff;
+                }
+            }
+            span{
+                color: #FFF;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                text-transform: uppercase;
+                height: 35px;
+                width: 35px;
+                border-radius: 38px;
+                background: #F85C3A;
+            }
+            p{
+                color: var(--3, #484848);
+                margin: 0;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 140%; /* 22.4px */
+            }
+        }
+    }
+}

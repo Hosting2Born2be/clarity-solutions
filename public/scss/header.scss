@@ -1,0 +1,39 @@
+header{
+    background: #F85C3A;
+    padding: 24px 0;
+    .header-wrap{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            color: var(--5, #FFF);
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 106.8%; /* 25.632px */
+        }
+        nav{
+            display: flex;
+            justify-content: flex-end;
+            gap:40px;
+            a{
+                color: var(--5, #FFF);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 106.8%; /* 17.088px */
+            }
+            @media (max-width:992px){
+                display: none;
+            }
+        }
+
+        .mobile-menu-btn{
+            display: none;
+            @media (max-width:992px){
+                display: flex;
+            }
+        }
+
+    }
+}
