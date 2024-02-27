@@ -158,7 +158,8 @@ const ContactsLast = () => {
                   {resultMessage === "success" ? (
                     <div className="input-wrap full">
                       <div className="message success">
-                        Your message was sent successfully!
+                        Thank you for choosing Clarity Solutions! Our
+                        representative will reach you out to you shortly.
                       </div>
                     </div>
                   ) : resultMessage === "failed" ? (
