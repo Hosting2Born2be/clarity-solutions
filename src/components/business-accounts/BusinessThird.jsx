@@ -8,7 +8,7 @@ const BusinessThird = () => {
       <section className="business-provide">
         <div className="_container">
           <div className="business-provide__body">
-            <RevealWrapper origin="bottom">
+            <RevealWrapper delay={100} origin="bottom">
               <h2 className="section-title">
                 Apply our business <br />
                 solutions now

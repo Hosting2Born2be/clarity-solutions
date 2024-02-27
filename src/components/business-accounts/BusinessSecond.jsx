@@ -8,7 +8,7 @@ const BusinessSecond = () => {
       <section className="business-second">
         <div className="_container">
           <div className="business-second__body">
-            <RevealWrapper origin="bottom">
+            <RevealWrapper delay={100} origin="bottom">
               <h2 className="section-title">We offer</h2>
             </RevealWrapper>
             <RevealList
@@ -129,7 +129,7 @@ const BusinessSecond = () => {
                 </p>
               </div>
             </RevealList>
-            <RevealWrapper origin="bottom">
+            <RevealWrapper delay={100} origin="bottom">
               <Link href="#" className="orange-button">
                 Get started today
               </Link>

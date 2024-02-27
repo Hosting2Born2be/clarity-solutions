@@ -11,7 +11,7 @@ export default function Home() {
       <section className="home-hero">
         <div className="_container">
           <div className="home-hero__body">
-            <RevealWrapper origin="bottom">
+            <RevealWrapper delay={100} origin="bottom">
               <h1 className="wow fadeInUp">Welcome to Clarity Solutions</h1>
               <p className="wow fadeInUp">
                 At Clarity Solutions, we believe in empowering individuals and
@@ -32,12 +32,12 @@ export default function Home() {
       <section className="home-second">
         <div className="_container">
           <div className="home-second__body">
-            <RevealWrapper origin="bottom">
+            <RevealWrapper delay={100} origin="bottom">
               <h2 className="section-title">Why choose us?</h2>
             </RevealWrapper>
 
             <div className="why-row">
-              <RevealWrapper origin="bottom">
+              <RevealWrapper delay={100} origin="bottom">
                 <div className="why-element">
                   <span>1</span>
                   <p>
@@ -46,7 +46,7 @@ export default function Home() {
                   </p>
                 </div>
               </RevealWrapper>
-              <RevealWrapper origin="bottom">
+              <RevealWrapper delay={100} origin="bottom">
                 <div className="why-element">
                   <span>2</span>
                   <p>
@@ -54,7 +54,7 @@ export default function Home() {
                   </p>
                 </div>
               </RevealWrapper>
-              <RevealWrapper origin="bottom">
+              <RevealWrapper delay={100} origin="bottom">
                 <div className="why-element">
                   <span>3</span>
                   <p>
@@ -71,7 +71,7 @@ export default function Home() {
       <section className="home-third">
         <div className="_container">
           <div className="home-third__body">
-            <RevealWrapper origin="bottom">
+            <RevealWrapper delay={100} origin="bottom">
               <div className="home-third__col-01">
                 <h2>Already a member?</h2>
                 <p>
@@ -94,7 +94,7 @@ export default function Home() {
               </div>
             </RevealWrapper>
 
-            <RevealWrapper origin="bottom">
+            <RevealWrapper delay={100} origin="bottom">
               <div className="home-third__col-02">
                 <h2>Join us today - it&apos;s free!</h2>
                 <p>
@@ -117,7 +117,7 @@ export default function Home() {
       <section className="home-fourth">
         <div className="_container">
           <div className="home-fourth__body">
-            <RevealWrapper origin="bottom">
+            <RevealWrapper delay={100} origin="bottom">
               <h2 className="section-title">
                 Upgrade your <br />
                 payment experience
@@ -233,7 +233,7 @@ export default function Home() {
       <section className="home-provide">
         <div className="_container">
           <div className="home-provide__body">
-            <RevealWrapper origin="bottom">
+            <RevealWrapper delay={100} origin="bottom">
               <h2 className="section-title">We provide</h2>
             </RevealWrapper>
             <RevealList
@@ -276,7 +276,7 @@ export default function Home() {
               </div>
             </RevealList>
 
-            <RevealWrapper origin="bottom">
+            <RevealWrapper delay={100} origin="bottom">
               <Link href="#" className="orange-button">
                 Become a member
               </Link>
@@ -288,7 +288,7 @@ export default function Home() {
       <section className="home-prioritise">
         <div className="_container">
           <div className="home-prioritise__body">
-            <RevealWrapper origin="bottom">
+            <RevealWrapper delay={100} origin="bottom">
               <h2 className="section-title">We prioritise</h2>
             </RevealWrapper>
             <RevealList
@@ -458,7 +458,7 @@ export default function Home() {
       <section className="home-last">
         <div className="_container">
           <div className="home-last__body">
-            <RevealWrapper origin="bottom">
+            <RevealWrapper delay={100} origin="bottom">
               <div className="home-last__col-01">
                 <span class="highlight">
                   Optimise your finances easy as ABC
@@ -478,7 +478,7 @@ export default function Home() {
               </div>
             </RevealWrapper>
 
-            <RevealWrapper origin="bottom">
+            <RevealWrapper delay={100} origin="bottom">
               <div className="home-last__col-02">
                 <span class="highlight">Contact us</span>
                 <h2>

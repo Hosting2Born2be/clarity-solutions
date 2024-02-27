@@ -32,7 +32,7 @@ const Header = () => {
                 <Link href="/tariffs">Tariffs</Link>
                 <Link href="#">FAQ</Link>
                 <Link href="/insights">Insights</Link>
-                <Link href="#">Contacts</Link>
+                <Link href="/contacts">Contacts</Link>
               </nav>
 
               <span className="mobile-menu-btn" onClick={handleMenu}>

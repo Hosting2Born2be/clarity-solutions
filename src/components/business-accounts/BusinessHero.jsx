@@ -9,7 +9,7 @@ const BusinessHero = () => {
       <section className="business-hero">
         <div className="_container">
           <div className="business-hero__body">
-            <RevealWrapper origin="bottom">
+            <RevealWrapper delay={100} origin="bottom">
               <h1 className="wow fadeInUp">Expand your financial reach</h1>
               <p className="wow fadeInUp">
                 Empower your business with Clarity Solutions Business Accounts,

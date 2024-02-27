@@ -33,7 +33,7 @@ const BusinessLast = () => {
       <section className="business-last">
         <div className="_container">
           <div className="business-last__body">
-            <RevealWrapper origin="bottom">
+            <RevealWrapper delay={100} origin="bottom">
               <h2 className="section-title">
                 Transact securely
                 <br />
