@@ -1,5 +1,6 @@
 import "@/public/scss/business.scss";
 import BusinessHero from "@/src/components/business-accounts/BusinessHero";
+import BusinessLast from "@/src/components/business-accounts/BusinessLast";
 import BusinessSecond from "@/src/components/business-accounts/BusinessSecond";
 import BusinessThird from "@/src/components/business-accounts/BusinessThird";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <BusinessHero/>
       <BusinessSecond/>
       <BusinessThird/>
+      <BusinessLast/>
     </>
   );
 }
