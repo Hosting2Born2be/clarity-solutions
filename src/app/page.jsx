@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import "@/public/scss/home.scss";
 import { RevealWrapper, RevealList } from "next-reveal";
+import ParallaxComponent from "../components/ParallaxComponent";
 
 export default function Home() {
   return (
@@ -22,6 +23,10 @@ export default function Home() {
             </RevealWrapper>
           </div>
         </div>
+        <ParallaxComponent />
+        <RevealWrapper origin="bottom">
+          <img src="/images/home/hero-mobile.png" />
+        </RevealWrapper>
       </section>
 
       <section className="home-second">
