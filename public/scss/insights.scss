@@ -52,17 +52,21 @@
         @media (max-width:992px){
             flex-direction: column;
         }
-        >a{
+        >div{
             width: calc(33.33% - 20px);
+            @media (max-width:992px){
+                width: 100%;
+            }
+        }
+        a{
+            width: 100%;
             border-radius:16px;
             overflow: hidden;
             background: #FFF;
             box-shadow: 0px 4px 31px 0px rgba(0, 0, 0, 0.05);
             display: flex;
             flex-direction: column;
-            @media (max-width:992px){
-                width: 100%;
-            }
+            
             .thumbnail{
                 background-size: cover;
                 background-position: center;

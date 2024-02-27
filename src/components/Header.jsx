@@ -18,7 +18,7 @@ const Header = () => {
   
   return (
     <>
-      <div className={`head-wrap ${menuOpened && "fixed"}`}>
+      <div className={`head-wrap ${menuOpened ? "fixed" : ''}`}>
         <div className="top-head"></div>
         <header className={menuOpened && "fixed"}>
           <div className="_container">
