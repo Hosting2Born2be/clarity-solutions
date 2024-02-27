@@ -20,7 +20,7 @@ const ValidationSchema = Yup.object().shape({
 
 const ContactsLast = () => {
   const [resultMessage, setResultMessage] = useState("");
-  
+
   return (
     <>
       <section className="contacts-last">
@@ -64,15 +64,11 @@ const ContactsLast = () => {
                     resetForm();
                     setResultMessage("success");
                   } else {
-                    setResultMessage(
-                      "failed"
-                    );
+                    setResultMessage("failed");
                   }
                 } catch (error) {
                   console.error(error);
-                  setResultMessage(
-                    "failed"
-                  );
+                  setResultMessage("failed");
                 }
               }}
             >
@@ -161,14 +157,17 @@ const ContactsLast = () => {
 
                   {resultMessage === "success" ? (
                     <div className="input-wrap full">
-                      <div className="message success">Your message was sent successfully!</div>
+                      <div className="message success">
+                        Your message was sent successfully!
+                      </div>
                     </div>
-                  ) : (
+                  ) : resultMessage === "failed" ? (
                     <div className="input-wrap full">
-                      <div className="message">Failed to send message. Please try again.</div>
+                      <div className="message error">
+                        Failed to send message. Please try again.
+                      </div>
                     </div>
-                  )}
-
+                  ) : null}
                 </Form>
               )}
             </Formik>
