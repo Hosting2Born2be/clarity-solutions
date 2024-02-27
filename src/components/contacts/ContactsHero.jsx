@@ -19,8 +19,8 @@ const ContactsHero = () => {
                 resolution to your queries. Before filling out the contact form,
                 do take a moment to explore our FAQ page.
               </p>
-              <Link href="/faq" className="black-button">
-                Dive into FAQ{" "}
+              <Link href="#" className="black-button">
+                Dive into FAQ
               </Link>
             </RevealWrapper>
             <RevealWrapper className="hero-mobile" origin="bottom">

@@ -14,14 +14,14 @@ const Footer = () => {
             <nav className="main-menu">
               <Link href="/business-accounts">Business Accounts</Link>
               <Link href="/tariffs">Tariffs</Link>
-              <Link href="/faq">FAQ</Link>
+              <Link href="#">FAQ</Link>
               <Link href="/insights">Insights</Link>
               <Link href="/contacts">Contacts</Link>
             </nav>
             <span></span>
             <nav className="legal">
-              <Link href="/terms-and-conditions">Terms and Conditions</Link>
-              <Link href="/privacy-policy">Privacy Policy</Link>
+              <Link href="#">Terms and Conditions</Link>
+              <Link href="#">Privacy Policy</Link>
             </nav>
           </div>
 
