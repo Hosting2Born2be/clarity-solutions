@@ -12,7 +12,7 @@ const Header = () => {
             </Link>
 
             <nav>
-              <Link href="#">Business Accounts</Link>
+              <Link href="/business-accounts">Business Accounts</Link>
               <Link href="#">Tariffs</Link>
               <Link href="#">FAQ</Link>
               <Link href="#">Contacts</Link>

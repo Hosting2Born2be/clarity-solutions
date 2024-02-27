@@ -12,7 +12,7 @@ const Footer = () => {
             </Link>
             <span></span>
             <nav className="main-menu">
-              <Link href="#">Business Accounts</Link>
+              <Link href="/business-accounts">Business Accounts</Link>
               <Link href="#">Tariffs</Link>
               <Link href="#">FAQ</Link>
               <Link href="#">Insights</Link>
