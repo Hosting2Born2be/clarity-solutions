@@ -3,6 +3,7 @@ import { RevealWrapper, RevealList } from "next-reveal";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import { Montserrat } from "next/font/google";
+import { useState } from "react";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -18,6 +19,8 @@ const ValidationSchema = Yup.object().shape({
 });
 
 const ContactsLast = () => {
+  const [resultMessage, setResultMessage] = useState("");
+  
   return (
     <>
       <section className="contacts-last">
@@ -31,8 +34,8 @@ const ContactsLast = () => {
               </h2>
               <p>
                 Feel free to reach out to us for any further inquiries. Please
-                complete <br/>the fields below, and our team will promptly contact
-                you!
+                complete <br />
+                the fields below, and our team will promptly contact you!
               </p>
             </RevealWrapper>
 
@@ -46,9 +49,31 @@ const ContactsLast = () => {
                 yourInquiry: "",
               }}
               validationSchema={ValidationSchema}
-              onSubmit={(values) => {
-                // Here you would handle form submission, e.g., sending data to a server
-                alert(JSON.stringify(values, null, 2));
+              onSubmit={async (values) => {
+                try {
+                  // Make a POST request to your serverless function
+                  const response = await fetch("/api/contact", {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(values),
+                  });
+                  console.log(JSON.stringify(values));
+                  if (response.ok) {
+                    //formik.resetForm();
+                    setResultMessage("Your message was sent successfully!");
+                  } else {
+                    setResultMessage(
+                      "Failed to send message. Please try again."
+                    );
+                  }
+                } catch (error) {
+                  console.error(error);
+                  setResultMessage(
+                    "An unexpected error occurred. Please try again."
+                  );
+                }
               }}
             >
               {({ errors, touched }) => (
@@ -133,6 +158,13 @@ const ContactsLast = () => {
                   <button type="submit" className="orange-button">
                     Send Message
                   </button>
+
+                  {resultMessage && 
+                  <div className="input-wrap full">
+                      <div className="message succes">{resultMessage}</div>
+                  </div>
+                  }
+
                 </Form>
               )}
             </Formik>
