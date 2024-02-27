@@ -18,7 +18,7 @@ const Header = () => {
   
   return (
     <>
-      <div className={`head-wrap ${menuOpened ? "fixed" : ''}`}>
+      <div className={`head-wrap ${menuOpened && "fixed"}`}>
         <div className="top-head"></div>
         <header className={menuOpened && "fixed"}>
           <div className="_container">
@@ -30,7 +30,7 @@ const Header = () => {
               <nav className={menuOpened && "opened"}>
                 <Link href="/business-accounts">Business Accounts</Link>
                 <Link href="/tariffs">Tariffs</Link>
-                <Link href="/faq">FAQ</Link>
+                <Link href="#">FAQ</Link>
                 <Link href="/insights">Insights</Link>
                 <Link href="/contacts">Contacts</Link>
               </nav>
