@@ -9,8 +9,10 @@
     overflow: hidden;
     
     &__body{
+        width: 100%;
         display: flex;
         align-items: center;
+        justify-content: space-between;
         >div{
             display: flex;
         }
