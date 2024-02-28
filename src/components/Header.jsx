@@ -22,7 +22,7 @@ const Header = () => {
         <div className="top-head">
           <div className="_container">
             <div className="top-icons">
-              <div className="icons-wrap ">
+              <div className="icons-wrap mob-hidden">
                 <a href="mailto:info@clarity-solutions.io">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M7 9L12 12.5L17 9" stroke="#282828" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
