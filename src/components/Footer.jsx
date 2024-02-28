@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="_container">
           <div className="foot-top">
             <Link href="/" className="logo">
-              Clarity Solutions
+              <img src="/images/logo.svg" />
             </Link>
             <span></span>
             <nav className="main-menu">
@@ -40,13 +40,14 @@ const Footer = () => {
               the Service Organizational Controls Report. Clarity Solutions and
               its offerings comply with the Payment Card Industry Payment
               Application Data Security Standard (PA-DSS) and PCI Data Security
-              Standard (PCI DSS) as applicable to our services. 
-              <br/><br/>
-              Reputable banks issue Clarity Solutions’ cards under relevant regulatory licences.
-              As an authorised Program Manager and registered service provider,
-              Clarity Solutions ensures all fund transfers are processed through
-              partner financial institutions utilising certified “PrepaidGate”
-              technology.
+              Standard (PCI DSS) as applicable to our services.
+              <br />
+              <br />
+              Reputable banks issue Clarity Solutions’ cards under relevant
+              regulatory licences. As an authorised Program Manager and
+              registered service provider, Clarity Solutions ensures all fund
+              transfers are processed through partner financial institutions
+              utilising certified “PrepaidGate” technology.
             </span>
           </div>
         </div>
