@@ -22,15 +22,15 @@ const Header = () => {
         <div className="top-head">
           <div className="_container">
             <div className="top-icons">
-              <div className="icons-wrap dt-hidden mob-hidden">
-                <a href="#">
+              <div className="icons-wrap ">
+                <a href="mailto:info@clarity-solutions.io">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M7 9L12 12.5L17 9" stroke="#282828" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M2 17V7C2 6.46957 2.21071 5.96086 2.58579 5.58579C2.96086 5.21071 3.46957 5 4 5H20C20.5304 5 21.0391 5.21071 21.4142 5.58579C21.7893 5.96086 22 6.46957 22 7V17C22 17.5304 21.7893 18.0391 21.4142 18.4142C21.0391 18.7893 20.5304 19 20 19H4C3.46957 19 2.96086 18.7893 2.58579 18.4142C2.21071 18.0391 2 17.5304 2 17Z" stroke="#282828" stroke-width="1.5"/>
                   </svg>
-                  Email
+                  info@clarity-solutions.io
                 </a>
-                <a href="#">
+                <a href="#" className="dt-hidden mob-hidden">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                     <path d="M18.118 14.702L14 15.5C11.218 14.104 9.49999 12.5 8.49999 10L9.26999 5.87L7.81499 2H4.06399C2.93599 2 2.04799 2.932 2.21699 4.047C2.63699 6.83 3.87699 11.877 7.49999 15.5C11.305 19.305 16.786 20.956 19.802 21.613C20.967 21.866 22 20.958 22 19.765V16.181L18.118 14.702Z" stroke="#282828" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>

@@ -8,6 +8,7 @@ import ParallaxComponent from "../components/ParallaxComponent";
 export default function Home() {
   return (
     <>
+      
       <section className="home-hero">
         <div className="_container">
           <div className="home-hero__body">

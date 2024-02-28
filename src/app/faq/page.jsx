@@ -1,17 +1,14 @@
 import "@/public/scss/faq.scss";
+import FaqHero from "@/src/components/faq/FaqHero";
+import FaqWrap from "@/src/components/faq/FaqWrap";
 
 
 
 export default async function Faq() {
   return (
     <>
-      <section className="faq-wrap">
-        <div className="_container">
-          <div className="faq-inner__body">
-
-          </div>
-        </div>
-      </section>
+      <FaqHero/>
+      <FaqWrap/>
     </>
   );
 }
