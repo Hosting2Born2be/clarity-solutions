@@ -22,6 +22,10 @@ img{
 
 a{
 	text-decoration: none;
+	outline:none!important;
+	@media (max-width:992px){
+		outline:none!important;
+	}
 }
 
 .section-title{
