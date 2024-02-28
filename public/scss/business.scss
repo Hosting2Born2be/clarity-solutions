@@ -131,6 +131,11 @@
             padding: 40px;
             background-size: auto;
         }
+        >div{
+            @media (max-width:992px){
+                width: 100%;
+            }
+        }
     }
 
     .business-second-row{
