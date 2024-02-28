@@ -24,7 +24,7 @@ const Header = () => {
           <div className="_container">
             <div className="header-wrap">
               <Link href="/" className="logo">
-                Clarity Solutions
+                <img src="/images/logo.svg"/>
               </Link>
 
               <nav className={menuOpened && "opened"}>
