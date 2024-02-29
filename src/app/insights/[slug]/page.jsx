@@ -6,6 +6,10 @@ export async function generateMetadata({ params: { slug } }) {
     return {
       title: insight.seo_title,
       description: insight.seo_description,
+      openGraph: {
+        title: insight.seo_title,
+        description: insight.seo_description,
+      },
     };
   }
 
