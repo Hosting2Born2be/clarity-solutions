@@ -1,20 +1,33 @@
 "use client";
 import { RevealWrapper, RevealList } from "next-reveal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import Tab1 from "./tabContent/Tab1";
-import Tab2 from "./tabContent/Tab2";
-import Tab3 from "./tabContent/Tab3";
-import Tab4 from "./tabContent/Tab4";
-import Tab5 from "./tabContent/Tab5";
+import Accordion from "./tabContent/Accordion";
+import { tab1, tab2, tab3, tab4, tab5 } from "@/lib/faq";
 
 const FaqWrap = () => {
   const [activeTab, setActiveTab] = useState("#tab1");
+  const [items, setItems] = useState(tab1);
 
   const handleTabClick = (e, tabId) => {
     e.preventDefault();
     setActiveTab(tabId);
+    {
+      tabId == "#tab1"
+        ? setItems(tab1)
+        : tabId === "#tab2"
+        ? setItems(tab2)
+        : tabId === "#tab3"
+        ? setItems(tab3)
+        : tabId === "#tab4"
+        ? setItems(tab4)
+        : tabId === "#tab5"
+        ? setItems(tab5)
+        : setItems(tab1)
+    }
   };
+
+  useEffect(() => {}, [activeTab]);
 
   return (
     <>
@@ -65,13 +78,7 @@ const FaqWrap = () => {
             </RevealList>
 
             <RevealWrapper className="tab-content" delay={100} origin="bottom">
-              
-              <Tab1 activeTab={activeTab}/>
-              <Tab2 activeTab={activeTab}/>
-              <Tab3 activeTab={activeTab}/>
-              <Tab4 activeTab={activeTab}/>
-              <Tab5 activeTab={activeTab}/>
-              
+              <Accordion items={items} />
             </RevealWrapper>
           </div>
         </div>

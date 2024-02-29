@@ -10,16 +10,17 @@ const Accordion = ({items}) => {
   };
 
   useEffect(() => {
+    setOpenIndex(null);
     contentRef.current = contentRef.current.slice(0, items.length);
   }, [items]);
 
   return (
     <div className="accordion">
-      {items.map((item, index) => (
+      {items.map((item) => (
         <div
-          key={index}
-          className={`accordion__item ${openIndex === index ? "opened" : ""}`}
-          onClick={() => toggleItem(index)}
+          key={item.id}
+          className={`accordion__item ${openIndex === item.id ? "opened" : ""}`}
+          onClick={() => toggleItem(item.id)}
         >
           <div className="accordion__title">
             <h4 className="accordion__title-text">{item.title}</h4>
@@ -28,11 +29,11 @@ const Accordion = ({items}) => {
           </div>
           <div
             className="accordion__content"
-            ref={(el) => (contentRef.current[index] = el)}
+            ref={(el) => (contentRef.current[item.id] = el)}
             style={{
               maxHeight:
-                openIndex === index
-                  ? `${contentRef.current[index]?.scrollHeight}px`
+                openIndex === item.id
+                  ? `${contentRef.current[item.id]?.scrollHeight}px`
                   : "0",
               overflow: "hidden",
               transition: "max-height 0.3s ease",

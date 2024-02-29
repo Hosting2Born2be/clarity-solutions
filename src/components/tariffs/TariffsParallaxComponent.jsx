@@ -39,7 +39,7 @@ const TariffsParallaxComponent = () => {
       <div value="3" className="circle3">
         <img src="/images/home/circle-white.svg" />
       </div>
-      <div value="3" className="circle4">
+      <div value="5" className="circle4">
         <img src="/images/home/circle-black.svg" />
       </div>
       {/* Add more parallax layers as needed */}
