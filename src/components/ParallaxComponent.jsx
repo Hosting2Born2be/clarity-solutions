@@ -31,25 +31,25 @@ const ParallaxComponent = () => {
     <div className="parallax">
       {/* Your parallax content here */}
       <div value="3" className="hero1">
-        <img src="/images/home/hero1.png" />
+        <img src="/images/home/hero1.png" alt="Hero 1"/>
       </div>
       <div value="5" className="hero2">
-        <img src="/images/home/hero2.png" />
+        <img src="/images/home/hero2.png" alt="Hero 2"/>
       </div>
       <div value="-5" className="hero3">
-        <img src="/images/home/hero3.png" />
+        <img src="/images/home/hero3.png" alt="Hero 3"/>
       </div>
       <div value="-3" className="circle1">
-        <img src="/images/home/circle-white.svg" />
+        <img src="/images/home/circle-white.svg" alt="Circle white"/>
       </div>
       <div value="-3" className="circle2">
-        <img src="/images/home/circle-black.svg" />
+        <img src="/images/home/circle-black.svg" alt="Circle black"/>
       </div>
       <div value="-3" className="circle3">
-        <img src="/images/home/circle-black.svg" />
+        <img src="/images/home/circle-black.svg" alt="Circle black"/>
       </div>
       <div value="-3" className="circle4">
-        <img src="/images/home/circle-white.svg" />
+        <img src="/images/home/circle-white.svg" alt="Circle white"/>
       </div>
       {/* Add more parallax layers as needed */}
     </div>
