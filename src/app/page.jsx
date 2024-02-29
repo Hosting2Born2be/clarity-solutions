@@ -26,7 +26,7 @@ export default function Home() {
         </div>
         <ParallaxComponent />
         <RevealWrapper className="hero-mobile" origin="bottom">
-          <img src="/images/home/hero-mobile.png" />
+          <img src="/images/home/hero-mobile.png" alt="Hero Mobile"/>
         </RevealWrapper>
       </section>
 
@@ -84,11 +84,11 @@ export default function Home() {
                 <h4>App available on:</h4>
                 <div className="buttons-wrap">
                   <Link className="black-button" href="#">
-                    <img src="/images/home/appstore.svg" />
+                    <img src="/images/home/appstore.svg" alt="App Store"/>
                     App Store
                   </Link>
                   <Link className="black-button" href="#">
-                    <img src="/images/home/google.svg" />
+                    <img src="/images/home/google.svg" alt="Google Play"/>
                     Google Play
                   </Link>
                 </div>
@@ -105,7 +105,7 @@ export default function Home() {
                 </p>
                 <div className="buttons-wrap">
                   <Link className="black-button" href="#">
-                    <img src="/images/home/sign-up.svg" />
+                    <img src="/images/home/sign-up.svg" alt="Sign up"/>
                     Sign up
                   </Link>
                 </div>

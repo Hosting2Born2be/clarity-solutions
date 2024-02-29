@@ -7,8 +7,8 @@ const Footer = () => {
       <footer>
         <div className="_container">
           <div className="foot-top">
-            <Link href="/" className="logo">
-              <img src="/images/logo.svg" />
+            <Link href="/" className="logo" aria-label="Logo">
+              <img src="/images/logo.svg" alt="Logo"/>
             </Link>
             <span></span>
             <nav className="main-menu">
@@ -79,16 +79,16 @@ const Footer = () => {
 
             <div className="soc dt-hidden mob-hidden">
               <a href="#">
-                <img src="/images/whatsApp.svg"/>
+                <img src="/images/whatsApp.svg" alt="whatsApp"/>
               </a>
               <a href="#">
-                <img src="/images/telegram.svg"/>
+                <img src="/images/telegram.svg" alt="telegram"/>
               </a>
               <a href="#">
-                <img src="/images/youtube.svg"/>
+                <img src="/images/youtube.svg" alt="youtube"/>
               </a>
               <a href="#">
-                <img src="/images/in.svg"/>
+                <img src="/images/in.svg" alt="linkedin"/>
               </a>
             </div>
 

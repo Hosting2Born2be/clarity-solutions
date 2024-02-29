@@ -59,8 +59,8 @@ const Header = () => {
         <header className={menuOpened && "fixed"}>
           <div className="_container">
             <div className="header-wrap">
-              <Link href="/" className="logo">
-                <img src="/images/logo.svg" />
+              <Link href="/" className="logo" aria-label="Logo">
+                <img src="/images/logo.svg" alt="Logo"/>
               </Link>
 
               <nav className={menuOpened && "opened"}>
