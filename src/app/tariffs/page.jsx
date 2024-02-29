@@ -9,6 +9,7 @@ export const metadata = {
   openGraph: {
     title: "Clarity Solutions Tariffs: Transparent Pricing for Financial Services",
     description: "Explore Clarity Solutions tariffs for transparent pricing on card accounts, transfers, and ATM transactions. See our cost-effective options for hassle-free financial management.",
+    images: "/images/meta.jpg",
   },
 };
 

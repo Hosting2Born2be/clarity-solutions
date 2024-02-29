@@ -11,6 +11,7 @@ export const metadata = {
   openGraph: {
     title: "Clarity Solutions Business Accounts: Streamline Your Payment Processes",
     description: "Expand your financial reach with Clarity Solutions Business Accounts. Tailored solutions designed to support freelancers, gig economy platforms, and e-commerce businesses.",
+    images: "/images/meta.jpg",
   },
 };
 

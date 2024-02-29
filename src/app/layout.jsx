@@ -19,6 +19,7 @@ export const metadata = {
       template: "%s",
     },
     description: 'Manage your money securely and unlock financial freedom with Clarity Solutions. Explore our versatile debit card options and seamless payment solutions for individuals and businesses.',
+    images: "/images/meta.jpg",
   },
 };
 

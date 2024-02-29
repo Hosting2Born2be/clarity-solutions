@@ -9,6 +9,7 @@ export const metadata = {
   openGraph: {
     title: "Clarity Solutions Insights: Stay Informed with Our Latest Articles",
     description: "Explore insightful articles covering financial freedom, global transactions, payment security, and emerging trends in digital payments. Stay ahead with Clarity Solutions.",
+    images: "/images/meta.jpg",
   },
 };
 

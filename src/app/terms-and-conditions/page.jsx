@@ -4,11 +4,15 @@ import "@/public/scss/policy.scss";
 const pageId = 44;
 
 export async function generateMetadata() {
-    const page = await getPage(pageId);
-    return {
-      title: page.title,
-    };
-  }
+  const page = await getPage(pageId);
+  return {
+    title: `${page.title} | Clarity Solutions`,
+    openGraph: {
+      title: `${page.title} | Clarity Solutions`,
+      images: "/images/meta.jpg",
+    },
+  };
+}
 
 export default async function PolicyPage() {
   const page = await getPage(pageId);
