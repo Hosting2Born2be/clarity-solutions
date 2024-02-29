@@ -29,7 +29,7 @@ export async function POST(request) {
     // Set up email data
     const mailOptions = {
       from: '"Clarity Solutions" <noreply@clarity-solutions.io>', // Sender address
-      to: "serg.web@acceptance.ltd", // Change to your recipient's email
+      to: "info@clarity-solutions.io", // Change to your recipient's email
       subject: "Contact Form Submission",
       text: `Name: ${firstName} ${lastName}\nEmail: ${emailAddress}\nResidentialCountry: ${residentialCountry}\nSAN or Card Number: ${sanCard}\nYour Inquiry: ${yourInquiry}`,
     };
