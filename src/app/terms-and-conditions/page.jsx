@@ -9,7 +9,7 @@ export async function generateMetadata() {
     title: `${page.title} | Clarity Solutions`,
     openGraph: {
       title: `${page.title} | Clarity Solutions`,
-      images: "/images/meta.jpg",
+      images: "https://clarity-solutions.io/images/meta.jpg",
     },
   };
 }

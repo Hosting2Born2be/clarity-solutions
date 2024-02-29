@@ -9,7 +9,7 @@ export const metadata = {
   openGraph: {
     title: "Get in Touch with Clarity Solutions",
     description: "Have a question or need assistance? Feel free to reach out to us through our contact form. Our team is here to help you promptly. Don't forget to explore our FAQ section for quick answers to common queries before reaching out.",
-    images: "/images/meta.jpg",
+    images: "https://clarity-solutions.io/images/meta.jpg",
   },
 };
 

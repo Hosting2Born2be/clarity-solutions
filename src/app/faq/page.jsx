@@ -8,7 +8,7 @@ export const metadata = {
   openGraph: {
     title: "Clarity Solutions FAQ: Answers to Popular Questions",
     description: "Find essential information about prepaid cards, including usage, eligibility, fees, and troubleshooting. Get answers to common questions to enhance your Clarity Solutions experience.",
-    images: "/images/meta.jpg",
+    images: "https://clarity-solutions.io/images/meta.jpg",
   },
 };
 
