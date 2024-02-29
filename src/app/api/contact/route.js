@@ -18,8 +18,8 @@ export async function POST(request) {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "serg.web@acceptance.ltd", // Your Gmail email
-        pass: "JN69Gb85rt", // Your Gmail password or app password
+        user: "noreply@clarity-solutions.io", // Your Gmail email
+        pass: "bb%&95y6r2%P3dT*fgt", // Your Gmail password or app password
       },
       tls: {
         rejectUnauthorized: false // This bypasses the certificate validation
@@ -28,8 +28,8 @@ export async function POST(request) {
 
     // Set up email data
     const mailOptions = {
-      from: '"Clarity Solutions" <serg.web@acceptance.ltd>', // Sender address
-      to: "serg.web@acceptance.ltd", // Change to your recipient's email
+      from: '"Clarity Solutions" <noreply@clarity-solutions.io>', // Sender address
+      to: "info@clarity-solutions.io", // Change to your recipient's email
       subject: "Contact Form Submission",
       text: `Name: ${firstName} ${lastName}\nEmail: ${emailAddress}\nResidentialCountry: ${residentialCountry}\nSAN or Card Number: ${sanCard}\nYour Inquiry: ${yourInquiry}`,
     };
