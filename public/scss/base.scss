@@ -98,63 +98,6 @@ a{
 }
 
 
-.policy-hero {
-	margin:50px 0 100px 0;
-	h1 {
-		color: #131313;
-		font-size: 36px;
-		font-style: normal;
-		font-weight: 700;
-		line-height: normal;
-		margin-bottom:30px;
-		@media (max-width:992px){
-			font-size: 24px;
-		}
-	}
-	.policy-content {
-		a{
-			color: #005369;
-			font-size: 16px;
-			font-style: normal;
-			font-weight: 400;
-			line-height: normal;
-			text-decoration-line: underline;
-		}
-		p {
-			color: #212121;
-			font-size: 16px;
-			font-style: normal;
-			font-weight: 400;
-			line-height: normal;
-		}
-		h2{
-			color: #212121;
-			font-size: 24px;
-			font-style: normal;
-			font-weight: 700;
-			line-height: normal;
-			margin:40px 0 20px 0;
-			strong{
-				font-weight: 700;
-			}
-			&:first-child {
-				margin-top:0;
-			}
-		}
-		ul, ol {
-			margin:0 0 20px 0;
-			padding:0 0 0 16px;
-			li {
-				color: #212121;
-				font-size: 16px;
-				font-style: normal;
-				font-weight: 400;
-				line-height: normal;
-			}
-		}
-	}
-}
-
 .main-button{
 	color: var(--2-b, #FFF);
 	font-size: 14px;

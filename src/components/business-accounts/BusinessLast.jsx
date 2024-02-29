@@ -4,6 +4,21 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import { Montserrat } from "next/font/google";
 import { useState } from "react";
+import Select from "react-select";
+import countries from "@/lib/countries.json";
+
+const countryOptions = countries.map((country) => ({
+  value: country.name,
+  label: country.name,
+}));
+
+const customStyles = {
+  option: (provided, state) => ({
+    ...provided,
+    backgroundColor: state.isSelected ? '#f0f0f0' : '#fff',
+    color: state.isSelected ? '#000' : '#333',
+  }),
+};
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 const requiredText = "This field is required";
@@ -75,7 +90,7 @@ const BusinessLast = () => {
                 }
               }}
             >
-              {({ errors, touched }) => (
+              {({ errors, touched, setFieldValue, values }) => (
                 <Form className={`contact-form ${montserrat.className}`}>
                   <div className="input-wrap">
                     <Field
@@ -86,7 +101,7 @@ const BusinessLast = () => {
                       }
                     />
                     {errors.companyName && touched.companyName ? (
-                      <div>{errors.companyName}</div>
+                      <div className="error-label">{errors.companyName}</div>
                     ) : null}
                   </div>
                   <div className="input-wrap">
@@ -98,7 +113,7 @@ const BusinessLast = () => {
                       }
                     />
                     {errors.contactName && touched.contactName ? (
-                      <div>{errors.contactName}</div>
+                      <div className="error-label">{errors.contactName}</div>
                     ) : null}
                   </div>
                   <div className="input-wrap">
@@ -112,7 +127,7 @@ const BusinessLast = () => {
                       }
                     />
                     {errors.companyWebsite && touched.companyWebsite ? (
-                      <div>{errors.companyWebsite}</div>
+                      <div className="error-label">{errors.companyWebsite}</div>
                     ) : null}
                   </div>
                   <div className="input-wrap">
@@ -127,7 +142,7 @@ const BusinessLast = () => {
                       }
                     />
                     {errors.contactPhoneNumber && touched.contactPhoneNumber ? (
-                      <div>{errors.contactPhoneNumber}</div>
+                      <div className="error-label">{errors.contactPhoneNumber}</div>
                     ) : null}
                   </div>
                   <div className="input-wrap">
@@ -142,41 +157,55 @@ const BusinessLast = () => {
                       }
                     />
                     {errors.emailAddress && touched.emailAddress ? (
-                      <div>{errors.emailAddress}</div>
+                      <div className="error-label">{errors.emailAddress}</div>
                     ) : null}
                   </div>
-                  <div className="input-wrap">
-                    <Field
+
+                  <div className={`input-wrap ${errors.countryOfIncorporation && touched.countryOfIncorporation ? "error" : ""}`}>
+                    <Select
+                      options={countryOptions}
                       name="countryOfIncorporation"
-                      placeholder="Country of Incorporation"
-                      className={
-                        errors.countryOfIncorporation &&
-                        touched.countryOfIncorporation
-                          ? "error"
-                          : ""
+                      placeholder="Country Of Incorporation"
+                      styles={customStyles}
+                      value={countryOptions.find(
+                        (option) => option.value === values.countryOfIncorporation
+                      )}
+                      onChange={(option) =>
+                        setFieldValue("countryOfIncorporation", option.value)
                       }
+                      error={
+                        errors.countryOfIncorporation && touched.countryOfIncorporation
+                      }
+                      classNamePrefix="select"
                     />
-                    {errors.countryOfIncorporation &&
-                    touched.countryOfIncorporation ? (
-                      <div>{errors.countryOfIncorporation}</div>
+                    {errors.countryOfIncorporation && touched.countryOfIncorporation ? (
+                      <div className="error-label">{errors.countryOfIncorporation}</div>
                     ) : null}
                   </div>
-                  <div className="input-wrap">
-                    <Field
+
+
+                  <div className={`input-wrap ${errors.countryOfBankAccount && touched.countryOfBankAccount ? "error" : ""}`}>
+                    <Select
+                      options={countryOptions}
                       name="countryOfBankAccount"
                       placeholder="Country of Bank Account"
-                      className={
-                        errors.countryOfBankAccount &&
-                        touched.countryOfBankAccount
-                          ? "error"
-                          : ""
+                      styles={customStyles}
+                      value={countryOptions.find(
+                        (option) => option.value === values.countryOfBankAccount
+                      )}
+                      onChange={(option) =>
+                        setFieldValue("countryOfBankAccount", option.value)
                       }
+                      error={
+                        errors.countryOfBankAccount && touched.countryOfBankAccount
+                      }
+                      classNamePrefix="select"
                     />
-                    {errors.countryOfBankAccount &&
-                    touched.countryOfBankAccount ? (
-                      <div>{errors.countryOfBankAccount}</div>
+                    {errors.countryOfBankAccount && touched.countryOfBankAccount ? (
+                      <div className="error-label">{errors.countryOfBankAccount}</div>
                     ) : null}
                   </div>
+
                   <div className="input-wrap">
                     <Field
                       name="affiliatedWebsites"
@@ -188,7 +217,7 @@ const BusinessLast = () => {
                       }
                     />
                     {errors.affiliatedWebsites && touched.affiliatedWebsites ? (
-                      <div>{errors.affiliatedWebsites}</div>
+                      <div className="error-label">{errors.affiliatedWebsites}</div>
                     ) : null}
                   </div>
                   <div className="radio-wrap">
@@ -335,7 +364,7 @@ const BusinessLast = () => {
                     </div>
                     {errors.monthlyPaymentVolume &&
                     touched.monthlyPaymentVolume ? (
-                      <div>{errors.monthlyPaymentVolume}</div>
+                      <div className="error-label">{errors.monthlyPaymentVolume}</div>
                     ) : null}
                   </div>
                   <div className="radio-wrap">
@@ -413,7 +442,7 @@ const BusinessLast = () => {
                       </label>
                     </div>
                     {errors.sourceOfFunds && touched.sourceOfFunds ? (
-                      <div>{errors.sourceOfFunds}</div>
+                      <div className="error-label">{errors.sourceOfFunds}</div>
                     ) : null}
                   </div>
                   <div className="input-wrap">

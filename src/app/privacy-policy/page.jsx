@@ -1,5 +1,5 @@
 import { getPage } from "@/lib/insights";
-import "@/public/scss/insights.scss";
+import "@/public/scss/policy.scss";
 
 const pageId = 3;
 
@@ -14,9 +14,9 @@ export default async function PolicyPage() {
   const page = await getPage(pageId);
   return (
     <>
-      <section className="insights-wrap">
+      <section className="policy-wrap">
         <div className="_container">
-          <div className="insight-inner__body">
+          <div className="policy-wrap__body">
             <div className="header">
                 <h1>{page.title}</h1>
             </div>

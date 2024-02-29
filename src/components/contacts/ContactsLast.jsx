@@ -4,8 +4,24 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import { Montserrat } from "next/font/google";
 import { useState } from "react";
+import Select from "react-select";
+import countries from "@/lib/countries.json";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
+
+const countryOptions = countries.map((country) => ({
+  value: country.name,
+  label: country.name,
+}));
+
+const customStyles = {
+  option: (provided, state) => ({
+    ...provided,
+    backgroundColor: state.isSelected ? '#f0f0f0' : '#fff',
+    color: state.isSelected ? '#000' : '#333',
+  }),
+};
+
 
 const ValidationSchema = Yup.object().shape({
   firstName: Yup.string().required("This field is required"),
@@ -72,7 +88,7 @@ const ContactsLast = () => {
                 }
               }}
             >
-              {({ errors, touched }) => (
+              {({ errors, touched, setFieldValue, values }) => (
                 <Form className={`contact-form ${montserrat.className}`}>
                   <div className="input-wrap">
                     <Field
@@ -83,7 +99,7 @@ const ContactsLast = () => {
                       }
                     />
                     {errors.firstName && touched.firstName ? (
-                      <div>{errors.firstName}</div>
+                      <div className="error-label">{errors.firstName}</div>
                     ) : null}
                   </div>
                   <div className="input-wrap">
@@ -95,7 +111,7 @@ const ContactsLast = () => {
                       }
                     />
                     {errors.lastName && touched.lastName ? (
-                      <div>{errors.lastName}</div>
+                      <div className="error-label">{errors.lastName}</div>
                     ) : null}
                   </div>
 
@@ -111,21 +127,28 @@ const ContactsLast = () => {
                       }
                     />
                     {errors.emailAddress && touched.emailAddress ? (
-                      <div>{errors.emailAddress}</div>
+                      <div className="error-label">{errors.emailAddress}</div>
                     ) : null}
                   </div>
-                  <div className="input-wrap">
-                    <Field
+                  <div className={`input-wrap ${errors.residentialCountry && touched.residentialCountry ? "error" : ""}`}>
+                    <Select
+                      options={countryOptions}
                       name="residentialCountry"
                       placeholder="Residential Country"
-                      className={
-                        errors.residentialCountry && touched.residentialCountry
-                          ? "error"
-                          : ""
+                      styles={customStyles}
+                      value={countryOptions.find(
+                        (option) => option.value === values.residentialCountry
+                      )}
+                      onChange={(option) =>
+                        setFieldValue("residentialCountry", option.value)
                       }
+                      error={
+                        errors.residentialCountry && touched.residentialCountry
+                      }
+                      classNamePrefix="select"
                     />
                     {errors.residentialCountry && touched.residentialCountry ? (
-                      <div>{errors.residentialCountry}</div>
+                      <div className="error-label">{errors.residentialCountry}</div>
                     ) : null}
                   </div>
 
@@ -138,7 +161,7 @@ const ContactsLast = () => {
                       }
                     />
                     {errors.sanCard && touched.sanCard ? (
-                      <div>{errors.sanCard}</div>
+                      <div className="error-label">{errors.sanCard}</div>
                     ) : null}
                   </div>
 
