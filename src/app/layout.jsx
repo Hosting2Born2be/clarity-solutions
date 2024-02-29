@@ -1,31 +1,33 @@
 import { Montserrat } from "next/font/google";
-import '@/public/scss/base.scss';
+import "@/public/scss/base.scss";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Preloader from "../components/Preloader";
-
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
   title: {
-    default:
-      "Clarity Solutions",
-    template: "%s | Clarity Solutions",
+    default: "Welcome to Clarity Solutions: Simplify Your Finances Today",
+    template: "%s",
   },
-  description: "",
+  description: {
+    default:
+      "Manage your money securely and unlock financial freedom with Clarity Solutions. Explore our versatile debit card options and seamless payment solutions for individuals and businesses.",
+    template: "%s",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={montserrat.className}>
-        <Preloader/>
+        <Preloader />
         <Header />
         <main>{children}</main>
         <Footer />
-        <SpeedInsights/>
+        <SpeedInsights />
       </body>
     </html>
   );

@@ -6,7 +6,8 @@ import BusinessThird from "@/src/components/business-accounts/BusinessThird";
 
 
 export const metadata = {
-  title: "Business Accounts",
+  title: "Clarity Solutions Business Accounts: Streamline Your Payment Processes",
+  description: "Expand your financial reach with Clarity Solutions Business Accounts. Tailored solutions designed to support freelancers, gig economy platforms, and e-commerce businesses.",
 };
 
 export default function Business() {

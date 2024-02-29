@@ -4,7 +4,8 @@ import "@/public/scss/insights.scss";
 export async function generateMetadata({ params: { slug } }) {
     const insight = await getInsight(slug);
     return {
-      title: insight.title,
+      title: insight.seo_title,
+      description: insight.seo_description,
     };
   }
 
