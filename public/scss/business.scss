@@ -300,7 +300,13 @@
     }
     button{
         margin: 24px auto 0 auto;
+        font-family: inherit;
     }
+   
+    .radio-wrap{
+        width: 100%;
+    }
+
     .radio-row{
         display: flex;
         gap:24px;
@@ -374,7 +380,7 @@
                 }
             }
         }
-
+        
         .select{
             &__control{
                 padding: 0 24px;

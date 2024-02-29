@@ -40,11 +40,17 @@ footer{
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 500;
-                line-height: 106.8%; /* 17.088px */
+                line-height: 106.8%; 
+                &:hover{
+                    color: #F85C3A;
+                }
             }
             &.legal{
                 a{
                     color: rgba(255, 255, 255, 0.60);
+                    &:hover{
+                        color: #F85C3A;
+                    }
                 }
             }
         }
@@ -83,6 +89,16 @@ footer{
                 span{
                     width: calc(100% - 32px);
                     color: #fff;
+                }
+                &:hover{
+                    span{
+                        color: #F85C3A;
+                    }
+                    svg{
+                        path{
+                            stroke: #F85C3A;
+                        }
+                    }
                 }
             }
         }
