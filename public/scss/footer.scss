@@ -64,6 +64,10 @@ footer{
             display: flex;
             align-items: center;
             gap:24px;
+            @media (max-width:992px){
+                flex-direction: column;
+                align-items: flex-start;
+            }
             a{
                 display: flex;
                 align-items: center;
@@ -73,6 +77,13 @@ footer{
                 font-style: normal;
                 font-weight: 500;
                 line-height: 106.8%;
+                svg{
+                    width: 24px;
+                }
+                span{
+                    width: calc(100% - 32px);
+                    color: #fff;
+                }
             }
         }
         .soc{
