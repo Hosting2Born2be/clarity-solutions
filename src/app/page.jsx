@@ -8,25 +8,24 @@ import ParallaxComponent from "../components/ParallaxComponent";
 export default function Home() {
   return (
     <>
-      
       <section className="home-hero">
         <div className="_container">
           <div className="home-hero__body">
             <RevealWrapper delay={100} origin="bottom">
               <h1 className="wow fadeInUp">Welcome to Clarity Solutions</h1>
               <p className="wow fadeInUp">
-                At Clarity Solutions, we believe in empowering individuals and
-                businesses alike by providing seamless financial solutions. With
-                a focus on convenience, security, and accessibility, we strive
-                to make managing your finances more straightforward than ever
-                before. Join us on a journey towards financial freedom today!
+                At Clarity Solutions, we provide seamless financial solutions.
+                With a focus on convenience, security, and accessibility, we
+                strive to make managing your finances more straightforward than
+                ever before. Join us on a journey towards financial freedom
+                today!
               </p>
             </RevealWrapper>
           </div>
         </div>
         <ParallaxComponent />
         <RevealWrapper className="hero-mobile" origin="bottom">
-          <img src="/images/home/hero-mobile.png" alt="Hero Mobile"/>
+          <img src="/images/home/hero-mobile.png" alt="Hero Mobile" />
         </RevealWrapper>
       </section>
 
@@ -59,8 +58,8 @@ export default function Home() {
                 <div className="why-element">
                   <span>3</span>
                   <p>
-                    Global access through our online banking portal and mobile
-                    app ensures convenience wherever you are.
+                    Global access through our online banking portal ensures
+                    convenience wherever you are.
                   </p>
                 </div>
               </RevealWrapper>
@@ -74,22 +73,17 @@ export default function Home() {
           <div className="home-third__body">
             <RevealWrapper delay={100} origin="bottom">
               <div className="home-third__col-01">
-                <h2>Already a member?</h2>
+                <h2>Already <br/>a member?</h2>
                 <p>
                   If you&apos;re already part of our community, simply{" "}
                   <Link href="#">sign in</Link> to access your account.
-                  Alternatively, download our app for convenient on-the-go
-                  management.
                 </p>
-                <h4>App available on:</h4>
                 <div className="buttons-wrap">
-                  <Link className="black-button" href="#">
-                    <img src="/images/home/appstore.svg" alt="App Store"/>
-                    App Store
-                  </Link>
-                  <Link className="black-button" href="#">
-                    <img src="/images/home/google.svg" alt="Google Play"/>
-                    Google Play
+                  <Link className="orange-button" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                      <path d="M19 12.3965H12M12 12.3965L15 15.3965M12 12.3965L15 9.39648M19 6.39648V5.39648C19 4.86605 18.7893 4.35734 18.4142 3.98227C18.0391 3.6072 17.5304 3.39648 17 3.39648H7C6.46957 3.39648 5.96086 3.6072 5.58579 3.98227C5.21071 4.35734 5 4.86605 5 5.39648V19.3965C5 19.9269 5.21071 20.4356 5.58579 20.8107C5.96086 21.1858 6.46957 21.3965 7 21.3965H17C17.5304 21.3965 18.0391 21.1858 18.4142 20.8107C18.7893 20.4356 19 19.9269 19 19.3965V18.3965" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Sign in
                   </Link>
                 </div>
               </div>
@@ -97,7 +91,7 @@ export default function Home() {
 
             <RevealWrapper delay={100} origin="bottom">
               <div className="home-third__col-02">
-                <h2>Join us today - it&apos;s free!</h2>
+                <h2>Join us today - <br/>it&apos;s free!</h2>
                 <p>
                   Ready to experience the benefits of Clarity Solutions?{" "}
                   <Link href="#">Sign up</Link> for free today and unlock a
@@ -105,7 +99,9 @@ export default function Home() {
                 </p>
                 <div className="buttons-wrap">
                   <Link className="black-button" href="#">
-                    <img src="/images/home/sign-up.svg" alt="Sign up"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+                      <path d="M6 3.39648H3V6.39648M18 3.39648H21V6.39648M6 21.3965H3V18.3965M7 18.3965V17.3965C7 16.0704 7.52678 14.7986 8.46447 13.861C9.40215 12.9233 10.6739 12.3965 12 12.3965M12 12.3965C13.3261 12.3965 14.5979 12.9233 15.5355 13.861C16.4732 14.7986 17 16.0704 17 17.3965V18.3965M12 12.3965C12.7956 12.3965 13.5587 12.0804 14.1213 11.5178C14.6839 10.9552 15 10.1921 15 9.39648C15 8.60083 14.6839 7.83777 14.1213 7.27516C13.5587 6.71255 12.7956 6.39648 12 6.39648C11.2044 6.39648 10.4413 6.71255 9.87868 7.27516C9.31607 7.83777 9 8.60083 9 9.39648C9 10.1921 9.31607 10.9552 9.87868 11.5178C10.4413 12.0804 11.2044 12.3965 12 12.3965ZM18 21.3965H21V18.3965" stroke="#F6F6F6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
                     Sign up
                   </Link>
                 </div>
@@ -137,9 +133,8 @@ export default function Home() {
               <div className="left">
                 <h3>Quick Sign-Up for Payments</h3>
                 <p>
-                  Get started in under a minute and begin receiving payments
-                  instantly upon registration. It&apos;s fast, simple, and
-                  hassle-free.
+                  Get started in under a minute and begin paying instantly upon
+                  registration. It&apos;s fast, simple, and hassle-free.
                 </p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -206,9 +201,9 @@ export default function Home() {
               <div className="right">
                 <h3>Comprehensive Money Management</h3>
                 <p>
-                  Stay in control with our intuitive online banking portal and
-                  mobile app. Review transaction history, monitor balances, and
-                  access additional features effortlessly.
+                  Stay in control with our intuitive online banking portal.
+                  Review transaction history, monitor balances, and access
+                  additional features effortlessly.
                 </p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -272,7 +267,7 @@ export default function Home() {
                 <h4>Global Access</h4>
                 <p>
                   Access your funds and manage your account anywhere in the
-                  world with our online banking portal and mobile app.
+                  world with our online banking portal.
                 </p>
               </div>
             </RevealList>
@@ -439,10 +434,7 @@ export default function Home() {
               </div>
               <div class="how-element">
                 <span>2</span>
-                <p>
-                  Receive payments instantly or transfer funds to your bank
-                  account.
-                </p>
+                <p>Pay instantly or transfer funds to your bank account.</p>
               </div>
               <div class="how-element">
                 <span>3</span>
@@ -474,7 +466,9 @@ export default function Home() {
                   management tips, industry updates, and success stories.
                 </p>
                 <div className="buttons-wrap">
-                  <Link className="black-button" href="/insights">Go to blog</Link>
+                  <Link className="black-button" href="/insights">
+                    Go to blog
+                  </Link>
                 </div>
               </div>
             </RevealWrapper>
@@ -491,7 +485,9 @@ export default function Home() {
                   hearing from you.
                 </p>
                 <div className="buttons-wrap">
-                  <Link className="black-button" href="/contacts">Get assistance</Link>
+                  <Link className="black-button" href="/contacts">
+                    Get assistance
+                  </Link>
                 </div>
               </div>
             </RevealWrapper>

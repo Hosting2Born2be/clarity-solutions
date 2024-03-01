@@ -136,9 +136,8 @@ a{
     background: var(--2, #282828);
 	border: 1px solid #282828;
 	&:hover{
-		color: #fff;
-		background: #F85C3A;
-		border-color: #F85C3A;
+		color: #282828;
+		background: transparent;
 	}
 	@media (max-width:992px){
 		width: 100%;
@@ -155,9 +154,9 @@ a{
 	background: #F85C3A;
 	display:flex;
 	align-items:center;
-	gap:24px;
-	padding:0 40px;
-	height:50px;
+	gap:10px;
+	height: 48px;
+    padding: 0 40px;
 	justify-content:center;
 	text-decoration:none;
 	border-radius: 54px;

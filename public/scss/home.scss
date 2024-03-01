@@ -147,7 +147,7 @@
         }
         .why-element{
             height: 100%;
-            padding: 40px;
+            padding: 40px 30px;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -256,11 +256,22 @@
         .buttons-wrap{
             display: flex;
             gap:32px;
+            margin-top: 75px;
             @media (max-width:992px){
                 flex-direction: column;
                 gap:16px;
+                margin-top: 54px;
                 a{
                     width: 100%;
+                }
+            }
+            a{
+                &:hover{
+                    svg{
+                        path{
+                            stroke: #F85C3A;
+                        }
+                    }
                 }
             }
             
@@ -307,8 +318,18 @@
             @media (max-width:992px){
                 flex-direction: column;
                 gap:16px;
+                margin-top: 54px;
                 a{
                     width: 100%;
+                }
+            }
+            a{
+                &:hover{
+                    svg{
+                        path{
+                            stroke: #282828;
+                        }
+                    }
                 }
             }
             
