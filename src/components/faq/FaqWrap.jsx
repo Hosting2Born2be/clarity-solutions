@@ -23,7 +23,7 @@ const FaqWrap = () => {
         ? setItems(tab4)
         : tabId === "#tab5"
         ? setItems(tab5)
-        : setItems(tab1)
+        : setItems(tab1);
     }
   };
 
@@ -78,7 +78,7 @@ const FaqWrap = () => {
             </RevealList>
 
             <RevealWrapper className="tab-content" delay={100} origin="bottom">
-              <Accordion items={items} />
+              <Accordion key={activeTab} items={items} />
             </RevealWrapper>
           </div>
         </div>

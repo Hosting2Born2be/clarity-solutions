@@ -5,22 +5,26 @@ const Accordion = ({items}) => {
   const [openIndex, setOpenIndex] = useState(null);
   const contentRef = useRef([]);
 
-  const toggleItem = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   useEffect(() => {
     setOpenIndex(null);
     contentRef.current = contentRef.current.slice(0, items.length);
   }, [items]);
 
+  const toggleItem = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  
+
   return (
     <div className="accordion">
-      {items.map((item) => (
+      {items.map((item, index) => (
         <div
-          key={item.id}
-          className={`accordion__item ${openIndex === item.id ? "opened" : ""}`}
-          onClick={() => toggleItem(item.id)}
+          data-id={openIndex}
+          data-key={item.id}
+          key={index}
+          className={`accordion__item ${openIndex === index ? "opened" : ""}`}
+          onClick={() => toggleItem(index)}
         >
           <div className="accordion__title">
             <h4 className="accordion__title-text">{item.title}</h4>
@@ -29,11 +33,11 @@ const Accordion = ({items}) => {
           </div>
           <div
             className="accordion__content"
-            ref={(el) => (contentRef.current[item.id] = el)}
+            ref={(el) => (contentRef.current[index] = el)}
             style={{
               maxHeight:
-                openIndex === item.id
-                  ? `${contentRef.current[item.id]?.scrollHeight}px`
+                openIndex === index
+                  ? `${contentRef.current[index]?.scrollHeight}px`
                   : "0",
               overflow: "hidden",
               transition: "max-height 0.3s ease",
