@@ -15,7 +15,7 @@ const BusinessHero = () => {
               </h1>
               <p className="wow fadeInUp">
                 Unlock the potential of our payment solutions! Discover the
-                versatility of Clarity Solutions' debit cards. Effortlessly
+                versatility of Clarity Solutions&apos; debit cards. Effortlessly
                 manage expenses with dedicated IBAN accounts, monitor real-time
                 transactions, and streamline budget management with integrated
                 services. Take control of your finances today!
