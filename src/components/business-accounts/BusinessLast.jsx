@@ -6,6 +6,8 @@ import { Montserrat } from "next/font/google";
 import { useState } from "react";
 import Select from "react-select";
 import countries from "@/lib/countries.json";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const countryOptions = countries.map((country) => ({
   value: country.name,
@@ -42,6 +44,7 @@ const ValidationSchema = Yup.object().shape({
 });
 
 const BusinessLast = () => {
+  const [birthDate, setBirthDate] = useState(new Date());
   const [resultMessage, setResultMessage] = useState("");
   return (
     <>
@@ -152,6 +155,23 @@ const BusinessLast = () => {
                     ) : null}
                   </div>
 
+                  <div className="input-wrap">
+                    <DatePicker
+                      selected={values.birthDate}
+                      onChange={(date) => setFieldValue("birthDate", date)}
+                      className={`form-control ${
+                        errors.birthDate && touched.birthDate
+                          ? "errors"
+                          : ""
+                      }`}
+                      dateFormat="MMMM d, yyyy"
+                      placeholderText="Your Date of Birth"
+                    />
+                    {errors.birthDate && touched.birthDate ? (
+                      <div className="error-label">{errors.birthDate}</div>
+                    ) : null}
+                  </div>
+
                   <div
                     className={`input-wrap ${
                       errors.yourCountry && touched.yourCountry ? "error" : ""
@@ -173,20 +193,6 @@ const BusinessLast = () => {
                     />
                     {errors.yourCountry && touched.yourCountry ? (
                       <div className="error-label">{errors.yourCountry}</div>
-                    ) : null}
-                  </div>
-
-                  <div className="input-wrap">
-                    <Field
-                      type="date"
-                      name="birthDate"
-                      placeholder="Your Date of Birth"
-                      className={
-                        errors.birthDate && touched.birthDate ? "error" : ""
-                      }
-                    />
-                    {errors.birthDate && touched.birthDate ? (
-                      <div className="error-label">{errors.birthDate}</div>
                     ) : null}
                   </div>
 
@@ -686,13 +692,33 @@ const BusinessLast = () => {
                   {resultMessage === "success" ? (
                     <div className="input-wrap full">
                       <div className="message success">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" fill="none">
-                        <path d="M12.2773 20.8334L17.2773 25.8334L28.944 14.1667" stroke="#F85C3A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M20.6108 36.6668C29.8158 36.6668 37.2774 29.2052 37.2774 20.0002C37.2774 10.7952 29.8158 3.3335 20.6108 3.3335C11.4058 3.3335 3.94409 10.7952 3.94409 20.0002C3.94409 29.2052 11.4058 36.6668 20.6108 36.6668Z" stroke="#F85C3A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                      </svg>
-                        <span><b>Success!</b> Your account registration is complete! Thank
-                        you for choosing Clarity Solutions! We will reach you
-                        out to you shortly.</span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="41"
+                          height="40"
+                          viewBox="0 0 41 40"
+                          fill="none"
+                        >
+                          <path
+                            d="M12.2773 20.8334L17.2773 25.8334L28.944 14.1667"
+                            stroke="#F85C3A"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M20.6108 36.6668C29.8158 36.6668 37.2774 29.2052 37.2774 20.0002C37.2774 10.7952 29.8158 3.3335 20.6108 3.3335C11.4058 3.3335 3.94409 10.7952 3.94409 20.0002C3.94409 29.2052 11.4058 36.6668 20.6108 36.6668Z"
+                            stroke="#F85C3A"
+                            stroke-width="1.5"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                        <span>
+                          <b>Success!</b> Your account registration is complete!
+                          Thank you for choosing Clarity Solutions! We will
+                          reach you out to you shortly.
+                        </span>
                       </div>
                     </div>
                   ) : resultMessage === "failed" ? (

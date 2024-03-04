@@ -1,6 +1,6 @@
 "use client";
 import { RevealWrapper, RevealList } from "next-reveal";
-
+import Link from "next/link";
 
 const TariffsSecond = () => {
   return (
@@ -17,7 +17,9 @@ const TariffsSecond = () => {
               </thead>
               <tbody>
                 <tr>
-                  <td colSpan={4} className="subtitle">Card Account</td>
+                  <td colSpan={4} className="subtitle">
+                    Card Account
+                  </td>
                 </tr>
 
                 <tr>
@@ -28,10 +30,16 @@ const TariffsSecond = () => {
                 </tr>
 
                 <tr>
-                  <td>Physical card issuance <br/>(Chip + PayPass)</td>
+                  <td>
+                    Physical card issuance <br />
+                    (Chip + PayPass)
+                  </td>
                   <td>€150.00</td>
                   <td>Per Card</td>
-                  <td>One-time charge for plastic card issuance. Standard fees will apply thereafter.</td>
+                  <td>
+                    One-time charge for plastic card issuance. Standard fees
+                    will apply thereafter.
+                  </td>
                 </tr>
 
                 <tr>
@@ -43,7 +51,9 @@ const TariffsSecond = () => {
 
                 <tr>
                   <td>Yearly Account Maintenance</td>
-                  <td><span>FREE</span></td>
+                  <td>
+                    <span>FREE</span>
+                  </td>
                   <td>Every Year</td>
                   <td>There is no charge for annual maintenance.</td>
                 </tr>
@@ -57,14 +67,20 @@ const TariffsSecond = () => {
 
                 <tr>
                   <td>Clarity Solutions Client Help</td>
-                  <td><span>FREE</span></td>
+                  <td>
+                    <span>FREE</span>
+                  </td>
                   <td>All the Time</td>
-                  <td>Assistance is provided to Clarity Solutions clients at no cost.</td>
+                  <td>
+                    Assistance is provided to Clarity Solutions clients at no
+                    cost.
+                  </td>
                 </tr>
 
-
                 <tr>
-                  <td colSpan={4} className="subtitle">Transaction</td>
+                  <td colSpan={4} className="subtitle">
+                    Transaction
+                  </td>
                 </tr>
 
                 <tr>
@@ -92,15 +108,23 @@ const TariffsSecond = () => {
                   <td>Maximum Payment Amount </td>
                   <td>€50.000</td>
                   <td>Per Payment</td>
-                  <td>Payments above 5k EUR could require additional verification.</td>
+                  <td>
+                    Payments above 5k EUR could require additional verification.
+                  </td>
                 </tr>
-
               </tbody>
             </table>
           </div>
+
+          <RevealWrapper delay={100} origin="bottom">
+            <div className="need-help">
+              <h2>Have questions?</h2>
+              <Link href="/contacts" className="black-button">
+              Contact Us
+              </Link>
+            </div>
+          </RevealWrapper>
         </div>
-
-
       </section>
     </>
   );
