@@ -116,8 +116,7 @@ const Header = () => {
                 </Link>
 
                 <nav className={menuOpened && "opened"}>
-                  <Link href="/business-accounts">Business Accounts</Link>
-                  <Link href="/tariffs">Tariffs</Link>
+                  <Link href="/use-cases">Use Cases</Link>
                   <Link href="/faq">FAQ</Link>
                   <Link href="/insights">Insights</Link>
                   <Link href="/contacts">Contacts</Link>

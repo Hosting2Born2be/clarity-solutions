@@ -12,8 +12,7 @@ const Footer = () => {
             </Link>
             <span></span>
             <nav className="main-menu">
-              <Link href="/business-accounts">Business Accounts</Link>
-              <Link href="/tariffs">Tariffs</Link>
+              <Link href="/use-cases">Use Cases</Link>
               <Link href="/faq">FAQ</Link>
               <Link href="/insights">Insights</Link>
               <Link href="/contacts">Contacts</Link>

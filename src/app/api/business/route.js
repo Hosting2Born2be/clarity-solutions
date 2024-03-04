@@ -6,16 +6,19 @@ export async function POST(request) {
     const requestBody = await request.text();
     const bodyJSON = JSON.parse(requestBody);
     const {
-      companyName,
-      contactName,
-      companyWebsite,
+      yourName,
       contactPhoneNumber,
-      countryOfIncorporation,
-      countryOfBankAccount,
       emailAddress,
-      affiliatedWebsites,
+      birthDate,
+      yourCountry,
+      yourCity,
+      yourState,
+      zipCode,
+      addressLine1,
+      addressLine2,
+      countryOfBankAccount,
       monthlyPaymentVolume,
-      sourceOfFunds,
+      idType,
       anticipatedPaymentCountries,
       additionalComments
     } = bodyJSON;
@@ -37,7 +40,7 @@ export async function POST(request) {
       from: '"Clarity Solutions" <noreply@clarity-solutions.io>', // Sender address
       to: "info@clarity-solutions.io", // Change to your recipient's email
       subject: "Business Form Submission",
-      text: `Company name: ${companyName}\nContact name: ${contactName}\nEmail: ${emailAddress}\nCompany Website: ${companyWebsite}\nContact Phone Number: ${contactPhoneNumber}\nCountry of Incorporation: ${countryOfIncorporation}\nCountry of Bank Account: ${countryOfBankAccount}\nAffiliated Website: ${affiliatedWebsites}\nMonthly Payment Volume: ${monthlyPaymentVolume}\nSource of Funds: ${sourceOfFunds}\nAnticipated Payment Countries: ${anticipatedPaymentCountries}\nAdditional Comments: ${additionalComments}`,
+      text: `Name: ${yourName}\nEmail: ${emailAddress}\nContact Phone Number: ${contactPhoneNumber}\nDate of Birth: ${birthDate}\nCountry: ${yourCountry}\nCity: ${yourCity}\nState/Province: ${yourState}\nZip Code: ${zipCode}\nAddress Line 1: ${addressLine1}\nAddress Line 2: ${addressLine2}\nCountry of Bank Account: ${countryOfBankAccount}\nMonthly Payment Volume: ${monthlyPaymentVolume}\nID Type: ${idType}\nAnticipated Payment Countries: ${anticipatedPaymentCountries}\nAdditional Comments: ${additionalComments}`,
     };
 
     // Send email

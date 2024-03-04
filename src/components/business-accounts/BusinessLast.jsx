@@ -24,16 +24,20 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 const requiredText = "This field is required";
 
 const ValidationSchema = Yup.object().shape({
-  companyName: Yup.string().required(requiredText),
-  contactName: Yup.string().required(requiredText),
-  companyWebsite: Yup.string().required(requiredText),
+  yourName: Yup.string().required(requiredText),
+  birthDate: Yup.string().required(requiredText),
+  addressLine1: Yup.string().required(requiredText),
   contactPhoneNumber: Yup.string().required(requiredText),
   emailAddress: Yup.string().email("Invalid email").required(requiredText),
-  countryOfIncorporation: Yup.string().required(requiredText),
+  yourCountry: Yup.string().required(requiredText),
+  yourCity: Yup.string().required(requiredText),
+  yourState: Yup.string().required(requiredText),
+  zipCode: Yup.string().required(requiredText),
   countryOfBankAccount: Yup.string().required(requiredText),
-  affiliatedWebsites: Yup.string().required(requiredText),
   monthlyPaymentVolume: Yup.string().required(requiredText),
-  sourceOfFunds: Yup.string().required(requiredText),
+  idType: Yup.string().required(requiredText),
+  anticipatedPaymentCountries: Yup.string().required(requiredText),
+  privacy: Yup.string().required(requiredText),
 });
 
 const BusinessLast = () => {
@@ -49,22 +53,30 @@ const BusinessLast = () => {
                 <br />
                 with Clarity Solutions
               </h2>
+              <h3>
+              Please provide information about your needs, empowering us to deliver <br/>
+              customised solutions aligned with your requirements.
+              </h3>
             </RevealWrapper>
 
             <Formik
               initialValues={{
-                companyName: "",
-                contactName: "",
-                companyWebsite: "",
+                yourName: "",
+                birthDate: "",
+                addressLine1: "",
+                addressLine2: "",
                 contactPhoneNumber: "",
                 emailAddress: "",
-                countryOfIncorporation: "",
+                yourCountry: "",
+                yourCity: "",
+                yourState: "",
+                zipCode: "",
                 countryOfBankAccount: "",
-                affiliatedWebsites: "",
                 monthlyPaymentVolume: "1 - 5,000",
-                sourceOfFunds: "Corporate Bank Funds",
+                idType: "Identity Card",
                 anticipatedPaymentCountries: "",
                 additionalComments: "",
+                privacy: "",
               }}
               validationSchema={ValidationSchema}
               onSubmit={async (values, { resetForm }) => {
@@ -94,40 +106,14 @@ const BusinessLast = () => {
                 <Form className={`contact-form ${montserrat.className}`}>
                   <div className="input-wrap">
                     <Field
-                      name="companyName"
-                      placeholder="Company Name"
+                      name="yourName"
+                      placeholder="Your Name"
                       className={
-                        errors.companyName && touched.companyName ? "error" : ""
+                        errors.yourName && touched.yourName ? "error" : ""
                       }
                     />
-                    {errors.companyName && touched.companyName ? (
-                      <div className="error-label">{errors.companyName}</div>
-                    ) : null}
-                  </div>
-                  <div className="input-wrap">
-                    <Field
-                      name="contactName"
-                      placeholder="Contact Name"
-                      className={
-                        errors.contactName && touched.contactName ? "error" : ""
-                      }
-                    />
-                    {errors.contactName && touched.contactName ? (
-                      <div className="error-label">{errors.contactName}</div>
-                    ) : null}
-                  </div>
-                  <div className="input-wrap">
-                    <Field
-                      name="companyWebsite"
-                      placeholder="Company Website"
-                      className={
-                        errors.companyWebsite && touched.companyWebsite
-                          ? "error"
-                          : ""
-                      }
-                    />
-                    {errors.companyWebsite && touched.companyWebsite ? (
-                      <div className="error-label">{errors.companyWebsite}</div>
+                    {errors.yourName && touched.yourName ? (
+                      <div className="error-label">{errors.yourName}</div>
                     ) : null}
                   </div>
                   <div className="input-wrap">
@@ -161,30 +147,118 @@ const BusinessLast = () => {
                     ) : null}
                   </div>
 
-                  <div className={`input-wrap ${errors.countryOfIncorporation && touched.countryOfIncorporation ? "error" : ""}`}>
+                  <div className={`input-wrap ${errors.yourCountry && touched.yourCountry ? "error" : ""}`}>
                     <Select
                       options={countryOptions}
-                      name="countryOfIncorporation"
-                      placeholder="Country Of Incorporation"
+                      name="yourCountry"
+                      placeholder="Your Country"
                       styles={customStyles}
                       value={countryOptions.find(
-                        (option) => option.value === values.countryOfIncorporation
+                        (option) => option.value === values.yourCountry
                       )}
                       onChange={(option) =>
-                        setFieldValue("countryOfIncorporation", option.value)
+                        setFieldValue("yourCountry", option.value)
                       }
                       error={
-                        errors.countryOfIncorporation && touched.countryOfIncorporation
+                        errors.yourCountry && touched.yourCountry
                       }
                       classNamePrefix="select"
                     />
-                    {errors.countryOfIncorporation && touched.countryOfIncorporation ? (
-                      <div className="error-label">{errors.countryOfIncorporation}</div>
+                    {errors.yourCountry && touched.yourCountry ? (
+                      <div className="error-label">{errors.yourCountry}</div>
                     ) : null}
                   </div>
 
+                  <div className="input-wrap">
+                    <Field
+                    type="date"
+                      name="birthDate"
+                      placeholder="Your Date of Birth"
+                      className={
+                        errors.birthDate && touched.birthDate ? "error" : ""
+                      }
+                    />
+                    {errors.birthDate && touched.birthDate ? (
+                      <div className="error-label">{errors.birthDate}</div>
+                    ) : null}
+                  </div>
 
-                  <div className={`input-wrap ${errors.countryOfBankAccount && touched.countryOfBankAccount ? "error" : ""}`}>
+                  <div className="input-wrap">
+                    <Field
+                      name="addressLine1"
+                      placeholder="Address Line 1"
+                      className={
+                        errors.addressLine1 && touched.addressLine1
+                          ? "error"
+                          : ""
+                      }
+                    />
+                    {errors.addressLine1 && touched.addressLine1 ? (
+                      <div className="error-label">{errors.addressLine1}</div>
+                    ) : null}
+                  </div>
+
+                  <div className="input-wrap">
+                    <Field
+                      name="addressLine2"
+                      placeholder="Address Line 2"
+                      className={
+                        errors.addressLine2 && touched.addressLine2
+                          ? "error"
+                          : ""
+                      }
+                    />
+                    {errors.addressLine2 && touched.addressLine2 ? (
+                      <div className="error-label">{errors.addressLine2}</div>
+                    ) : null}
+                  </div>
+
+                  <div className="input-wrap">
+                    <Field
+                      name="yourCity"
+                      placeholder="Your City"
+                      className={
+                        errors.yourCity && touched.yourCity
+                          ? "error"
+                          : ""
+                      }
+                    />
+                    {errors.yourCity && touched.yourCity ? (
+                      <div className="error-label">{errors.yourCity}</div>
+                    ) : null}
+                  </div>
+
+                  <div className="input-wrap">
+                    <Field
+                      name="yourState"
+                      placeholder="Your State/Province"
+                      className={
+                        errors.yourState && touched.yourState
+                          ? "error"
+                          : ""
+                      }
+                    />
+                    {errors.yourState && touched.yourState ? (
+                      <div className="error-label">{errors.yourState}</div>
+                    ) : null}
+                  </div>
+
+                  <div className="input-wrap">
+                    <Field
+                      name="zipCode"
+                      placeholder="Zip Code"
+                      className={
+                        errors.zipCode && touched.zipCode
+                          ? "error"
+                          : ""
+                      }
+                    />
+                    {errors.zipCode && touched.zipCode ? (
+                      <div className="error-label">{errors.zipCode}</div>
+                    ) : null}
+                  </div>
+
+                  <div className={`input-wrap full ${errors.countryOfBankAccount && touched.countryOfBankAccount ? "error" : ""}`}>
                     <Select
                       options={countryOptions}
                       name="countryOfBankAccount"
@@ -206,20 +280,6 @@ const BusinessLast = () => {
                     ) : null}
                   </div>
 
-                  <div className="input-wrap">
-                    <Field
-                      name="affiliatedWebsites"
-                      placeholder="Affiliated Websites"
-                      className={
-                        errors.affiliatedWebsites && touched.affiliatedWebsites
-                          ? "error"
-                          : ""
-                      }
-                    />
-                    {errors.affiliatedWebsites && touched.affiliatedWebsites ? (
-                      <div className="error-label">{errors.affiliatedWebsites}</div>
-                    ) : null}
-                  </div>
                   <div className="radio-wrap">
                     <h4>Monthly Payment Volume</h4>
                     <div className="radio-row">
@@ -368,13 +428,13 @@ const BusinessLast = () => {
                     ) : null}
                   </div>
                   <div className="radio-wrap">
-                    <h4>Source of Funds</h4>
+                    <h4>ID Type</h4>
                     <div className="radio-row">
                       <label>
                         <Field
                           type="radio"
-                          name="sourceOfFunds"
-                          value="Corporate Bank Funds"
+                          name="idType"
+                          value="Identity Card"
                         />
                         <span>
                           <svg
@@ -401,14 +461,14 @@ const BusinessLast = () => {
                               fill="#F85C3A"
                             />
                           </svg>
-                          <span>Corporate Bank Funds</span>
+                          <span>Identity Card</span>
                         </span>
                       </label>
                       <label>
                         <Field
                           type="radio"
-                          name="sourceOfFunds"
-                          value="Incoming Transfers from Affiliated Websites"
+                          name="idType"
+                          value="Passport Number"
                         />
                         <span>
                           <svg
@@ -436,13 +496,85 @@ const BusinessLast = () => {
                             />
                           </svg>
                           <span>
-                            Incoming Transfers from Affiliated Websites
+                          Passport Number
+                          </span>
+                        </span>
+                      </label>
+                      <label>
+                        <Field
+                          type="radio"
+                          name="idType"
+                          value="Driving Licence"
+                        />
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="12"
+                            height="13"
+                            viewBox="0 0 12 13"
+                            fill="none"
+                          >
+                            <rect
+                              x="0.5"
+                              y="0.896484"
+                              width="11"
+                              height="11"
+                              rx="5.5"
+                              stroke="#DCDCDC"
+                            />
+                            <rect
+                              x="3"
+                              y="3.39648"
+                              width="6"
+                              height="6"
+                              rx="3"
+                              fill="#F85C3A"
+                            />
+                          </svg>
+                          <span>
+                          Driving Licence
+                          </span>
+                        </span>
+                      </label>
+                      <label>
+                        <Field
+                          type="radio"
+                          name="idType"
+                          value="Social Security Number"
+                        />
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="12"
+                            height="13"
+                            viewBox="0 0 12 13"
+                            fill="none"
+                          >
+                            <rect
+                              x="0.5"
+                              y="0.896484"
+                              width="11"
+                              height="11"
+                              rx="5.5"
+                              stroke="#DCDCDC"
+                            />
+                            <rect
+                              x="3"
+                              y="3.39648"
+                              width="6"
+                              height="6"
+                              rx="3"
+                              fill="#F85C3A"
+                            />
+                          </svg>
+                          <span>
+                          Social Security Number
                           </span>
                         </span>
                       </label>
                     </div>
-                    {errors.sourceOfFunds && touched.sourceOfFunds ? (
-                      <div className="error-label">{errors.sourceOfFunds}</div>
+                    {errors.idType && touched.idType ? (
+                      <div className="error-label">{errors.idType}</div>
                     ) : null}
                   </div>
                   <div className="input-wrap">
@@ -451,7 +583,13 @@ const BusinessLast = () => {
                       as="textarea"
                       name="anticipatedPaymentCountries"
                       placeholder="Please provide information here"
+                      className={
+                        errors.anticipatedPaymentCountries && touched.anticipatedPaymentCountries ? "error" : ""
+                      }
                     />
+                    {errors.anticipatedPaymentCountries && touched.anticipatedPaymentCountries ? (
+                      <div className="error-label">{errors.anticipatedPaymentCountries}</div>
+                    ) : null}
                   </div>
                   <div className="input-wrap">
                     <h4>Additional Comments</h4>
@@ -460,6 +598,50 @@ const BusinessLast = () => {
                       name="additionalComments"
                       placeholder="Share insights about your business and its payment requirements"
                     />
+                  </div>
+
+                  <div className={
+                            errors.privacy && touched.privacy ? "error radio-wrap privacy" : "radio-wrap privacy"
+                          }>
+                    <div className="radio-row">
+                      <label>
+                        <Field
+                          type="radio"
+                          name="privacy"
+                          value="privacy"
+                          
+                        />
+
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="12"
+                            height="13"
+                            viewBox="0 0 12 13"
+                            fill="none"
+                          >
+                            <rect
+                              x="0.5"
+                              y="0.896484"
+                              width="11"
+                              height="11"
+                              rx="5.5"
+                              stroke="#DCDCDC"
+                            />
+                            <rect
+                              x="3"
+                              y="3.39648"
+                              width="6"
+                              height="6"
+                              rx="3"
+                              fill="#F85C3A"
+                            />
+                          </svg>
+                          <div>By confirming, you agree that you have read and accepted the <a href="/terms-and-conditions">Terms and Conditions</a> and <a href="/privacy-policy">Privacy Policy</a>.</div>
+                        </span>
+                      </label>
+                    </div>
+                    
                   </div>
 
                   <button type="submit" className="orange-button">

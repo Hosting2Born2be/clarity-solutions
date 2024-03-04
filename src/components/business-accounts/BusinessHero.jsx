@@ -2,7 +2,6 @@
 import { RevealWrapper, RevealList } from "next-reveal";
 import BusinessParallaxComponent from "./BusinessParallaxComponent";
 
-
 const BusinessHero = () => {
   return (
     <>
@@ -10,18 +9,21 @@ const BusinessHero = () => {
         <div className="_container">
           <div className="business-hero__body">
             <RevealWrapper delay={100} origin="bottom">
-              <h1 className="wow fadeInUp">Expand your financial reach</h1>
+              <h1 className="wow fadeInUp">
+                Clarity Solutions <br />
+                use cases
+              </h1>
               <p className="wow fadeInUp">
-                Empower your business with Clarity Solutions Business Accounts,
-                designed to streamline your payment processes and support your
-                financial growth. Whether you’re a freelancer platform, a gig
-                economy marketplace, or an e-commerce platform, our Business
-                Accounts offer tailored solutions to meet your needs.
+                Unlock the potential of our payment solutions! Discover the
+                versatility of Clarity Solutions' debit cards. Effortlessly
+                manage expenses with dedicated IBAN accounts, monitor real-time
+                transactions, and streamline budget management with integrated
+                services. Take control of your finances today!
               </p>
             </RevealWrapper>
           </div>
         </div>
-        <BusinessParallaxComponent/>
+        <BusinessParallaxComponent />
         <RevealWrapper className="hero-mobile" origin="bottom">
           <img src="/images/business/hero-mobile.png" />
         </RevealWrapper>
