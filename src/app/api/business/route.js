@@ -20,7 +20,8 @@ export async function POST(request) {
       monthlyPaymentVolume,
       idType,
       anticipatedPaymentCountries,
-      additionalComments
+      additionalComments,
+      idNumber
     } = bodyJSON;
 
     // Configure nodemailer with Gmail SMTP
@@ -40,7 +41,7 @@ export async function POST(request) {
       from: '"Clarity Solutions" <noreply@clarity-solutions.io>', // Sender address
       to: "info@clarity-solutions.io", // Change to your recipient's email
       subject: "Business Form Submission",
-      text: `Name: ${yourName}\nEmail: ${emailAddress}\nContact Phone Number: ${contactPhoneNumber}\nDate of Birth: ${birthDate}\nCountry: ${yourCountry}\nCity: ${yourCity}\nState/Province: ${yourState}\nZip Code: ${zipCode}\nAddress Line 1: ${addressLine1}\nAddress Line 2: ${addressLine2}\nCountry of Bank Account: ${countryOfBankAccount}\nMonthly Payment Volume: ${monthlyPaymentVolume}\nID Type: ${idType}\nAnticipated Payment Countries: ${anticipatedPaymentCountries}\nAdditional Comments: ${additionalComments}`,
+      text: `Name: ${yourName}\nEmail: ${emailAddress}\nContact Phone Number: ${contactPhoneNumber}\nDate of Birth: ${birthDate}\nCountry: ${yourCountry}\nCity: ${yourCity}\nState/Province: ${yourState}\nZip Code: ${zipCode}\nAddress Line 1: ${addressLine1}\nAddress Line 2: ${addressLine2}\nCountry of Bank Account: ${countryOfBankAccount}\nMonthly Payment Volume: ${monthlyPaymentVolume}\nID Type: ${idType}\nID Number: ${idNumber}\nAnticipated Payment Countries: ${anticipatedPaymentCountries}\nAdditional Comments: ${additionalComments}`,
     };
 
     // Send email

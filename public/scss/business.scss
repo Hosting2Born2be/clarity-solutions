@@ -314,6 +314,7 @@
         font-weight: 700;
         line-height: 140%;
         margin-bottom: 16px;
+        margin-top: 0;
     }
     button{
         margin: 24px auto 0 auto;
@@ -322,6 +323,8 @@
    
     .radio-wrap{
         width: 100%;
+        padding-bottom: 24px;
+        border-bottom: 1px solid rgba(45, 45, 45, 0.15);
         &.privacy{
             .radio-row{
                 label{
@@ -418,9 +421,34 @@
                 text-align: center;
                 width: 100%;
                 &.success{
-                    color: #000;
+                    display: flex;
+                    border-radius: 200px;
+                    border: 1px solid var(--1, #F85C3A);
+                    background: rgba(248, 92, 58, 0.05);
+                    padding: 12px 24px;
+                    text-align: left;
+                    color: var(--3, #484848);
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 140%;
+                    gap: 10px;
+                    svg{
+                        width: 40px;
+                    }
+                    span{
+                        width: calc(100% - 50px);
+                    }
+                    @media (max-width:992px){
+                        border-radius: 24px;
+                        padding: 12px;
+                    }
                 }
             }
+        }
+        &.with-border{
+            padding-bottom: 24px;
+            border-bottom: 1px solid rgba(45, 45, 45, 0.15);
         }
         @media (max-width:992px){
             width: 100%;

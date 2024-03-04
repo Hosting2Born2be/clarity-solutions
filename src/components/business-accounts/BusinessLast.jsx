@@ -15,8 +15,8 @@ const countryOptions = countries.map((country) => ({
 const customStyles = {
   option: (provided, state) => ({
     ...provided,
-    backgroundColor: state.isSelected ? '#f0f0f0' : '#fff',
-    color: state.isSelected ? '#000' : '#333',
+    backgroundColor: state.isSelected ? "#f0f0f0" : "#fff",
+    color: state.isSelected ? "#000" : "#333",
   }),
 };
 
@@ -36,6 +36,7 @@ const ValidationSchema = Yup.object().shape({
   countryOfBankAccount: Yup.string().required(requiredText),
   monthlyPaymentVolume: Yup.string().required(requiredText),
   idType: Yup.string().required(requiredText),
+  idNumber: Yup.string().required(requiredText),
   anticipatedPaymentCountries: Yup.string().required(requiredText),
   privacy: Yup.string().required(requiredText),
 });
@@ -54,8 +55,9 @@ const BusinessLast = () => {
                 with Clarity Solutions
               </h2>
               <h3>
-              Please provide information about your needs, empowering us to deliver <br/>
-              customised solutions aligned with your requirements.
+                Please provide information about your needs, empowering us to
+                deliver <br />
+                customised solutions aligned with your requirements.
               </h3>
             </RevealWrapper>
 
@@ -74,6 +76,7 @@ const BusinessLast = () => {
                 countryOfBankAccount: "",
                 monthlyPaymentVolume: "1 - 5,000",
                 idType: "Identity Card",
+                idNumber: "",
                 anticipatedPaymentCountries: "",
                 additionalComments: "",
                 privacy: "",
@@ -128,7 +131,9 @@ const BusinessLast = () => {
                       }
                     />
                     {errors.contactPhoneNumber && touched.contactPhoneNumber ? (
-                      <div className="error-label">{errors.contactPhoneNumber}</div>
+                      <div className="error-label">
+                        {errors.contactPhoneNumber}
+                      </div>
                     ) : null}
                   </div>
                   <div className="input-wrap">
@@ -147,7 +152,11 @@ const BusinessLast = () => {
                     ) : null}
                   </div>
 
-                  <div className={`input-wrap ${errors.yourCountry && touched.yourCountry ? "error" : ""}`}>
+                  <div
+                    className={`input-wrap ${
+                      errors.yourCountry && touched.yourCountry ? "error" : ""
+                    }`}
+                  >
                     <Select
                       options={countryOptions}
                       name="yourCountry"
@@ -159,9 +168,7 @@ const BusinessLast = () => {
                       onChange={(option) =>
                         setFieldValue("yourCountry", option.value)
                       }
-                      error={
-                        errors.yourCountry && touched.yourCountry
-                      }
+                      error={errors.yourCountry && touched.yourCountry}
                       classNamePrefix="select"
                     />
                     {errors.yourCountry && touched.yourCountry ? (
@@ -171,7 +178,7 @@ const BusinessLast = () => {
 
                   <div className="input-wrap">
                     <Field
-                    type="date"
+                      type="date"
                       name="birthDate"
                       placeholder="Your Date of Birth"
                       className={
@@ -218,9 +225,7 @@ const BusinessLast = () => {
                       name="yourCity"
                       placeholder="Your City"
                       className={
-                        errors.yourCity && touched.yourCity
-                          ? "error"
-                          : ""
+                        errors.yourCity && touched.yourCity ? "error" : ""
                       }
                     />
                     {errors.yourCity && touched.yourCity ? (
@@ -233,9 +238,7 @@ const BusinessLast = () => {
                       name="yourState"
                       placeholder="Your State/Province"
                       className={
-                        errors.yourState && touched.yourState
-                          ? "error"
-                          : ""
+                        errors.yourState && touched.yourState ? "error" : ""
                       }
                     />
                     {errors.yourState && touched.yourState ? (
@@ -248,9 +251,7 @@ const BusinessLast = () => {
                       name="zipCode"
                       placeholder="Zip Code"
                       className={
-                        errors.zipCode && touched.zipCode
-                          ? "error"
-                          : ""
+                        errors.zipCode && touched.zipCode ? "error" : ""
                       }
                     />
                     {errors.zipCode && touched.zipCode ? (
@@ -258,7 +259,14 @@ const BusinessLast = () => {
                     ) : null}
                   </div>
 
-                  <div className={`input-wrap full ${errors.countryOfBankAccount && touched.countryOfBankAccount ? "error" : ""}`}>
+                  <div
+                    className={`input-wrap full ${
+                      errors.countryOfBankAccount &&
+                      touched.countryOfBankAccount
+                        ? "error"
+                        : ""
+                    }`}
+                  >
                     <Select
                       options={countryOptions}
                       name="countryOfBankAccount"
@@ -271,12 +279,16 @@ const BusinessLast = () => {
                         setFieldValue("countryOfBankAccount", option.value)
                       }
                       error={
-                        errors.countryOfBankAccount && touched.countryOfBankAccount
+                        errors.countryOfBankAccount &&
+                        touched.countryOfBankAccount
                       }
                       classNamePrefix="select"
                     />
-                    {errors.countryOfBankAccount && touched.countryOfBankAccount ? (
-                      <div className="error-label">{errors.countryOfBankAccount}</div>
+                    {errors.countryOfBankAccount &&
+                    touched.countryOfBankAccount ? (
+                      <div className="error-label">
+                        {errors.countryOfBankAccount}
+                      </div>
                     ) : null}
                   </div>
 
@@ -424,7 +436,9 @@ const BusinessLast = () => {
                     </div>
                     {errors.monthlyPaymentVolume &&
                     touched.monthlyPaymentVolume ? (
-                      <div className="error-label">{errors.monthlyPaymentVolume}</div>
+                      <div className="error-label">
+                        {errors.monthlyPaymentVolume}
+                      </div>
                     ) : null}
                   </div>
                   <div className="radio-wrap">
@@ -495,9 +509,7 @@ const BusinessLast = () => {
                               fill="#F85C3A"
                             />
                           </svg>
-                          <span>
-                          Passport Number
-                          </span>
+                          <span>Passport Number</span>
                         </span>
                       </label>
                       <label>
@@ -531,9 +543,7 @@ const BusinessLast = () => {
                               fill="#F85C3A"
                             />
                           </svg>
-                          <span>
-                          Driving Licence
-                          </span>
+                          <span>Driving Licence</span>
                         </span>
                       </label>
                       <label>
@@ -567,9 +577,7 @@ const BusinessLast = () => {
                               fill="#F85C3A"
                             />
                           </svg>
-                          <span>
-                          Social Security Number
-                          </span>
+                          <span>Social Security Number</span>
                         </span>
                       </label>
                     </div>
@@ -577,6 +585,22 @@ const BusinessLast = () => {
                       <div className="error-label">{errors.idType}</div>
                     ) : null}
                   </div>
+
+                  <div className="input-wrap full with-border">
+                    <h4>ID Number</h4>
+                    <Field
+                      type="number"
+                      name="idNumber"
+                      placeholder="ID Number"
+                      className={
+                        errors.idNumber && touched.idNumber ? "error" : ""
+                      }
+                    />
+                    {errors.idNumber && touched.idNumber ? (
+                      <div className="error-label">{errors.idNumber}</div>
+                    ) : null}
+                  </div>
+
                   <div className="input-wrap">
                     <h4>Anticipated Payment Countries</h4>
                     <Field
@@ -584,11 +608,17 @@ const BusinessLast = () => {
                       name="anticipatedPaymentCountries"
                       placeholder="Please provide information here"
                       className={
-                        errors.anticipatedPaymentCountries && touched.anticipatedPaymentCountries ? "error" : ""
+                        errors.anticipatedPaymentCountries &&
+                        touched.anticipatedPaymentCountries
+                          ? "error"
+                          : ""
                       }
                     />
-                    {errors.anticipatedPaymentCountries && touched.anticipatedPaymentCountries ? (
-                      <div className="error-label">{errors.anticipatedPaymentCountries}</div>
+                    {errors.anticipatedPaymentCountries &&
+                    touched.anticipatedPaymentCountries ? (
+                      <div className="error-label">
+                        {errors.anticipatedPaymentCountries}
+                      </div>
                     ) : null}
                   </div>
                   <div className="input-wrap">
@@ -600,17 +630,16 @@ const BusinessLast = () => {
                     />
                   </div>
 
-                  <div className={
-                            errors.privacy && touched.privacy ? "error radio-wrap privacy" : "radio-wrap privacy"
-                          }>
+                  <div
+                    className={
+                      errors.privacy && touched.privacy
+                        ? "error radio-wrap privacy"
+                        : "radio-wrap privacy"
+                    }
+                  >
                     <div className="radio-row">
                       <label>
-                        <Field
-                          type="radio"
-                          name="privacy"
-                          value="privacy"
-                          
-                        />
+                        <Field type="radio" name="privacy" value="privacy" />
 
                         <span>
                           <svg
@@ -637,11 +666,17 @@ const BusinessLast = () => {
                               fill="#F85C3A"
                             />
                           </svg>
-                          <div>By confirming, you agree that you have read and accepted the <a href="/terms-and-conditions">Terms and Conditions</a> and <a href="/privacy-policy">Privacy Policy</a>.</div>
+                          <div>
+                            By confirming, you agree that you have read and
+                            accepted the{" "}
+                            <a href="/terms-and-conditions">
+                              Terms and Conditions
+                            </a>{" "}
+                            and <a href="/privacy-policy">Privacy Policy</a>.
+                          </div>
                         </span>
                       </label>
                     </div>
-                    
                   </div>
 
                   <button type="submit" className="orange-button">
@@ -651,8 +686,13 @@ const BusinessLast = () => {
                   {resultMessage === "success" ? (
                     <div className="input-wrap full">
                       <div className="message success">
-                        Thank you for choosing Clarity Solutions! Our
-                        representative will reach you out to you shortly.
+                      <svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" fill="none">
+                        <path d="M12.2773 20.8334L17.2773 25.8334L28.944 14.1667" stroke="#F85C3A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M20.6108 36.6668C29.8158 36.6668 37.2774 29.2052 37.2774 20.0002C37.2774 10.7952 29.8158 3.3335 20.6108 3.3335C11.4058 3.3335 3.94409 10.7952 3.94409 20.0002C3.94409 29.2052 11.4058 36.6668 20.6108 36.6668Z" stroke="#F85C3A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                        <span><b>Success!</b> Your account registration is complete! Thank
+                        you for choosing Clarity Solutions! We will reach you
+                        out to you shortly.</span>
                       </div>
                     </div>
                   ) : resultMessage === "failed" ? (
