@@ -4,11 +4,11 @@ import TariffsSecond from "@/src/components/tariffs/TariffsSecond";
 
 
 export const metadata = {
-  title: "Clarity Solutions Tariffs: Transparent Pricing for Financial Services",
-  description: "Explore Clarity Solutions tariffs for transparent pricing on card accounts, transfers, and ATM transactions. See our cost-effective options for hassle-free financial management.",
+  title: "Debit Cards Tariffs | Clarity Solutions",
+  description: "Explore the current tariffs on debit cards and learn what limits and fees are applied. See our cost-effective options for hassle-free financial management.",
   openGraph: {
-    title: "Clarity Solutions Tariffs: Transparent Pricing for Financial Services",
-    description: "Explore Clarity Solutions tariffs for transparent pricing on card accounts, transfers, and ATM transactions. See our cost-effective options for hassle-free financial management.",
+    title: "Debit Cards Tariffs | Clarity Solutions",
+    description: "Explore the current tariffs on debit cards and learn what limits and fees are applied. See our cost-effective options for hassle-free financial management.",
     images: "https://clarity-solutions.io/images/meta.jpg",
   },
 };

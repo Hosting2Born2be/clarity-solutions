@@ -9,16 +9,16 @@ const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
   title: {
-    default: "Welcome to Clarity Solutions: Simplify Your Finances Today",
+    default: "Flexible Payment Solutions | Clarity Solutions",
     template: "%s",
   },
-  description: "Manage your money securely and unlock financial freedom with Clarity Solutions. Explore our versatile debit card options and seamless payment solutions for individuals and businesses.",
+  description: "Manage your money securely and unlock financial freedom with Clarity Solutions. Explore our versatile debit card options and seamless payment solutions.",
   openGraph: {
     title: {
-      default: "Welcome to Clarity Solutions: Simplify Your Finances Today",
+      default: "Flexible Payment Solutions | Clarity Solutions",
       template: "%s",
     },
-    description: 'Manage your money securely and unlock financial freedom with Clarity Solutions. Explore our versatile debit card options and seamless payment solutions for individuals and businesses.',
+    description: 'Manage your money securely and unlock financial freedom with Clarity Solutions. Explore our versatile debit card options and seamless payment solutions.',
     images: "https://clarity-solutions.io/images/meta.jpg",
   },
 };

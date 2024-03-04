@@ -3,11 +3,11 @@ import FaqHero from "@/src/components/faq/FaqHero";
 import FaqWrap from "@/src/components/faq/FaqWrap";
 
 export const metadata = {
-  title: "Clarity Solutions FAQ: Answers to Popular Questions",
-  description: "Find essential information about prepaid cards, including usage, eligibility, fees, and troubleshooting. Get answers to common questions to enhance your Clarity Solutions experience.",
+  title: "Debit Cards FAQ | Clarity Solutions",
+  description: "Find essential information about prepaid cards, including usage, eligibility, fees, and troubleshooting. Get answers to common questions to enhance your payment experience with Clairy Solutions.",
   openGraph: {
-    title: "Clarity Solutions FAQ: Answers to Popular Questions",
-    description: "Find essential information about prepaid cards, including usage, eligibility, fees, and troubleshooting. Get answers to common questions to enhance your Clarity Solutions experience.",
+    title: "Debit Cards FAQ | Clarity Solutions",
+    description: "Find essential information about prepaid cards, including usage, eligibility, fees, and troubleshooting. Get answers to common questions to enhance your payment experience with Clairy Solutions.",
     images: "https://clarity-solutions.io/images/meta.jpg",
   },
 };

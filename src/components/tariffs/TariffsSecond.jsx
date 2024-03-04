@@ -10,10 +10,12 @@ const TariffsSecond = () => {
           <div className="tariffs-second__body">
             <table>
               <thead>
-                <th>Service</th>
-                <th>Cost</th>
-                <th>Unit</th>
-                <th>Description</th>
+                <tr>
+                  <th>Service</th>
+                  <th>Cost</th>
+                  <th>Unit</th>
+                  <th>Description</th>
+                </tr>
               </thead>
               <tbody>
                 <tr>
@@ -120,7 +122,7 @@ const TariffsSecond = () => {
             <div className="need-help">
               <h2>Have questions?</h2>
               <Link href="/contacts" className="black-button">
-              Contact Us
+                Contact Us
               </Link>
             </div>
           </RevealWrapper>

@@ -6,11 +6,11 @@ import BusinessThird from "@/src/components/business-accounts/BusinessThird";
 
 
 export const metadata = {
-  title: "Clarity Solutions Business Accounts: Streamline Your Payment Processes",
-  description: "Expand your financial reach with Clarity Solutions Business Accounts. Tailored solutions designed to support freelancers, gig economy platforms, and e-commerce businesses.",
+  title: "Clarity Solutions Use Cases ",
+  description: "Explore the versatile use cases of debit cards from Clarity Solutions. Streamline finance management and control, assign team budgets, and flexibly set card limits and terms.",
   openGraph: {
-    title: "Clarity Solutions Business Accounts: Streamline Your Payment Processes",
-    description: "Expand your financial reach with Clarity Solutions Business Accounts. Tailored solutions designed to support freelancers, gig economy platforms, and e-commerce businesses.",
+    title: "Clarity Solutions Use Cases ",
+    description: "Explore the versatile use cases of debit cards from Clarity Solutions. Streamline finance management and control, assign team budgets, and flexibly set card limits and terms.",
     images: "https://clarity-solutions.io/images/meta.jpg",
   },
 };
