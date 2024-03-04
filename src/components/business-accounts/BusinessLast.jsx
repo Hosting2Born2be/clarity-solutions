@@ -8,6 +8,9 @@ import Select from "react-select";
 import countries from "@/lib/countries.json";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { PhoneInput } from 'react-international-phone';
+import 'react-international-phone/style.css';
+import { PhoneNumberUtil } from 'google-libphonenumber';
 
 const countryOptions = countries.map((country) => ({
   value: country.name,
@@ -25,11 +28,26 @@ const customStyles = {
 const montserrat = Montserrat({ subsets: ["latin"] });
 const requiredText = "This field is required";
 
+const phoneUtil = PhoneNumberUtil.getInstance();
+
+const phoneValidation = Yup.string().test(
+  'is-valid-phone',
+  'Phone number is not valid',
+  (value) => {
+    try {
+      const number = phoneUtil.parseAndKeepRawInput(value, ''); // You might need to adjust the default region code
+      return phoneUtil.isValidNumber(number);
+    } catch (error) {
+      return false;
+    }
+  }
+);
+
 const ValidationSchema = Yup.object().shape({
   yourName: Yup.string().required(requiredText),
   birthDate: Yup.string().required(requiredText),
   addressLine1: Yup.string().required(requiredText),
-  contactPhoneNumber: Yup.string().required(requiredText),
+  contactPhoneNumber: phoneValidation.required(requiredText),
   emailAddress: Yup.string().email("Invalid email").required(requiredText),
   yourCountry: Yup.string().required(requiredText),
   yourCity: Yup.string().required(requiredText),
@@ -123,15 +141,18 @@ const BusinessLast = () => {
                     ) : null}
                   </div>
                   <div className="input-wrap">
-                    <Field
-                      name="contactPhoneNumber"
-                      placeholder="Contact Phone Number"
-                      type="tel"
-                      className={
+                    <PhoneInput
+                      international
+                      defaultCountry="US"
+                      value={values.contactPhoneNumber}
+                      onChange={(value) =>
+                        setFieldValue("contactPhoneNumber", value)
+                      }
+                      className={`form-control ${
                         errors.contactPhoneNumber && touched.contactPhoneNumber
                           ? "error"
                           : ""
-                      }
+                      }`}
                     />
                     {errors.contactPhoneNumber && touched.contactPhoneNumber ? (
                       <div className="error-label">
@@ -160,9 +181,7 @@ const BusinessLast = () => {
                       selected={values.birthDate}
                       onChange={(date) => setFieldValue("birthDate", date)}
                       className={`form-control ${
-                        errors.birthDate && touched.birthDate
-                          ? "errors"
-                          : ""
+                        errors.birthDate && touched.birthDate ? "errors" : ""
                       }`}
                       dateFormat="MMMM d, yyyy"
                       placeholderText="Your Date of Birth"

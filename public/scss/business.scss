@@ -415,6 +415,7 @@
     .input-wrap{
         width: calc(50% - 16px);
         position: relative;
+        
         &.full{
             width: 100%;
             .message{
@@ -453,6 +454,37 @@
         @media (max-width:992px){
             width: 100%;
         }
+
+        .react-international-phone-input-container{
+            position: relative;
+            &.error{
+                input{
+                    border-color: #f00;
+                }
+            }
+            .react-international-phone-country-selector{
+                position: absolute;
+                left: 24px;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 99;
+                button{
+                    border: none;
+                    background: transparent;
+                    margin: 0;
+                    img{
+                        margin-left: 0;
+
+                    }
+                }
+            }
+            .react-international-phone-country-selector-dropdown{
+                z-index: 99;
+            }
+            input{
+                padding-left: 75px;
+            }
+        }        
 
         .react-datepicker-popper {
             width: 100%;
