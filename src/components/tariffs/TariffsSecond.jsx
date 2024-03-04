@@ -17,7 +17,7 @@ const TariffsSecond = () => {
               </thead>
               <tbody>
                 <tr>
-                  <td colSpan={4} className="subtitle">Card Accound</td>
+                  <td colSpan={4} className="subtitle">Card Account</td>
                 </tr>
 
                 <tr>
