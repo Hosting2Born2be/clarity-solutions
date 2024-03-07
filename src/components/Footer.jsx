@@ -77,17 +77,17 @@ const Footer = () => {
               </a>
             </div>
 
-            <div className="soc dt-hidden mob-hidden">
-              <a href="#">
-                <img src="/images/whatsApp.svg" alt="whatsApp"/>
+            <div className="soc">
+              <a href="https://www.facebook.com/claritysolutions.io" target="_blank">
+                <img src="/images/fb.svg" alt="fb"/>
               </a>
-              <a href="#">
-                <img src="/images/telegram.svg" alt="telegram"/>
+              <a href="https://www.instagram.com/claritysolutions.io" target="_blank">
+                <img src="/images/inst.svg" alt="inst"/>
               </a>
-              <a href="#">
-                <img src="/images/youtube.svg" alt="youtube"/>
+              <a href="https://twitter.com/csolutions_io"  target="_blank">
+                <img src="/images/twiter.svg" alt="twiter"/>
               </a>
-              <a href="#">
+              <a href="https://www.linkedin.com/company/claritysolutions-io/" target="_blank">
                 <img src="/images/in.svg" alt="linkedin"/>
               </a>
             </div>
