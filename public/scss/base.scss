@@ -36,6 +36,9 @@ a{
 	font-weight: 600;
 	line-height: 120%;
 	margin: 0;
+	a{
+		color: var(--2, #282828);
+	}
 	@media (max-width:992px){
 		font-size: 40px;
 	}

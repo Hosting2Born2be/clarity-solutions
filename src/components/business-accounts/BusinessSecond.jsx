@@ -9,7 +9,14 @@ const BusinessSecond = () => {
         <div className="_container">
           <div className="business-second__body">
             <RevealWrapper delay={100} origin="bottom">
-              <h2 className="section-title">Apply for payment solutions now</h2>
+              <h2 className="section-title">
+                <Link
+                  href="https://clarityglobalinc.com/send.html"
+                  target="_blank"
+                >
+                  Apply for payment solutions now
+                </Link>
+              </h2>
             </RevealWrapper>
             <RevealList
               origin="bottom"
@@ -19,22 +26,27 @@ const BusinessSecond = () => {
             >
               <div>
                 <h4>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="21"
-                    viewBox="0 0 20 21"
-                    fill="none"
+                  <Link
+                    href="https://clarityglobalinc.com/send.html"
+                    target="_blank"
                   >
-                    <circle
-                      cx="10"
-                      cy="10.9546"
-                      r="7.5"
-                      stroke="#F85C3A"
-                      stroke-width="5"
-                    />
-                  </svg>
-                  <span>Accounts for SEPA, CHAPS and SWIFT payments</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="21"
+                      viewBox="0 0 20 21"
+                      fill="none"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10.9546"
+                        r="7.5"
+                        stroke="#F85C3A"
+                        stroke-width="5"
+                      />
+                    </svg>
+                    <span>Accounts for SEPA, CHAPS and SWIFT payments</span>
+                  </Link>
                 </h4>
                 <p>
                   Named IBANS for worldwide B2B payments and currency exchange
@@ -44,24 +56,29 @@ const BusinessSecond = () => {
 
               <div>
                 <h4>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="21"
-                    viewBox="0 0 20 21"
-                    fill="none"
+                  <Link
+                    href="https://clarityglobalinc.com/send.html"
+                    target="_blank"
                   >
-                    <circle
-                      cx="10"
-                      cy="10.9546"
-                      r="7.5"
-                      stroke="#F85C3A"
-                      stroke-width="5"
-                    />
-                  </svg>
-                  <span>
-                    All accounts and services are managed under one platform
-                  </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="21"
+                      viewBox="0 0 20 21"
+                      fill="none"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10.9546"
+                        r="7.5"
+                        stroke="#F85C3A"
+                        stroke-width="5"
+                      />
+                    </svg>
+                    <span>
+                      All accounts and services are managed under one platform
+                    </span>
+                  </Link>
                 </h4>
                 <p>
                   Find it easy to manage your accounts and transactions with our
@@ -71,24 +88,29 @@ const BusinessSecond = () => {
 
               <div>
                 <h4>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="21"
-                    viewBox="0 0 20 21"
-                    fill="none"
+                  <Link
+                    href="https://clarityglobalinc.com/send.html"
+                    target="_blank"
                   >
-                    <circle
-                      cx="10"
-                      cy="10.9546"
-                      r="7.5"
-                      stroke="#F85C3A"
-                      stroke-width="5"
-                    />
-                  </svg>
-                  <span>
-                    Personalised support while onboarding and processing
-                  </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="21"
+                      viewBox="0 0 20 21"
+                      fill="none"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10.9546"
+                        r="7.5"
+                        stroke="#F85C3A"
+                        stroke-width="5"
+                      />
+                    </svg>
+                    <span>
+                      Personalised support while onboarding and processing
+                    </span>
+                  </Link>
                 </h4>
                 <p>
                   Experience hassle-free account setup with a personal account
@@ -99,22 +121,27 @@ const BusinessSecond = () => {
 
               <div>
                 <h4>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="21"
-                    viewBox="0 0 20 21"
-                    fill="none"
+                  <Link
+                    href="https://clarityglobalinc.com/send.html"
+                    target="_blank"
                   >
-                    <circle
-                      cx="10"
-                      cy="10.9546"
-                      r="7.5"
-                      stroke="#F85C3A"
-                      stroke-width="5"
-                    />
-                  </svg>
-                  <span>Tailored payment solutions and OTC deals</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="21"
+                      viewBox="0 0 20 21"
+                      fill="none"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10.9546"
+                        r="7.5"
+                        stroke="#F85C3A"
+                        stroke-width="5"
+                      />
+                    </svg>
+                    <span>Tailored payment solutions and OTC deals</span>
+                  </Link>
                 </h4>
                 <p>
                   Find the perfect tailored solution for your business with low
@@ -125,7 +152,13 @@ const BusinessSecond = () => {
             </RevealList>
           </div>
           <div class="button-wrap">
-            <Link href="https://t.me/clarityglobalinc_support" target="_blank" className="orange-button">Contact us</Link>
+            <Link
+              href="https://t.me/clarityglobalinc_support"
+              target="_blank"
+              className="orange-button"
+            >
+              Contact us
+            </Link>
           </div>
         </div>
       </section>
