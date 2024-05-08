@@ -9,7 +9,7 @@ const BusinessSecond = () => {
         <div className="_container">
           <div className="business-second__body">
             <RevealWrapper delay={100} origin="bottom">
-              <h2 className="section-title">Apply our payment solutions now</h2>
+              <h2 className="section-title">Apply for payment solutions now</h2>
             </RevealWrapper>
             <RevealList
               origin="bottom"
@@ -34,12 +34,11 @@ const BusinessSecond = () => {
                       stroke-width="5"
                     />
                   </svg>
-                  Cost-effective
+                  <span>Accounts for SEPA, CHAPS and SWIFT payments</span>
                 </h4>
                 <p>
-                  Avoid exorbitant fees that eat into your bottom line—benefit
-                  from our No-Cost model, ensuring payments without financial
-                  burdens.
+                  Named IBANS for worldwide B2B payments and currency exchange
+                  with all major currencies supported.
                 </p>
               </div>
 
@@ -60,11 +59,13 @@ const BusinessSecond = () => {
                       stroke-width="5"
                     />
                   </svg>
-                  Versatile options
+                  <span>
+                    All accounts and services are managed under one platform
+                  </span>
                 </h4>
                 <p>
-                  Pay, track, and manage your budget efficiently with a single
-                  solution! We offer flexibility and simplicity of payments.
+                  Find it easy to manage your accounts and transactions with our
+                  secure platform protected with 2FA verification access
                 </p>
               </div>
 
@@ -85,12 +86,14 @@ const BusinessSecond = () => {
                       stroke-width="5"
                     />
                   </svg>
-                  Efficient & Straightforward
+                  <span>
+                    Personalised support while onboarding and processing
+                  </span>
                 </h4>
                 <p>
-                  Experience hassle-free account setup. Simply fill out the form
-                  below, and we will reach out within 24 hours to prepare your
-                  account for seamless payment transactions within a few hours.
+                  Experience hassle-free account setup with a personal account
+                  manager. Fill in the online application form to get an account
+                  for your business
                 </p>
               </div>
 
@@ -111,15 +114,18 @@ const BusinessSecond = () => {
                       stroke-width="5"
                     />
                   </svg>
-                  Personalised support
+                  <span>Tailored payment solutions and OTC deals</span>
                 </h4>
                 <p>
-                  Receive dedicated assistance from our experienced team
-                  throughout your journey. We’re here to address your inquiries,
-                  provide guidance, and ensure our solutions meet your needs.
+                  Find the perfect tailored solution for your business with low
+                  financial risk and an individual approach. Make your
+                  cryptocurrencies exchange and transfers with our services.
                 </p>
               </div>
             </RevealList>
+          </div>
+          <div class="button-wrap">
+            <Link href="https://t.me/clarityglobalinc_support" target="_blank" className="orange-button">Contact us</Link>
           </div>
         </div>
       </section>

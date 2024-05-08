@@ -116,6 +116,11 @@
     @media (max-width:992px){
         margin: 100px 0;
     }
+    .button-wrap{
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
     &__body{
         border-radius: 40px;
         background-color: #F6F6F6;
@@ -163,9 +168,25 @@
             }
             h4{
                 display: flex;
-                align-items: center;
+                align-items: flex-start;
                 margin: 0;
                 gap:16px;
+                color: var(--2, #282828);
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 120%;
+                svg{
+                    width: 20px;
+                    height: 20px;
+                    margin-top: 5px;
+                }
+                span{
+                    width: calc(100% - 36px);
+                }
+                @media (max-width:992px){
+                    font-size: 16px;
+                }
             }
             p{
                 color: var(--3, #484848);
