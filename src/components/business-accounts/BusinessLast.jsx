@@ -66,7 +66,7 @@ const BusinessLast = () => {
   const [resultMessage, setResultMessage] = useState("");
   return (
     <>
-      <section className="business-last">
+      <section className="business-last" id="become-member">
         <div className="_container">
           <div className="business-last__body">
             <RevealWrapper delay={100} origin="bottom">

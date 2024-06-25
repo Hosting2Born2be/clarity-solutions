@@ -483,7 +483,7 @@ export default function Home() {
             </RevealList>
 
             <RevealWrapper delay={100} origin="bottom">
-              <Link href="#" className="orange-button">
+              <Link href="/use-cases#become-member" className="orange-button">
                 Become a member
               </Link>
             </RevealWrapper>
@@ -625,7 +625,7 @@ export default function Home() {
                 Simplify your finances with <br />
                 Clarity Solutions
               </p>
-              <Link href="#" className="orange-button">
+              <Link href="/use-cases#become-member" className="orange-button">
                 Get started
               </Link>
             </RevealList>
@@ -642,8 +642,7 @@ export default function Home() {
               <div class="how-element">
                 <span>2</span>
                 <p>
-                  Order a debit card. pay and transfer funds to your bank
-                  account.
+                Order a debit card and transfer funds to your account effortlessly.
                 </p>
               </div>
               <div class="how-element">
@@ -669,15 +668,15 @@ export default function Home() {
                 <h2>
                   Stay informed <br />
                   with the Clarity <br />
-                  Solutions blog
+                  Solutions 
                 </h2>
                 <p>
                   Explore the latest articles covering topics such as financial
                   management tips, industry updates, and success stories.
                 </p>
                 <div className="buttons-wrap">
-                  <Link className="black-button" href="/insights">
-                    Go to blog
+                  <Link className="black-button" href="https://www.facebook.com/claritysolutions.io" target="_blank">
+                  Follow us on Facebook
                   </Link>
                 </div>
               </div>
