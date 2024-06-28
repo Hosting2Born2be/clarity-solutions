@@ -7,6 +7,7 @@ const TariffsSecond = () => {
     <>
       <section className="tariffs-second">
         <div className="_container">
+          <span class="highlight">TERMS OF OPENING A CARD</span>
           <div className="tariffs-second__body">
             <table>
               <thead>
@@ -118,14 +119,155 @@ const TariffsSecond = () => {
             </table>
           </div>
 
+          <div className="tariffs-second__other">
+            <RevealWrapper origin="bottom">
+              <h2>Other conditions:</h2>
+            </RevealWrapper>
+            <RevealWrapper origin="bottom">
+              <ul>
+                <li>
+                  The top-up takes up to 1 business day after payment is
+                  received.
+                </li>
+                <li>
+                  You will get phone App access and a web browser dashboard with
+                  access to your cards, transactions, and balances.
+                </li>
+                <li>
+                  With the App on your phone, you can add any card to your Apple
+                  Wallet or Google Pay as a physical card to make POS payments.
+                </li>
+                <li>
+                  Each card could be connected to 1 user, but one could have
+                  multiple cards.
+                </li>
+                <li>
+                  You can order Virtual (issued up to 1 business day) and
+                  Physical cards (issued within 1 business day; delivery
+                  timeframe is from 1 week, depending on your location).
+                </li>
+                <li>
+                  No weekly or monthly limits are predefined. You can place the
+                  monthly/weekly/daily limit per transaction on the desired
+                  cards. In addition, you can create cards with a "lock after 1
+                  payment" feature.
+                </li>
+                <li>
+                  You are able to set up the alerts on minimum wallet balance
+                  and declined transaction alerts to be sent to the user’s
+                  email.
+                </li>
+              </ul>
+            </RevealWrapper>
+            <RevealWrapper origin="bottom">
+              <div className="warn">
+                <img src="/images/tariffs/warn.svg" />
+                The commission is calculated as a percentage of the amount to
+                top-up the virtual card. Then, it is added to the top-up amount,
+                creating the gross amount to pay for you.
+              </div>
+            </RevealWrapper>
+
+            <RevealWrapper origin="bottom">
+              <h2>To create a virtual card account, we need the following:</h2>
+            </RevealWrapper>
+            <RevealWrapper origin="bottom">
+              <ul>
+                <li>First name - could be various.</li>
+                <li>Last name - could be various.</li>
+                <li>
+                  Phone number - You will need a code from it to log in to the
+                  phone app or website app to manage the transactions and cards.
+                </li>
+                <li>
+                  Email - You will need to log in to the phone app or website
+                  app to manage the transactions and cards. It could be provided
+                  from our side.
+                </li>
+              </ul>
+            </RevealWrapper>
+            <RevealWrapper origin="bottom">
+              <div className="warn">
+                <img src="/images/tariffs/warn.svg" />
+                Both phone and email could be changed after.
+              </div>
+            </RevealWrapper>
+
+            <RevealWrapper origin="bottom">
+              <ul>
+                <li>
+                  Amount of desired cards (currently) and amount (EUR) to top up
+                  for each one.
+                </li>
+              </ul>
+            </RevealWrapper>
+            <RevealWrapper origin="bottom">
+              <div className="warn">
+                <img src="/images/tariffs/warn.svg" />
+                After collecting the required information, you will receive your
+                card account credentials.
+              </div>
+            </RevealWrapper>
+          </div>
+
           <RevealWrapper delay={100} origin="bottom">
             <div className="need-help">
-              <h2>Have questions?</h2>
-              <Link href="/contacts" className="black-button">
-                Contact Us
-              </Link>
+              <h2>Top-up process</h2>
+              <p>
+                Your funds are topped up to your user's wallet. All the user's
+                cards <br />
+                are connected to their wallet and use their balance. The
+                spending <br />
+                limits section could limit the card spending (balance).
+              </p>
             </div>
           </RevealWrapper>
+        </div>
+      </section>
+
+      <section className="tariffs-top">
+        <div className="_container">
+          <div className="tariffs-top__body">
+            <RevealList
+              origin="bottom"
+              interval={100}
+              delay={0}
+              className="tariffs-top__col-01"
+            >
+              <h2 className="section-title">
+                To top-up your <br />
+                wallet/card, <br />
+                you need:
+              </h2>
+            </RevealList>
+            <RevealList
+              origin="bottom"
+              interval={100}
+              delay={0}
+              className="tariffs-top__col-02"
+            >
+              <div class="how-element">
+                <span>1</span>
+                <p>
+                  To mention your request in the group with your cards manager
+                  or email us.
+                </p>
+              </div>
+              <div class="how-element">
+                <span>2</span>
+                <p>
+                  To send an internal transfer to the Virtual Cards account.
+                </p>
+              </div>
+              <div class="how-element">
+                <span>3</span>
+                <p>
+                  To see the balance on your user’s wallet and start spending
+                  immediately.
+                </p>
+              </div>
+            </RevealList>
+          </div>
         </div>
       </section>
     </>

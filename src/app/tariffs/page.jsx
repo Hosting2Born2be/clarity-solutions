@@ -1,6 +1,8 @@
 import "@/public/scss/tariffs.scss";
+import TariffsForm from "@/src/components/tariffs/TariffsForm";
 import TariffsHero from "@/src/components/tariffs/TariffsHero";
 import TariffsSecond from "@/src/components/tariffs/TariffsSecond";
+import TariffsWhy from "@/src/components/tariffs/TariffsWhy";
 
 
 export const metadata = {
@@ -17,7 +19,9 @@ export default function Tariffs() {
   return (
     <>
     <TariffsHero/>
+    <TariffsWhy />
     <TariffsSecond/>
+    <TariffsForm />
     </>
   );
 }

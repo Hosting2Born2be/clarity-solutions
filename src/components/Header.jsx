@@ -3,10 +3,16 @@ import "@/public/scss/header.scss";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import ConnectForm from "./ConnectForm";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const pathname = usePathname();
+  const [popupOpened, setPopupOpened] = useState(false);
+
+  const handlePopup = () => {
+    setPopupOpened(!popupOpened);
+  };
 
   const handleMenu = () => {
     setMenuOpened(!menuOpened);
@@ -68,7 +74,7 @@ const Header = () => {
                 </div>
 
                 <div className="icons-wrap">
-                  <a href="#">
+                  <button>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -85,7 +91,7 @@ const Header = () => {
                       />
                     </svg>
                     Sign in
-                  </a>
+                  </button>
                   <a href="#">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -123,22 +129,35 @@ const Header = () => {
                   <Link href="/contacts">Contacts</Link>
                 </nav>
 
-                <span className={`mobile-menu-btn ${menuOpened ? 'opened' : ''}`} onClick={handleMenu}>
+                <span
+                  className={`mobile-menu-btn ${menuOpened ? "opened" : ""}`}
+                  onClick={handleMenu}
+                >
                   <div>
-                      <span className="squere"></span>
-                      <span className="vertical"></span>
-                      <span className="squere"></span>
-                      <span className="horizontal"></span>
-                      <span className="squere"></span>
-                      <span className="vertical"></span>
-                      <span className="squere"></span>
-                    </div>
+                    <span className="squere"></span>
+                    <span className="vertical"></span>
+                    <span className="squere"></span>
+                    <span className="horizontal"></span>
+                    <span className="squere"></span>
+                    <span className="vertical"></span>
+                    <span className="squere"></span>
+                  </div>
                 </span>
               </div>
             </div>
           </header>
         </div>
       </div>
+
+      {popupOpened && (
+        <div className="popup-wrap">
+          <div className="popupOverlay" onClick={() => handlePopup()}></div>
+          <div className="popup">
+            <h2>Quick Access Form</h2>
+            <ConnectForm />
+          </div>
+        </div>
+      )}
     </>
   );
 };
