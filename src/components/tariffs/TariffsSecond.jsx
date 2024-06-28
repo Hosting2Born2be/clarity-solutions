@@ -214,7 +214,7 @@ const TariffsSecond = () => {
             <div className="need-help">
               <h2>Top-up process</h2>
               <p>
-                Your funds are topped up to your user's wallet. All the user's
+                Your funds are topped up to your user&apos;s wallet. All the user&apos;s
                 cards <br />
                 are connected to their wallet and use their balance. The
                 spending <br />
