@@ -149,12 +149,12 @@ const TariffsSecond = () => {
                 <li>
                   No weekly or monthly limits are predefined. You can place the
                   monthly/weekly/daily limit per transaction on the desired
-                  cards. In addition, you can create cards with a "lock after 1
-                  payment" feature.
+                  cards. In addition, you can create cards with a &quot;lock after 1
+                  payment&quot; feature.
                 </li>
                 <li>
                   You are able to set up the alerts on minimum wallet balance
-                  and declined transaction alerts to be sent to the user’s
+                  and declined transaction alerts to be sent to the user&apos;s
                   email.
                 </li>
               </ul>
@@ -262,7 +262,7 @@ const TariffsSecond = () => {
               <div class="how-element">
                 <span>3</span>
                 <p>
-                  To see the balance on your user’s wallet and start spending
+                  To see the balance on your user&apos;s wallet and start spending
                   immediately.
                 </p>
               </div>
