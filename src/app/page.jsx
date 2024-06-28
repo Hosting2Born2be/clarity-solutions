@@ -134,32 +134,6 @@ export default function Home() {
                       stroke-width="5"
                     />
                   </svg>
-                  Versatile Spending Options
-                </h4>
-                <p>
-                  Utilise cards for a wide range of purposes, including
-                  advertising, development, technology, and online service
-                  purchases.
-                </p>
-              </div>
-
-              <div>
-                <h4>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="21"
-                    viewBox="0 0 20 21"
-                    fill="none"
-                  >
-                    <circle
-                      cx="10"
-                      cy="10.9546"
-                      r="7.5"
-                      stroke="#F85C3A"
-                      stroke-width="5"
-                    />
-                  </svg>
                   Streamlined Team Spending
                 </h4>
                 <p>
@@ -218,32 +192,6 @@ export default function Home() {
                   streamlining financial processes.
                 </p>
               </div>
-
-              <div>
-                <h4>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="21"
-                    viewBox="0 0 20 21"
-                    fill="none"
-                  >
-                    <circle
-                      cx="10"
-                      cy="10.9546"
-                      r="7.5"
-                      stroke="#F85C3A"
-                      stroke-width="5"
-                    />
-                  </svg>
-                  Flexible Ad Hoc Purchases
-                </h4>
-                <p>
-                  Allow employees or contractors to make approved ad hoc
-                  purchases with temporary virtual cards that are active for 7
-                  days and have customizable usage limits.
-                </p>
-              </div>
             </RevealList>
           </div>
         </div>
@@ -296,7 +244,10 @@ export default function Home() {
                   world of financial convenience and security.
                 </p>
                 <div className="buttons-wrap">
-                  <Link className="black-button" href="#">
+                  <Link
+                    className="black-button"
+                    href="/use-cases#become-member"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -312,7 +263,7 @@ export default function Home() {
                         stroke-linejoin="round"
                       />
                     </svg>
-                    Sign up
+                    Get a quote
                   </Link>
                 </div>
               </div>
@@ -642,7 +593,8 @@ export default function Home() {
               <div class="how-element">
                 <span>2</span>
                 <p>
-                Order a debit card and transfer funds to your account effortlessly.
+                  Order a debit card and transfer funds to your account
+                  effortlessly.
                 </p>
               </div>
               <div class="how-element">
@@ -668,15 +620,19 @@ export default function Home() {
                 <h2>
                   Stay informed <br />
                   with the Clarity <br />
-                  Solutions 
+                  Solutions
                 </h2>
                 <p>
                   Explore the latest articles covering topics such as financial
                   management tips, industry updates, and success stories.
                 </p>
                 <div className="buttons-wrap">
-                  <Link className="black-button" href="https://www.facebook.com/claritysolutions.io" target="_blank">
-                  Follow us on Facebook
+                  <Link
+                    className="black-button"
+                    href="https://www.facebook.com/claritysolutions.io"
+                    target="_blank"
+                  >
+                    Follow us on Facebook
                   </Link>
                 </div>
               </div>
