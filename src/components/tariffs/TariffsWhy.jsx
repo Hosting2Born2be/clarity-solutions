@@ -9,7 +9,7 @@ function TariffsWhy() {
         <div className="_container">
           <div className="tariffs-why__body">
             <RevealWrapper delay={100} origin="bottom">
-              <span class="highlight">CLIENT'S JOURNEY</span>
+              <span class="highlight">CLIENT&apos;S JOURNEY</span>
               <h2 className="section-title">
                 Why order, and what are the use cases?
               </h2>
@@ -91,7 +91,7 @@ function TariffsWhy() {
                 </h4>
                 <p>
                   Create virtual cards for dedicated types of spending to easily
-                  manage third-party suppliers' expenses, such as subscription
+                  manage third-party suppliers&apos; expenses, such as subscription
                   or online ad expenses, and remove duplicate, wasted spending.
                 </p>
               </div>
