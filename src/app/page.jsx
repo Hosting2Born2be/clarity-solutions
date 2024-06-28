@@ -4,8 +4,16 @@ import Link from "next/link";
 import "@/public/scss/home.scss";
 import { RevealWrapper, RevealList } from "next-reveal";
 import ParallaxComponent from "../components/ParallaxComponent";
+import { useState } from "react";
+import ConnectForm from "../components/ConnectForm";
 
 export default function Home() {
+  const [popupOpened, setPopupOpened] = useState(false);
+
+  const handlePopup = () => {
+    setPopupOpened(!popupOpened);
+  };
+
   return (
     <>
       <section className="home-hero">
@@ -206,11 +214,10 @@ export default function Home() {
                   Already <br />a member?
                 </h2>
                 <p>
-                  If you&apos;re already part of our community, simply{" "}
-                  <Link href="#">sign in</Link> to access your account.
+                  If you&apos;re already part of our community, simply sign in to access your account.
                 </p>
                 <div className="buttons-wrap">
-                  <Link className="orange-button" href="#">
+                  <button onClick={() => handlePopup()} className="orange-button">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -227,7 +234,7 @@ export default function Home() {
                       />
                     </svg>
                     Sign in
-                  </Link>
+                  </button>
                 </div>
               </div>
             </RevealWrapper>
@@ -659,6 +666,16 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {popupOpened && (
+        <div className="popup-wrap">
+          <div className="popupOverlay" onClick={() => handlePopup()}></div>
+          <div className="popup">
+            <h2>Quick Access Form</h2>
+            <ConnectForm />
+          </div>
+        </div>
+      )}
     </>
   );
 }
