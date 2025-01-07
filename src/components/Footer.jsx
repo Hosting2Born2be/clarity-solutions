@@ -2,6 +2,7 @@ import Link from "next/link";
 import "@/public/scss/footer.scss";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <>
       <footer>
@@ -92,7 +93,7 @@ const Footer = () => {
               </a>
             </div>
 
-            <span>All Rights Reserved. © 2024</span>
+            <span>All Rights Reserved. © {currentYear}</span>
           </div>
 
           <div className="foot-bottom">
