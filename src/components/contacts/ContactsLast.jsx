@@ -6,6 +6,7 @@ import { Montserrat } from "next/font/google";
 import { useState } from "react";
 import Select from "react-select";
 import countries from "@/lib/countries.json";
+import Link from "next/link";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -17,11 +18,10 @@ const countryOptions = countries.map((country) => ({
 const customStyles = {
   option: (provided, state) => ({
     ...provided,
-    backgroundColor: state.isSelected ? '#f0f0f0' : '#fff',
-    color: state.isSelected ? '#000' : '#333',
+    backgroundColor: state.isSelected ? "#f0f0f0" : "#fff",
+    color: state.isSelected ? "#000" : "#333",
   }),
 };
-
 
 const ValidationSchema = Yup.object().shape({
   firstName: Yup.string().required("This field is required"),
@@ -130,7 +130,13 @@ const ContactsLast = () => {
                       <div className="error-label">{errors.emailAddress}</div>
                     ) : null}
                   </div>
-                  <div className={`input-wrap ${errors.residentialCountry && touched.residentialCountry ? "error" : ""}`}>
+                  <div
+                    className={`input-wrap ${
+                      errors.residentialCountry && touched.residentialCountry
+                        ? "error"
+                        : ""
+                    }`}
+                  >
                     <Select
                       options={countryOptions}
                       name="residentialCountry"
@@ -148,7 +154,9 @@ const ContactsLast = () => {
                       classNamePrefix="select"
                     />
                     {errors.residentialCountry && touched.residentialCountry ? (
-                      <div className="error-label">{errors.residentialCountry}</div>
+                      <div className="error-label">
+                        {errors.residentialCountry}
+                      </div>
                     ) : null}
                   </div>
 
@@ -195,6 +203,12 @@ const ContactsLast = () => {
                 </Form>
               )}
             </Formik>
+            <div className="via-email">
+              <span>Or via email</span>
+              <Link href="mailto:support@clarity-solutions.io">
+                support@clarity-solutions.io
+              </Link>
+            </div>
           </div>
         </div>
       </section>
