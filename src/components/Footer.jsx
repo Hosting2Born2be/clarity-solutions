@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="_container">
           <div className="foot-top">
             <Link href="/" className="logo" aria-label="Logo">
-              <img src="/images/logo.svg" alt="Logo"/>
+              <img src="/images/logo-foot.svg" alt="Logo"/>
             </Link>
             <span></span>
             <nav className="main-menu">
@@ -94,6 +94,9 @@ const Footer = () => {
             </div>
 
             <span>All Rights Reserved. © {currentYear}</span>
+
+            <img src="/images/GDPR.png" width={92} />
+
           </div>
 
           <div className="foot-bottom">
