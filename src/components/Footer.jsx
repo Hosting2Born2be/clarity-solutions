@@ -23,6 +23,7 @@ const Footer = () => {
             <nav className="legal">
               <Link href="/terms-and-conditions">Terms and Conditions</Link>
               <Link href="/privacy-policy">Privacy Policy</Link>
+              <Link href="/cookie-notice">Cookie Notice</Link>
             </nav>
           </div>
 

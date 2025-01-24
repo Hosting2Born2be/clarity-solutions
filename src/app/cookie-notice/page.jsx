@@ -1,7 +1,7 @@
 import { getPage } from "@/lib/insights";
 import "@/public/scss/policy.scss";
 
-const pageId = 3;
+const pageId = 75;
 
 export async function generateMetadata() {
   const page = await getPage(pageId);
