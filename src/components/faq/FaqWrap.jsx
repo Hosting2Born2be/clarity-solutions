@@ -45,7 +45,7 @@ const FaqWrap = () => {
                 onClick={(e) => handleTabClick(e, "#tab1")}
                 className={`${activeTab === "#tab1" ? "active" : ""}`}
               >
-                Prepaid Cards Guide
+                Cards Guide
               </Link>
               <Link
                 href="#"
