@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="_container">
           <div className="foot-top">
             <Link href="/" className="logo" aria-label="Logo">
-              <img src="/images/logo-foot.svg" alt="Logo"/>
+              <img src="/images/logo-foot.svg" alt="Logo" />
             </Link>
             <span></span>
             <nav className="main-menu">
@@ -71,33 +71,59 @@ const Footer = () => {
                 Phone
               </a>
               <a href="#" className="">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-                  <path d="M20 10.4546C20 14.8726 12 22.4546 12 22.4546C12 22.4546 4 14.8726 4 10.4546C4 8.33286 4.84285 6.29803 6.34315 4.79774C7.84344 3.29744 9.87827 2.45459 12 2.45459C14.1217 2.45459 16.1566 3.29744 17.6569 4.79774C19.1571 6.29803 20 8.33286 20 10.4546Z" stroke="white" stroke-width="1.5"/>
-                  <path d="M12 11.4546C12.2652 11.4546 12.5196 11.3492 12.7071 11.1617C12.8946 10.9742 13 10.7198 13 10.4546C13 10.1894 12.8946 9.93502 12.7071 9.74748C12.5196 9.55995 12.2652 9.45459 12 9.45459C11.7348 9.45459 11.4804 9.55995 11.2929 9.74748C11.1054 9.93502 11 10.1894 11 10.4546C11 10.7198 11.1054 10.9742 11.2929 11.1617C11.4804 11.3492 11.7348 11.4546 12 11.4546Z" fill="white" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="25"
+                  viewBox="0 0 24 25"
+                  fill="none"
+                >
+                  <path
+                    d="M20 10.4546C20 14.8726 12 22.4546 12 22.4546C12 22.4546 4 14.8726 4 10.4546C4 8.33286 4.84285 6.29803 6.34315 4.79774C7.84344 3.29744 9.87827 2.45459 12 2.45459C14.1217 2.45459 16.1566 3.29744 17.6569 4.79774C19.1571 6.29803 20 8.33286 20 10.4546Z"
+                    stroke="white"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    d="M12 11.4546C12.2652 11.4546 12.5196 11.3492 12.7071 11.1617C12.8946 10.9742 13 10.7198 13 10.4546C13 10.1894 12.8946 9.93502 12.7071 9.74748C12.5196 9.55995 12.2652 9.45459 12 9.45459C11.7348 9.45459 11.4804 9.55995 11.2929 9.74748C11.1054 9.93502 11 10.1894 11 10.4546C11 10.7198 11.1054 10.9742 11.2929 11.1617C11.4804 11.3492 11.7348 11.4546 12 11.4546Z"
+                    fill="white"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                 </svg>
-                <span>Harju Maakond, Tallinn, Lasnamäe Linnaosa, Peteburi tee 2c, 11415, Estonia</span>
+                <span>
+                  Harju Maakond, Tallinn, Lasnamäe Linnaosa, Peteburi tee 2c,
+                  11415, Estonia
+                </span>
               </a>
             </div>
 
             <div className="soc">
-              <a href="https://www.facebook.com/claritysolutions.io" target="_blank">
-                <img src="/images/fb.svg" alt="fb"/>
+              <a
+                href="https://www.facebook.com/claritysolutions.io"
+                target="_blank"
+              >
+                <img src="/images/fb.svg" alt="fb" />
               </a>
-              <a href="https://www.instagram.com/claritysolutions.io" target="_blank">
-                <img src="/images/inst.svg" alt="inst"/>
+              <a
+                href="https://www.instagram.com/claritysolutions.io"
+                target="_blank"
+              >
+                <img src="/images/inst.svg" alt="inst" />
               </a>
-              <a href="https://twitter.com/csolutions_io"  target="_blank">
-                <img src="/images/twiter.svg" alt="twiter"/>
+              <a href="https://twitter.com/csolutions_io" target="_blank">
+                <img src="/images/twiter.svg" alt="twiter" />
               </a>
-              <a href="https://www.linkedin.com/company/claritysolutions-io/" target="_blank">
-                <img src="/images/in.svg" alt="linkedin"/>
+              <a
+                href="https://www.linkedin.com/company/claritysolutions-io/"
+                target="_blank"
+              >
+                <img src="/images/in.svg" alt="linkedin" />
               </a>
             </div>
 
             <span>All Rights Reserved. © {currentYear}</span>
-
-            <img src="/images/GDPR.png" width={92} />
-
           </div>
 
           <div className="foot-bottom">
