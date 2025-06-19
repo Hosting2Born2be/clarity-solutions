@@ -121,6 +121,7 @@ const Footer = () => {
                 <h3>Legal</h3>
                 <nav className="legal">
                   <Link href="/terms-and-conditions">Terms and Conditions</Link>
+                  <Link href="/card_terms_and_conditions.pdf" target="_blank">Card Terms and Conditions</Link>
                   <Link href="/privacy-policy">Privacy Policy</Link>
                   <Link href="/cookie-notice">Cookie Notice</Link>
                 </nav>
