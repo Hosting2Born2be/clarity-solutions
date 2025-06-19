@@ -13,7 +13,7 @@ export const metadata = {
   openGraph: {
     title: "Our Debit Card with Apple Pay | Clarity Solutions",
     description: "Explore the benefits of Clarity Solutions debit cards with Apple Pay. Learn how to add your card to Apple Wallet and enjoy fast, secure payments on the go.",
-    images: "https://clarity-solutions.io/images/meta.jpg",
+    images: "https://clarity-solutions.io/images/apple-meta.png",
   },
 };
 
