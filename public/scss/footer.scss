@@ -1,111 +1,110 @@
 footer {
   background: var(--2, #282828);
   padding: 65px 0;
-  .foot-top {
+
+  .foot-row {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     @media (max-width: 992px) {
       flex-direction: column;
-      gap: 30px;
-      align-items: flex-start;
     }
-    span {
-      width: 1px;
-      height: 40px;
-      background: #484848;
-      @media (max-width: 992px) {
-        width: 100%;
-        height: 1px;
-      }
-    }
-    .logo {
-      color: var(--5, #fff);
-      font-size: 24px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 106.8%; /* 25.632px */
-    }
-    nav {
+
+    &__left {
       display: flex;
-      gap: 40px;
+      flex-direction: column;
+      gap: 24px;
       @media (max-width: 992px) {
-        width: 100%;
-        flex-direction: column;
-        gap: 30px;
-        align-items: flex-start;
+        margin-bottom: 32px;
+        padding-bottom: 32px;
+        border-bottom: 1px solid rgba(72, 72, 72, 0.5);
       }
-      a {
-        color: var(--5, #fff);
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 106.8%;
-        &:hover {
-          color: #f85c3a;
+      .icons-wrap {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+        @media (max-width: 992px) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        a {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          color: #fff;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 106.8%;
+          svg {
+            width: 24px;
+          }
+          span {
+            width: calc(100% - 32px);
+            color: #fff;
+          }
+          &:hover {
+            span {
+              color: #f85c3a;
+            }
+            svg {
+              path {
+                stroke: #f85c3a;
+              }
+            }
+          }
         }
       }
-      &.legal {
-        a {
-          color: rgba(255, 255, 255, 0.6);
-          &:hover {
-            color: #f85c3a;
+      .soc {
+        display: flex;
+        gap: 16px;
+      }
+    }
+
+    &__right {
+      display: flex;
+      gap: 64px;
+      @media (max-width: 992px) {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 32px;
+      }
+      > div {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        h3 {
+          color: var(--5, #fff);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 106.8%; /* 17.088px */
+          margin: 0;
+        }
+        nav {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+          a {
+            color: var(--4, #f6f6f6);
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 106.8%; /* 17.088px */
           }
         }
       }
     }
   }
+
   .foot-rights {
     margin: 30px 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
     @media (max-width: 992px) {
-      flex-direction: column;
-      gap: 24px;
-      align-items: flex-start;
     }
-    .icons-wrap {
-      display: flex;
-      align-items: flex-start;
-      flex-direction: column;
-      gap: 16px;
-      @media (max-width: 992px) {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      a {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        color: #fff;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 106.8%;
-        svg {
-          width: 24px;
-        }
-        span {
-          width: calc(100% - 32px);
-          color: #fff;
-        }
-        &:hover {
-          span {
-            color: #f85c3a;
-          }
-          svg {
-            path {
-              stroke: #f85c3a;
-            }
-          }
-        }
-      }
-    }
-    .soc {
-      display: flex;
-      gap: 16px;
-    }
+
     span {
       color: rgba(255, 255, 255, 0.6);
       font-size: 16px;
@@ -115,6 +114,9 @@ footer {
     }
   }
   .foot-bottom {
+    margin: 32px 0;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(72, 72, 72, 0.5);
     span {
       color: rgba(255, 255, 255, 0.6);
       font-size: 16px;
