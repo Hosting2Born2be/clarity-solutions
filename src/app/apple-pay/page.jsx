@@ -9,10 +9,10 @@ import { WantToStart } from "@/src/components/apple-pay/WantToStart";
 
 export const metadata = {
   title: "Apple Pay | Clarity Solutions",
-  description: "",
+  description: "Apple Pay",
   openGraph: {
     title: "Apple Pay | Clarity Solutions",
-    description: "",
+    description: "Apple Pay",
     images: "https://clarity-solutions.io/images/meta.jpg",
   },
 };
