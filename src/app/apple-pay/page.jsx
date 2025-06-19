@@ -8,11 +8,11 @@ import { HowToPay } from "@/src/components/apple-pay/HowToPay";
 import { WantToStart } from "@/src/components/apple-pay/WantToStart";
 
 export const metadata = {
-  title: "Apple Pay | Clarity Solutions",
-  description: "Apple Pay",
+  title: "Our Debit Card with Apple Pay | Clarity Solutions",
+  description: "Explore the benefits of Clarity Solutions debit cards with Apple Pay. Learn how to add your card to Apple Wallet and enjoy fast, secure payments on the go.",
   openGraph: {
-    title: "Apple Pay | Clarity Solutions",
-    description: "Apple Pay",
+    title: "Our Debit Card with Apple Pay | Clarity Solutions",
+    description: "Explore the benefits of Clarity Solutions debit cards with Apple Pay. Learn how to add your card to Apple Wallet and enjoy fast, secure payments on the go.",
     images: "https://clarity-solutions.io/images/meta.jpg",
   },
 };
