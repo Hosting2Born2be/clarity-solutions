@@ -9,6 +9,16 @@ const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const pathname = usePathname();
   const [popupOpened, setPopupOpened] = useState(false);
+  const [signUpLink, setSignUpLink] = useState(false);
+
+  useEffect(() => {
+    fetch("/api/sumsub-link", {
+      method: "POST",
+    })
+      .then((res) => res.json())
+      .then((res) => setSignUpLink(res.url))
+      .catch((err) => console.error(err));
+  }, []);
 
   const handlePopup = () => {
     setPopupOpened(!popupOpened);
