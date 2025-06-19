@@ -18,7 +18,11 @@ export const LearnHow = () => {
               <br />
               Visit Apple’s official resources for step-by-step instructions.
             </p>
-            <Link href="#" className="orange-button">
+            <Link
+              href="https://support.apple.com/guide/iphone/set-up-apple-pay-iph9b7f53382/ios"
+              className="orange-button"
+              target="_blank"
+            >
               Learn More
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -38,8 +42,8 @@ export const LearnHow = () => {
           <Image
             src="/images/apple-pay/card.png"
             alt="Learn How"
-            width={380}
-            height={293}
+            width={297}
+            height={315}
           />
         </div>
       </div>

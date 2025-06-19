@@ -45,7 +45,11 @@ export const HowToPay = () => {
                 <b>Clarity Solutions debit card.</b>
               </p>
             </div>
-            <Link href="#" className="white-button">
+            <Link
+              href="https://support.apple.com/guide/iphone/set-up-apple-pay-iph9b7f53382/ios"
+              className="white-button"
+              target="_blank"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"
