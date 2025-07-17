@@ -1,0 +1,225 @@
+.app-hero {
+  padding: 0 24px 24px;
+  @media (max-width: 992px) {
+    padding: 0 16px 16px;
+  }
+  > div {
+    padding-top: 100px;
+    background-image: url(/images/app/gradient.svg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    border-radius: 0px 0px 24px 24px;
+    border: 1px solid rgba(45, 45, 45, 0);
+    @media (max-width: 992px) {
+      padding-top: 64px;
+    }
+  }
+
+  &__body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    @media (max-width: 992px) {
+      flex-direction: column;
+      gap: 64px;
+    }
+    > div {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      @media (max-width: 992px) {
+        width: 100%;
+        align-items: center;
+      }
+      h1 {
+        color: #2d2d2d;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 0;
+        span {
+          color: #f85c3a;
+        }
+        @media (max-width: 992px) {
+          font-size: 32px;
+          text-align: center;
+          br {
+            display: none;
+          }
+        }
+      }
+      p {
+        color: #2d2d2d;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin: 0;
+        @media (max-width: 992px) {
+          text-align: center;
+        }
+      }
+      .qr {
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+      }
+      .buttons {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        a {
+          display: flex;
+          align-items: center;
+        }
+      }
+      .hero {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+.dont-have-card {
+  padding: 65px 0;
+  @media (max-width: 992px) {
+    padding: 50px 0;
+  }
+  &__body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    @media (max-width: 992px) {
+      flex-direction: column;
+      gap: 32px;
+      align-items: flex-start;
+    }
+    > div {
+      width: calc(50% - 50px);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      @media (max-width: 992px) {
+        width: 100%;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+      h2 {
+        color: #2d2d2d;
+        margin: 0;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+      p {
+        color: #2d2d2d;
+        margin: 0;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      a {
+        color: #fff;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 0%;
+        display: flex;
+        padding: 0 32px;
+        justify-content: center;
+        align-items: center;
+        height: 53px;
+        gap: 10px;
+        border-radius: 100px;
+        background: #f85c3a;
+        transition: all 0.3s ease;
+        &:hover {
+          background: #f85c3a;
+        }
+      }
+    }
+  }
+}
+
+.app-assistance {
+  padding: 65px 0;
+  @media (max-width: 992px) {
+    padding: 50px 0;
+  }
+  &__body {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+    @media (max-width: 992px) {
+      flex-direction: column;
+      gap: 32px;
+      align-items: flex-start;
+    }
+    > div {
+      width: calc(50% - 50px);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      @media (max-width: 992px) {
+        width: 100%;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+      h2 {
+        color: #2d2d2d;
+        margin: 0;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+      p {
+        color: #2d2d2d;
+        margin: 0;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      a {
+        color: #fff;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 0%;
+        display: flex;
+        padding: 0 32px;
+        justify-content: center;
+        align-items: center;
+        height: 53px;
+        gap: 10px;
+        border-radius: 100px;
+        background: #f85c3a;
+        transition: all 0.3s ease;
+        &:hover {
+          background: #f85c3a;
+        }
+      }
+    }
+  }
+}
