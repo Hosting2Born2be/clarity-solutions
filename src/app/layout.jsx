@@ -9,6 +9,23 @@ import DeviceRedirect from "../components/DeviceRedirect";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
+export const metadata = {
+  title: {
+    default: "Flexible Payment Solutions | Clarity Solutions",
+    template: "%s",
+  },
+  description:
+    "",
+  openGraph: {
+    title: {
+      default: "Flexible Payment Solutions | Clarity Solutions",
+      template: "%s",
+    },
+    description:
+      "",
+    images: "https://clarity-solutions.io/images/meta.jpg",
+  },
+};
 
 export default function RootLayout({ children }) {
   return (
