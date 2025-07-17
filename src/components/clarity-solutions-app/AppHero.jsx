@@ -52,7 +52,7 @@ const AppHero = () => {
             </RevealWrapper>
             <RevealWrapper delay={100} origin="bottom">
               <Image
-                src="/images/app/hero.png"
+                src="/images/app/hero.webp"
                 alt="Clarity Solutions App"
                 width={506}
                 height={808}
