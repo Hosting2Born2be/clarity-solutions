@@ -113,17 +113,19 @@ const Footer = () => {
                   <Link href="/use-cases">Use Cases</Link>
                   <Link href="/tariffs">Tariffs</Link>
                   <Link href="/faq">FAQ</Link>
-                  <Link href="/insights">Insights</Link>
                   <Link href="/clarity-solutions-app">Download the App</Link>
+                  <Link href="/insights">Insights</Link>
+
                   <Link href="/contacts">Contacts</Link>
-                  
                 </nav>
               </div>
               <div>
                 <h3>Legal</h3>
                 <nav className="legal">
                   <Link href="/terms-and-conditions">Terms and Conditions</Link>
-                  <Link href="/card_terms_and_conditions.pdf" target="_blank">Card Terms and Conditions</Link>
+                  <Link href="/card_terms_and_conditions.pdf" target="_blank">
+                    Card Terms and Conditions
+                  </Link>
                   <Link href="/privacy-policy">Privacy Policy</Link>
                   <Link href="/cookie-notice">Cookie Notice</Link>
                 </nav>
