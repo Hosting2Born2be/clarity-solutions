@@ -57,6 +57,7 @@ const AppHero = () => {
                 width={506}
                 height={808}
                 className="hero"
+                quality={100}
               />
             </RevealWrapper>
           </div>
