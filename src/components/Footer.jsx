@@ -113,6 +113,7 @@ const Footer = () => {
                   <Link href="/use-cases">Use Cases</Link>
                   <Link href="/tariffs">Tariffs</Link>
                   <Link href="/faq">FAQ</Link>
+                  <Link href="/download-the-app">Download the App</Link>
                   <Link href="/insights">Insights</Link>
 
                   <Link href="/contacts">Contacts</Link>
