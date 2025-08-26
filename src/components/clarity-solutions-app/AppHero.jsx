@@ -32,7 +32,10 @@ const AppHero = () => {
                 className="qr"
               />
               <div className="buttons">
-                <Link href="#">
+                <Link
+                  href="https://apps.apple.com/us/app/global-clarity-cards/id6746410505"
+                  target="_blank"
+                >
                   <Image
                     src="/images/app/app-store.svg"
                     alt="App Store"
@@ -40,7 +43,10 @@ const AppHero = () => {
                     height={54}
                   />
                 </Link>
-                <Link href="#">
+                <Link
+                  href="https://play.google.com/store/apps/details?id=io.claritysolutions.whitelabel"
+                  target="_blank"
+                >
                   <Image
                     src="/images/app/google-play.svg"
                     alt="Google Play"
