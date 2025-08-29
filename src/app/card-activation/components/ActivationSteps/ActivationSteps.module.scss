@@ -1,0 +1,95 @@
+.activationSteps {
+  padding: 164px 0;
+  background: #fff;
+  @media (max-width: 992px) {
+    padding: 64px 0;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    > div {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2 {
+        color: #2d2d2d;
+        text-align: center;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin: 0 0 12px 0;
+        @media (max-width: 992px) {
+          font-size: 32px;
+        }
+      }
+      > p {
+        color: #2d2d2d;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 0;
+        @media (max-width: 992px) {
+          br {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  &__steps {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    @media (max-width: 992px) {
+      gap: 64px;
+    }
+  }
+
+  &__step {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    width: 100%;
+    max-width: 1110px;
+
+    @media (max-width: 992px) {
+      flex-direction: column-reverse;
+      gap: 32px;
+    }
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+      @media (max-width: 992px) {
+        flex-direction: column-reverse;
+      }
+    }
+    > div {
+      width: 50%;
+      @media (max-width: 992px) {
+        width: 100%;
+      }
+      img {
+        width: 100%;
+        height: auto;
+      }
+      p {
+        color: #2d2d2d;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin: 0;
+        @media (max-width: 992px) {
+          font-size: 24px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
