@@ -76,6 +76,7 @@ const Accordion = ({ items }) => {
                     muted
                     loop
                     ref={(el) => (videoRefs.current[index] = el)}
+                    poster={item.cover}
                   />
                 </div>
               </div>

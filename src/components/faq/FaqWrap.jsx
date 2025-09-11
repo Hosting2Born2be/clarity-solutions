@@ -13,18 +13,22 @@ const FaqWrap = () => {
     {
       title: "How to add card to Google Wallet",
       video: "/images/faq/3-Google_Wallet.mp4",
+      cover: "/images/faq/3-Google_Wallet.png",
     },
     {
       title: "How to add card to Apple Wallet",
       video: "/images/faq/4-Apple_Wallet.MP4",
+      cover: "/images/faq/4-Apple_Wallet.png",
     },
     {
       title: "How to set/change limits",
       video: "/images/faq/2-limits.mp4",
+      cover: "/images/faq/2-limits.png",
     },
     {
       title: "How to order card delivery",
       video: "/images/faq/1-Physical_card.mp4",
+      cover: "/images/faq/1-Physical_card.png",
     },
   ];
 
