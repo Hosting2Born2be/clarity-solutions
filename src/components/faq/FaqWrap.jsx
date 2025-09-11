@@ -9,6 +9,25 @@ const FaqWrap = () => {
   const [activeTab, setActiveTab] = useState("#tab1");
   const [items, setItems] = useState(tab1);
 
+  const tab6 = [
+    {
+      title: "How to add card to Google Wallet",
+      video: "/images/faq/3-Google_Wallet.mp4",
+    },
+    {
+      title: "How to add card to Apple Wallet",
+      video: "/images/faq/4-Apple_Wallet.MP4",
+    },
+    {
+      title: "How to set/change limits",
+      video: "/images/faq/2-limits.mp4",
+    },
+    {
+      title: "How to order card delivery",
+      video: "/images/faq/1-Physical_card.mp4",
+    },
+  ];
+
   const handleTabClick = (e, tabId) => {
     e.preventDefault();
     setActiveTab(tabId);
@@ -23,6 +42,8 @@ const FaqWrap = () => {
         ? setItems(tab4)
         : tabId === "#tab5"
         ? setItems(tab5)
+        : tabId === "#tab6"
+        ? setItems(tab6)
         : setItems(tab1);
     }
   };
@@ -74,6 +95,13 @@ const FaqWrap = () => {
                 className={`${activeTab === "#tab5" ? "active" : ""}`}
               >
                 Troubleshooting Card Account
+              </Link>
+              <Link
+                href="#"
+                onClick={(e) => handleTabClick(e, "#tab6")}
+                className={`${activeTab === "#tab6" ? "active" : ""}`}
+              >
+                Video Tutorials on Card Usage
               </Link>
             </RevealList>
 
