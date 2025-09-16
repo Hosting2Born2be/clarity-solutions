@@ -26,10 +26,10 @@ const TariffsSecond = () => {
                 </tr>
 
                 <tr>
-                  <td>Initial Card Order</td>
-                  <td>€25.00</td>
+                  <td>Virtual Card Issuance</td>
+                  <td>€30.00</td>
                   <td>Per Card</td>
-                  <td>One-time fee for the first card order.</td>
+                  <td>One-time fee for the card order.</td>
                 </tr>
 
                 <tr>
@@ -37,7 +37,7 @@ const TariffsSecond = () => {
                     Physical card issuance <br />
                     (Chip + PayPass)
                   </td>
-                  <td>€150.00</td>
+                  <td>€30.00</td>
                   <td>Per Card</td>
                   <td>
                     One-time charge for plastic card issuance. Standard fees
@@ -47,7 +47,7 @@ const TariffsSecond = () => {
 
                 <tr>
                   <td>Monthly Account Maintenance</td>
-                  <td>€25.00</td>
+                  <td>€30.00</td>
                   <td>Per Month</td>
                   <td>Deducted from available balance monthly.</td>
                 </tr>
@@ -63,7 +63,9 @@ const TariffsSecond = () => {
 
                 <tr>
                   <td>Card Top-Up Fee </td>
-                  <td>2%</td>
+                  <td>
+                    <span>FREE</span>
+                  </td>
                   <td>Per Transfer</td>
                   <td>Fee for adding funds to your card.</td>
                 </tr>
@@ -80,7 +82,8 @@ const TariffsSecond = () => {
                   </td>
                 </tr>
 
-                <tr>
+                {/**
+                 * <tr>
                   <td colSpan={4} className="subtitle">
                     Transaction
                   </td>
@@ -115,6 +118,7 @@ const TariffsSecond = () => {
                     Payments above 5k EUR could require additional verification.
                   </td>
                 </tr>
+                 */}
               </tbody>
             </table>
           </div>
@@ -130,8 +134,8 @@ const TariffsSecond = () => {
                   received.
                 </li>
                 <li>
-                  You will get phone App access and a web browser dashboard with
-                  access to your cards, transactions, and balances.
+                  You will get phone App access with access to your cards,
+                  transactions, and balances.
                 </li>
                 <li>
                   With the App on your phone, you can add any card to your Apple
@@ -147,26 +151,22 @@ const TariffsSecond = () => {
                   timeframe is from 1 week, depending on your location).
                 </li>
                 <li>
-                  No weekly or monthly limits are predefined. You can place the
+                  There are predefined Monthly and daily limits for a wallet,
+                  which can be increased subject to additional approval process
+                  by the service provider. You can place the
                   monthly/weekly/daily limit per transaction on the desired
-                  cards. In addition, you can create cards with a &quot;lock after 1
-                  payment&quot; feature.
-                </li>
-                <li>
-                  You are able to set up the alerts on minimum wallet balance
-                  and declined transaction alerts to be sent to the user&apos;s
-                  email.
+                  cards.
                 </li>
               </ul>
             </RevealWrapper>
-            <RevealWrapper origin="bottom">
+            {/**<RevealWrapper origin="bottom">
               <div className="warn">
                 <img src="/images/tariffs/warn.svg" />
                 The commission is calculated as a percentage of the amount to
                 top-up the virtual card. Then, it is added to the top-up amount,
                 creating the gross amount to pay for you.
               </div>
-            </RevealWrapper>
+            </RevealWrapper> */}
 
             <RevealWrapper origin="bottom">
               <h2>To create a virtual card account, we need the following:</h2>
@@ -180,9 +180,8 @@ const TariffsSecond = () => {
                   phone app or website app to manage the transactions and cards.
                 </li>
                 <li>
-                  Email - You will need to log in to the phone app or website
-                  app to manage the transactions and cards. It could be provided
-                  from our side.
+                  Email - You will need to log in to the phone app to manage the
+                  transactions and cards.
                 </li>
               </ul>
             </RevealWrapper>
@@ -214,8 +213,8 @@ const TariffsSecond = () => {
             <div className="need-help">
               <h2>Top-up process</h2>
               <p>
-                Your funds are topped up to your user&apos;s wallet. All the user&apos;s
-                cards <br />
+                Your funds are topped up to your user&apos;s wallet. All the
+                user&apos;s cards <br />
                 are connected to their wallet and use their balance. The
                 spending <br />
                 limits section could limit the card spending (balance).
@@ -249,21 +248,16 @@ const TariffsSecond = () => {
               <div class="how-element">
                 <span>1</span>
                 <p>
-                  To mention your request in the group with your cards manager
-                  or email us.
+                  To send transfer from your account with Clarity Global to your
+                  Global Clarity Card account (details will be visible under Top
+                  Up section in the mobile application.
                 </p>
               </div>
               <div class="how-element">
                 <span>2</span>
                 <p>
-                  To send an internal transfer to the Virtual Cards account.
-                </p>
-              </div>
-              <div class="how-element">
-                <span>3</span>
-                <p>
-                  To see the balance on your user&apos;s wallet and start spending
-                  immediately.
+                  To see the balance on your user&apos;s wallet and start
+                  spending immediately.
                 </p>
               </div>
             </RevealList>
