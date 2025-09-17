@@ -106,7 +106,7 @@ const Header = () => {
                     <span>Download the App</span>
                   </Link>
 
-                  <button className="link-btn">
+                  {/**<button className="link-btn">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -123,7 +123,7 @@ const Header = () => {
                       />
                     </svg>
                     Sign in
-                  </button>
+                  </button> */}
                   <a
                     href="https://in.sumsub.com/websdk/p/uni_vljdIxrbsRuzxwYB"
                     className="link-btn"

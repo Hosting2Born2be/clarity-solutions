@@ -86,13 +86,13 @@ const FaqWrap = () => {
               >
                 Essential Info for Cardholders
               </Link>
-              <Link
+              {/**<Link
                 href="#"
                 onClick={(e) => handleTabClick(e, "#tab4")}
                 className={`${activeTab === "#tab4" ? "active" : ""}`}
               >
                 KYC Requirements
-              </Link>
+              </Link> */}
               <Link
                 href="#"
                 onClick={(e) => handleTabClick(e, "#tab5")}

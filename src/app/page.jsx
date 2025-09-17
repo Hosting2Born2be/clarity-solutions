@@ -214,10 +214,14 @@ export default function Home() {
                   Already <br />a member?
                 </h2>
                 <p>
-                  If you&apos;re already part of our community, simply sign in to access your account.
+                  If you already have an account with Clarity Global, please
+                  contact your manager.
                 </p>
-                <div className="buttons-wrap">
-                  <button onClick={() => handlePopup()} className="orange-button">
+                {/**<div className="buttons-wrap">
+                  <button
+                    onClick={() => handlePopup()}
+                    className="orange-button"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -235,7 +239,7 @@ export default function Home() {
                     </svg>
                     Sign in
                   </button>
-                </div>
+                </div> */}
               </div>
             </RevealWrapper>
 
@@ -434,8 +438,7 @@ export default function Home() {
               <div className="provide">
                 <h4>Global Access</h4>
                 <p>
-                  Access your funds and manage your account anywhere in the
-                  world with our online banking portal.
+                Manage your account and access your funds anywhere in the world using our mobile application
                 </p>
               </div>
             </RevealList>
@@ -449,7 +452,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="home-prioritise">
+      {/**<section className="home-prioritise">
         <div className="_container">
           <div className="home-prioritise__body">
             <RevealWrapper delay={100} origin="bottom">
@@ -567,7 +570,7 @@ export default function Home() {
             </RevealList>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="home-how">
         <div className="_container">

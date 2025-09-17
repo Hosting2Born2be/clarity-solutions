@@ -19,7 +19,7 @@ export default function Business() {
   return (
     <>
       <BusinessHero/>
-      <BusinessSecond/>
+      {/**<BusinessSecond/> */}
       <BusinessThird/>
       
       <BusinessLast/>
