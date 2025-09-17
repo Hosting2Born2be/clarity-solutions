@@ -291,12 +291,15 @@ export default function Home() {
                 Upgrade your <br />
                 payment experience
               </h2>
+              <p>
+                Unleash the power of seamless spending <br />
+                with our innovative Debit Cards! 
+              </p>
             </RevealWrapper>
             <span className="highlight">
               Optimise your finances easy as ABC
             </span>
-
-            <RevealList
+            {/**<RevealList
               origin="bottom"
               interval={500}
               delay={0}
@@ -393,6 +396,144 @@ export default function Home() {
                   />
                 </svg>
               </div>
+            </RevealList> */}
+            <RevealList
+              origin="bottom"
+              interval={500}
+              delay={0}
+              className="flex"
+            >
+              <div className="left">
+                <h3>Direct Access to Your Funds</h3>
+                <p>
+                  Spend only what you have, avoiding debt and interest charges.
+                </p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="41"
+                  viewBox="0 0 40 41"
+                  fill="none"
+                >
+                  <circle
+                    cx="20"
+                    cy="20.9543"
+                    r="14.5"
+                    stroke="#F85C3A"
+                    stroke-width="11"
+                  />
+                </svg>
+              </div>
+              <div className="right">
+                <h3>Global Acceptance</h3>
+                <p>
+                  Use your card at millions of merchants worldwide, both online
+                  and in-store.
+                </p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="41"
+                  viewBox="0 0 40 41"
+                  fill="none"
+                >
+                  <circle
+                    cx="20"
+                    cy="20.9543"
+                    r="14.5"
+                    stroke="#F85C3A"
+                    stroke-width="11"
+                  />
+                </svg>
+              </div>
+              <div className="left">
+                <h3>Enhanced Security</h3>
+                <p>
+                  Benefit from robust fraud protection and secure transaction
+                  processing.
+                </p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="41"
+                  viewBox="0 0 40 41"
+                  fill="none"
+                >
+                  <circle
+                    cx="20"
+                    cy="20.9543"
+                    r="14.5"
+                    stroke="#F85C3A"
+                    stroke-width="11"
+                  />
+                </svg>
+              </div>
+              <div className="right">
+                <h3>Convenient Tracking</h3>
+                <p>
+                  Monitor your spending in real-time through our mobile app or
+                  online banking.
+                </p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="41"
+                  viewBox="0 0 40 41"
+                  fill="none"
+                >
+                  <circle
+                    cx="20"
+                    cy="20.9543"
+                    r="14.5"
+                    stroke="#F85C3A"
+                    stroke-width="11"
+                  />
+                </svg>
+              </div>
+              <div className="left">
+                <h3>Budget-Friendly</h3>
+                <p>
+                  Stay on top of your budget and avoid overspending with instant
+                  transaction updates.
+                </p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="41"
+                  viewBox="0 0 40 41"
+                  fill="none"
+                >
+                  <circle
+                    cx="20"
+                    cy="20.9543"
+                    r="14.5"
+                    stroke="#F85C3A"
+                    stroke-width="11"
+                  />
+                </svg>
+              </div>
+              <div className="right">
+                <h3>No Credit Checks</h3>
+                <p>
+                  Get approved quickly and easily, regardless of your credit
+                  history.
+                </p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40"
+                  height="41"
+                  viewBox="0 0 40 41"
+                  fill="none"
+                >
+                  <circle
+                    cx="20"
+                    cy="20.9543"
+                    r="14.5"
+                    stroke="#F85C3A"
+                    stroke-width="11"
+                  />
+                </svg>
+              </div>
             </RevealList>
           </div>
         </div>
@@ -438,7 +579,8 @@ export default function Home() {
               <div className="provide">
                 <h4>Global Access</h4>
                 <p>
-                Manage your account and access your funds anywhere in the world using our mobile application
+                  Manage your account and access your funds anywhere in the
+                  world using our mobile application
                 </p>
               </div>
             </RevealList>

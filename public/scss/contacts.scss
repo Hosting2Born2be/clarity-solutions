@@ -151,12 +151,28 @@
   }
 }
 
+.via-telegram {
+  display: flex;
+  padding: 8px 16px 8px 8px;
+  align-items: center;
+  gap: 6px;
+  border-radius: 48px;
+  background: #f6f6f6;
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 14px */
+  width: fit-content;
+  margin: 0 auto;
+}
 .via-email {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
   margin-top: 24px;
+  margin-bottom: 24px;
   span {
     color: #6b7280;
     font-size: 16px;
@@ -171,7 +187,7 @@
     line-height: 32px;
     text-align: center;
     @media (max-width: 992px) {
-        font-size: 18px;
+      font-size: 18px;
     }
   }
 }
