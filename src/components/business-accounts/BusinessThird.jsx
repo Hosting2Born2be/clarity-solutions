@@ -116,11 +116,11 @@ const BusinessThird = () => {
               </div>
             </div>
 
-            <RevealWrapper delay={100} origin="bottom">
+            {/**<RevealWrapper delay={100} origin="bottom">
               <Link href="#" className="orange-button">
                 Get started today
               </Link>
-            </RevealWrapper>
+            </RevealWrapper> */}
           </div>
         </div>
       </section>
