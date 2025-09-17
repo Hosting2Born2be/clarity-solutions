@@ -23,7 +23,7 @@ const BusinessThird = () => {
     infinite: true,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay:true,
+    autoplay: true,
     dots: false,
     arrows: true,
     prevArrow: <CustomPrevArrow />,
@@ -32,9 +32,8 @@ const BusinessThird = () => {
       {
         breakpoint: 992,
         settings: {
-          slidesToShow: 1, 
+          slidesToShow: 1,
           slidesToScroll: 1,
-
         },
       },
     ],
@@ -49,7 +48,9 @@ const BusinessThird = () => {
               <h2 className="section-title">Use cases</h2>
             </RevealWrapper>
 
-            <Slider className="cases-slider" {...slickSettings}>
+            {/**<Slider className="cases-slider" {...slickSettings}></Slider> */}
+
+            <div className="cases-wrapper">
               <div className="case">
                 <span>1</span>
                 <h5>Project Expense Management</h5>
@@ -113,7 +114,8 @@ const BusinessThird = () => {
                   various business needs or personal expenses.
                 </p>
               </div>
-            </Slider>
+            </div>
+
             <RevealWrapper delay={100} origin="bottom">
               <Link href="#" className="orange-button">
                 Get started today
