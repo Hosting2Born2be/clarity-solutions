@@ -67,7 +67,7 @@ export default function Home() {
                 <div className="why-element">
                   <span>3</span>
                   <p>
-                    Global access through our online banking portal ensures
+                    Global access through our online mobile application ensures
                     convenience wherever you are.
                   </p>
                 </div>
