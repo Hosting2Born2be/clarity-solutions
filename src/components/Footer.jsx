@@ -131,12 +131,12 @@ const Footer = () => {
                   <Link href="/cookie-notice">Cookie Notice</Link>
                 </nav>
               </div>
-              <div>
+              {/**<div>
                 <h3>Payments</h3>
                 <nav className="legal">
                   <Link href="/apple-pay">Pay with Apple Pay</Link>
                 </nav>
-              </div>
+              </div> */}
             </div>
           </div>
 
